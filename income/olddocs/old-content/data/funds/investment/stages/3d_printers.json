@@ -1,0 +1,14 @@
+{
+	"name": "3D printers ",
+	"target": "3D printers (SLA)",
+	"microfunds": [
+		{ "product": "hub_12" },
+		{ "product": "powerfull_arm" },
+		{ "product": "lcd_controller" },
+		{ "product": "dlp_controller" },
+		{ "product": "led_driver" },
+		{ "product": "ethernet_1gb" },
+		{ "product": "ultrasonic_sensor" },
+		{ "product": "camera_module" }
+	]
+}

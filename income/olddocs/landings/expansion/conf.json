@@ -1,0 +1,18 @@
+[
+	{
+		"component": "@solenopsys/ui-landing:Banner",
+		"data": "banner.json"
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "tokens.json"
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "funds.json"
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "infrastructure.json"
+	}
+]

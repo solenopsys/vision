@@ -1,0 +1,3 @@
+### Compute
+
+Digital factories perform numerous data operations, making data processing systems crucial. This includes systems for processing, storing, and transmitting various types of data, such as CPUs, GPUs, FPGAs, NPUs, DSPs, ASICs, and others. Network equipment like routers, switches, and wireless data transmission systems also play a vital role. Computational power is a critical component for the efficient operation of digital factories.

@@ -1,0 +1,10 @@
+[
+	{
+		"component": "@solenopsys/ui-landing:Banner",
+		"data": "banner.json"
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "projects.json"
+	}
+]

@@ -1,0 +1,16 @@
+{
+	"name": "Middle power robotics, (up to 10.000 watts)",
+	"target": "Hi power industrial robots, CNC machines (lathe, milling)",
+	"microfunds": [
+		{ "product": "stand_by" },
+		{ "product": "one_phase_kkm_400v" },
+		{ "product": "three_phase_kkm_400v" },
+		{ "product": "emi_filter_one_phase" },
+		{ "product": "emi_filter_three_phase" },
+		{ "product": "power_inverter" },
+		{ "product": "capacitor_module" },
+		{ "product": "encoder_sensor" },
+		{ "product": "power_stepper_controller" },
+		{ "product": "three_phase_servo_motor_controller" }
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"roadmap": [
+		"low_power_robotics",
+		"autonomous_robotics",
+		"3d_printers",
+		"middle_power_robotics",
+		"industrial_data_transmission",
+		"photonics_power",
+		"industrial_data_processing",
+		"autonomus_power",
+		"sensors"
+	]
+}

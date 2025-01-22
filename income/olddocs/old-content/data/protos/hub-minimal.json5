@@ -1,0 +1,24 @@
+{
+  "proto": {
+    "type": "hub-module",
+    "version": "1.0.0"
+  },
+  "shape": {
+    "standard": "hub-minmal",
+    "version": "1.0.0"
+  },
+  "io": {
+    "iusb": {
+      "count": 8,
+      // bla bla bla
+      "standard": "iusb-minmal"
+    },
+    "m2": {
+      "count": 8,
+      "standard": "m2-minmal"
+    }
+  },
+  "images": [
+    "hub-assebly.JPG"
+  ]
+}

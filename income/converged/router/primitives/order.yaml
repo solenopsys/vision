@@ -1,0 +1,7 @@
+include:
+  useParams: "?"
+  useNavigate: "?"
+  useLocation: "?"
+  useSearchParams: "?"
+  useRouteData: "?"
+  useMatch: "?"

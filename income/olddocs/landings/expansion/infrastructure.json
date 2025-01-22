@@ -1,0 +1,13 @@
+{
+	"title": "infrastructure",
+	"tiles": [
+		{
+			"name": "Exchange",
+			"description": "Assets exchange"
+		},
+        {
+			"name": "Gataways",
+			"description": "Gataways width global financial system"
+		}
+	]
+}

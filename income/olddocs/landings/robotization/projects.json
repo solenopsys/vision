@@ -1,0 +1,28 @@
+{
+	"title": "Projects",
+	"tiles": [
+		{
+			"name": "Rings",
+			"description": "Controlled environments for research and development"
+		},
+        {
+			"name": "Plant",
+			"description": "Solution for creating digital factories"
+		},
+        {
+			"name": "Hive",
+			"description": "System for managing autonomous drones"
+		},
+        {
+			"name": "Compute",
+			"description": "Systems for computation, data processing, storage, and transmission."
+		},
+        {
+			"name": "Energy",
+			"description": "Systems for energy generation, storage, and transmissio"
+		}
+	]
+}
+
+
+

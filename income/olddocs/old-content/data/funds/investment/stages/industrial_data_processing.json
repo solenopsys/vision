@@ -1,0 +1,8 @@
+{
+	"name": "Industrial data processing ",
+	"target": "industrial systems for data processing",
+	"microfunds": [
+        { "product":"converter_24v-5v"},
+        { "product":"converter_5v-3.3v"}
+	]
+}

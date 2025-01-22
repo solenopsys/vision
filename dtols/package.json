@@ -1,0 +1,42 @@
+{
+  "name": "dtols",
+  "version": "1.0.0",
+  "description": "Tools for working with documentation",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "gen-md": "bun ./src/md/group.ts",
+    "gen-pdf": "bun ./src/pdf/main.ts",
+    "gen-all": "bun gen-md && bun gen-pdf",
+    "ipfs-pub": "bun ./src/upload/main.ts",
+    "json-pub": "bun ./src/upload/json.ts",
+    "format": "bunx @biomejs/biome format src/**/*.ts --write",
+    "yaml": "bunx @biomejs/biome format content/tree.yaml --write",
+    "serve": "bun ./src/server/server.ts",
+    "build-app":"bun build ./src/server/app/main.tsx --external @solenopsys/converged-renderer  --external @solenopsys/converged-reactive --outdir ./src/server/templates"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@biomejs/biome": "1.6.4",
+    "@stricjs/router": "^5.0.6",
+    "@stricjs/utils": "^2.0.7",
+    "@types/mdast": "^4.0.3",
+    "asc": "^2.0.3",
+    "axios": "^1.6.1",
+    "bun-types": "^1.0.18-1",
+    "js-yaml": "^4.1.0",
+    "marked": "^12.0.1",
+    "puppeteer": "^22.6.3",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-images": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "showdown": "^2.1.0",
+    "unified": "^11.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0"
+  }
+}

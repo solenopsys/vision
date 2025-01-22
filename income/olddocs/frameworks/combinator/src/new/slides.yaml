@@ -1,0 +1,26 @@
+slides:
+  - abstract: "?"
+  - problem: "What are the problem?"
+  - solution: "What is the general concept?"
+  - profit: "What are the profits?"
+  - architecture: "What is the architecture?"
+  - hubs: "What hubs will be developed?"
+  - modules: "What modules will be developed?"
+  - smartmodules: "What will be the smart modules?"
+  - powergrid: "What power will be used?"
+  - connnectors: "What are the connectors?"
+  - future: "What will be the future?"
+  
+ideas:
+
+
+   решение: 
+     - стандартизированные модули и разъемы  
+     - новая архитектура на основе FPGA обеспечивает совместимость
+     - слой подачи питания
+     - смарт модули 
+     - функция определяется программным обеспечением
+   profit:
+     - низкие затраты за счет массового производства, универсальности 
+     - простота развертывания
+     - возможно переиспользование и 

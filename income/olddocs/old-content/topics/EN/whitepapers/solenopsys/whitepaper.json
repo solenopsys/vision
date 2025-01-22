@@ -1,0 +1,24 @@
+{
+  "cover": {
+    "image": "/content/topics/EN/whitepapers/solenopsys/images/robotics.png"
+  },
+  "pages":[
+    {
+      "key": "problem",
+      "title": "В чем заключается проблема?"
+    },
+    {
+      "key": "goals",
+      "title": "Какие ставим перед собой цели?"
+    },
+    {
+      "key": "strategy",
+      "title": "Как мы собираемся решать проблему?"
+    },
+    {
+      "key": "community",
+      "title": "Кто мы такие?"
+    }
+  ]
+  
+}

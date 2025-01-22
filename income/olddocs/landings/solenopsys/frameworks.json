@@ -1,0 +1,33 @@
+{
+	"title": "Technology",
+	"tiles": [
+		{
+			"name": "Converged",
+			"description": "Ui framework",
+			"link": "/technology/converged/",
+			"image": "./images/converged.png",
+			"logo": "./images/converged.svg"
+		},
+		{
+			"name": "Detonation",
+			"description": "Computing framework",
+			"link": "/technology/detonation/",
+			"image": "./images/detonation.png",
+			"logo": "./images/detonation.svg"
+		},
+		{
+			"name": "Combinator",
+			"description": "Industrial framework",
+			"link": "/technology/combinator/",
+			"image": "./images/combinator.png",
+			"logo": "./images/combinator.svg"
+		},
+		{
+			"name": "Graphene",
+			"description": "Archeture framework",
+			"link": "/technology/graphene/",
+			"image": "./images/graphene.png",
+			"logo": "./images/graphene.svg"
+		}
+	]
+}
