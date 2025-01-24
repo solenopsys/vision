@@ -1,6 +1,7 @@
+ 
 
-const yaml = require("js-yaml");
-const fs = require("fs");
+import yaml from "js-yaml"
+import fs from "fs"
 
 export function loadFile(name: string): any {
 	return fs.readFileSync(name, "utf8"); // todo convert to bun function

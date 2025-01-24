@@ -1,4 +1,4 @@
-import {DirProcessor} from "./dir";
+import {DirProcessor} from "../core/dir";
 import IpfsApi from "./ipfs";
 import {MdProcessor} from "./md";
 import {exportMdFileToIpfs} from "./ipfs";
