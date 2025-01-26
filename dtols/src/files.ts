@@ -8,7 +8,7 @@ export function loadFile(name: string): any {
 }
 
 export function loadYaml(name: string): any {
-	console.log("FILE", name);
+
 	try {
 		const doc = yaml.load(loadFile(name));
 		//console.log(doc);
@@ -16,6 +16,28 @@ export function loadYaml(name: string): any {
 	} catch (e) {
 		console.log(e);
 	}
+}
+
+export function  makePaths(base: string) {
+  const keys = Object.keys(this.pathsTree).sort(sortByDepth);
+  
+  for (let key of keys) {
+   const strings: string[] = key.split("/");
+   let lastPath: string | undefined = strings.pop();
+   if (lastPath === "") {
+    lastPath = strings.pop();
+   }
+   if (lastPath === "") {
+    lastPath = base;
+   }
+   if (lastPath === undefined) {
+    throw new Error("No path");
+   }
+   this.paths[key] = {
+    isDir: this.pathsTree[key].length > 0,
+    name: lastPath,
+   };
+  }
 }
 
 export function sortByDepth(a: string, b: string): number {

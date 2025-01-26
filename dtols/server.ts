@@ -1,6 +1,6 @@
 import { serve, file } from "bun";
 
-const TEMPLATES_PATH = "./src/server/templates/";
+const TEMPLATES_PATH = "../docs/";
 
 serve({
 	port: 8888,
@@ -21,6 +21,11 @@ serve({
 			const url = new URL(req.url);
 			console.log("PNG", url.pathname);
 			return new Response(file("." +  url.pathname));
+		}
+
+		if (req.url.endsWith(".css")) {
+			const url = new URL(req.url); 
+			return new Response(file("../docs"+url.pathname));
 		}
         
 		return new Response(file(TEMPLATES_PATH + "index.html"));
