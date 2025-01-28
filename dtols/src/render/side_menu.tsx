@@ -15,7 +15,7 @@ export interface SideMenuProps {
   items: GroupMenuItem[];
 }
 
-export const SideMenu: Component<SideMenuProps> = ( items:GroupMenuItem[] ) => {
+export const SideMenu: Component<SideMenuProps> = (prefix:string, items:GroupMenuItem[] ) => {
   return (
     <div class="side-menu">
       <nav class="flex flex-col space-y-4">
@@ -25,7 +25,7 @@ export const SideMenu: Component<SideMenuProps> = ( items:GroupMenuItem[] ) => {
             <div class="flex flex-col space-y-2 pl-4">
               {group.items.map(item => (
                 <div><a 
-                  href={item.link}
+                  href={prefix+item.link}
                   class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200"
                 >
                   {item.title}

@@ -8,9 +8,9 @@ import { SideMenu } from "./side_menu";
 
  
 
-export async function renderPage(mdArray: any[], out: string, menuItems: MenuItem[] = []) {
+export async function renderPage(prefix:string,mdArray: any[], out: string, menuItems: MenuItem[] = []) {
   const pageMarkup = await renderToString(Page(mdArray));
-  const menuMarkup =await renderToString(SideMenu(menuItems)); 
+  const menuMarkup =await renderToString(SideMenu(prefix,menuItems)); 
 
   console.log("menuMarkup",menuMarkup);
   
@@ -22,7 +22,7 @@ export async function renderPage(mdArray: any[], out: string, menuItems: MenuIte
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-       <link href="/style.css" rel="stylesheet">
+       <link href="${prefix}/style.css" rel="stylesheet">
   
 </head>
 <body>

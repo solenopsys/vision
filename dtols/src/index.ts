@@ -4,13 +4,14 @@ import { renderPage } from "./render/gen";
 import { mkdirsSync } from "fs-extra";
 import { convertMenuStructure } from "./menu_converter";
 
-
-const root = "../RU";
-const out="../docs";
+const prefix="/vision"
+const lang="RU"
+const root = "../";
+const out="../docs/";
 
  
 async function genPages(root: string,outDir:string) {
-   const obj = await loadMenu(root, "");
+   const obj = await loadMenu(root+lang , "");
    console.log(JSON.stringify(obj, null, 4));
  
 
@@ -22,7 +23,7 @@ async function genPages(root: string,outDir:string) {
    const paths = getPathsFromMenu(obj);
    for (const path of paths) {
       console.log(path);
-      const fullPath = root + path;
+      const fullPath = root+lang + path;
       
       const pathsTree = loadRecursive(fullPath);
     
@@ -34,19 +35,19 @@ async function genPages(root: string,outDir:string) {
       for (const pathMd in pathsMD) {
 
          if (pathsMD[pathMd].length > 0) {
-            files.push(root+path + pathMd + "index.md");
+            files.push(root+ lang+path + pathMd + "index.md");
          } else {
             let lp =
-               files.push(root+path + pathMd + ".md");
+               files.push(root+ lang+path + pathMd + ".md");
          }
 
       }
 
      // console.log(files);
-      const destPath=outDir+path;
+      const destPath=outDir+lang+path;
        mkdirsSync(destPath);
 
-      await renderPage(files,destPath+"/index.html",groupedMenu);
+      await renderPage(prefix+"/"+lang,files,destPath+"/index.html",groupedMenu);
    }
 
 
