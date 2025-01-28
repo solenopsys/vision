@@ -47,7 +47,7 @@ async function genPages(root: string,outDir:string) {
       const destPath=outDir+lang+path;
        mkdirsSync(destPath);
 
-      await renderPage(prefix ,files,destPath+"/index.html",groupedMenu);
+      await renderPage(prefix,lang ,files,destPath+"/index.html",groupedMenu);
    }
 
 

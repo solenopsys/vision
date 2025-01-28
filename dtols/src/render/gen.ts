@@ -8,9 +8,9 @@ import { SideMenu } from "./side_menu";
 
  
 
-export async function renderPage(prefix:string,mdArray: any[], out: string, menuItems: MenuItem[] = []) {
+export async function renderPage(prefix:string,lang:string,mdArray: any[], out: string, menuItems: MenuItem[] = []) {
   const pageMarkup = await renderToString(Page(mdArray));
-  const menuMarkup =await renderToString(SideMenu(prefix,menuItems)); 
+  const menuMarkup =await renderToString(SideMenu(prefix+"/"+lang,menuItems)); 
 
   console.log("menuMarkup",menuMarkup);
   
