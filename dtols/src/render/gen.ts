@@ -2,29 +2,17 @@ import "./setup";
 import fs from "fs";
 import { renderToString } from "@solenopsys/converged-renderer";
 import { Page } from "./page";
+import { SideMenu } from "./side_menu";
 
-interface MenuItem {
-  title: string;
-  link: string;
-}
+ 
 
-const SideMenu = (items: MenuItem[]) => {
-  return `
-    <div class="side-menu">
-      <nav>
-        ${items.map(item => `
-          <a href="${item.link}" class="menu-item">
-            ${item.title}
-          </a>
-        `).join('')}
-      </nav>
-    </div>
-  `;
-};
+ 
 
 export async function renderPage(mdArray: any[], out: string, menuItems: MenuItem[] = []) {
   const pageMarkup = await renderToString(Page(mdArray));
-  const menuMarkup = SideMenu(menuItems); 
+  const menuMarkup =await renderToString(SideMenu(menuItems)); 
+
+  console.log("menuMarkup",menuMarkup);
   
   const html = `
 <!DOCTYPE html>
@@ -38,7 +26,7 @@ export async function renderPage(mdArray: any[], out: string, menuItems: MenuIte
   
 </head>
 <body>
-    ${menuMarkup}
+    ${menuMarkup} 
     <div class="content">
         ${pageMarkup}
     </div>
