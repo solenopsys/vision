@@ -1,0 +1,11 @@
+include:
+  overview: "Введение в фреймворк Organic"
+  
+
+status:
+  index: ok
+  overview: ok
+   
+
+todo:
+  - оптимизировать текст для b2b  

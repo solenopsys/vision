@@ -1,0 +1,14 @@
+include:
+  target: "What will it be used for?"
+  name: "Why is it named like that?"
+  intro: "What is Converged?"
+  about: "What is it for?"
+  arh: "How is it structured?"
+  difference: "What is the difference?"
+  devices: "On which devices can it be used?"
+  modules: "How are modules loaded?"
+  connections: "How can it connect to devices?"
+  compared: "What is the difference compared to existing technologies?"
+  advantages: "What are the advantages?"
+  architect: "What architectures are there?"
+ 

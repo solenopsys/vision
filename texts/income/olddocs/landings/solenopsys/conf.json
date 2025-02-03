@@ -1,0 +1,14 @@
+[
+	{
+		"component": "@solenopsys/ui-landing:Banner",
+		"data":"banner.json" 
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "frameworks.json" 
+	},
+	{
+		"component": "@solenopsys/ui-landing:TilesGroup",
+		"data": "ecosystem.json" 
+	}
+]

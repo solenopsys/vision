@@ -1,0 +1,19 @@
+### UiMatrix Elements
+- **Colors**: All interface elements are managed from a palette, including multiple palettes, with primary options being black and white.
+- **Layouts**: Schemes for arranging individual elements on pages.
+- **Themes**: Comprehensive interface customization, encompassing colors, icons, sounds, images, and fonts.
+- **Grids**: Grids with standard element widths and heights.
+- **Icons**: Icon sets.
+- **Dialogs**: Various pop-up windows, tooltips, and dialogs.
+- **Sounds**: Sound sets for tactile interfaces, as DFUI is actively used with smartphones, tablets, and other touch devices.
+- **Typography**: Font sets and text styling.
+- **Editors**: Standard UI layout editor modes for various types of editors, such as 3D object editors, code editors, and text editors.
+- **Control Panels**: One of the framework's core functions is equipment management (industrial, scientific, measurement).
+- **Lists**: Various interface elements for displaying data sets, including tables, lists, tiles, and more.
+- **Diagrams**: A set of diagrams for visually representing different types of data.
+- **Localization**: Rules that adapt interface behavior depending on the language.
+- **Navigation**: Menus, breadcrumbs, and navigation panels.
+- **Notifications**: All aspects related to notifications, status panels, and pop-up notifications.
+- **Control Elements**: Any individual elements, including buttons, input fields, checkboxes, and more.
+- **Images**: Vector images for use in the interface.
+- **Forms**: Organization of data input forms.

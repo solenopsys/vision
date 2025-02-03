@@ -1,0 +1,9 @@
+include:
+   principles: "What are the principles?"
+   langs: "What programming languages are used?"
+   modules: "What are the modules?"
+   deploy: "How to deploy?"
+   databases: "What are the databases?"
+   dataservices: "What are the data services?"
+   cache: "What is the cache?"
+   requrements: "What are the minimum requirements?"

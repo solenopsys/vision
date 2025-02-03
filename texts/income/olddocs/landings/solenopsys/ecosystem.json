@@ -1,0 +1,21 @@
+{
+	"title": "Ecosystem",
+	"tiles": [
+		{
+			"name": "Community",
+			"description": "Community solenopsys"
+		},
+		{
+			"name": "Evolution",
+			"description": "Decentrasized platform"
+		},
+		{
+			"name": "Expansion",
+			"description": "DeFi platform for startups"
+		},
+		{
+			"name": "Matrix",
+			"description": "Code driven rules system"
+		}
+	]
+}

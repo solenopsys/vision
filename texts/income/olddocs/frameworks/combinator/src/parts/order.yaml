@@ -1,0 +1,9 @@
+include:
+  chips: "What chips will be developed?"
+  measurement: "What measurement modules will be created?"
+  grid: "What modules will be used for power supply?"
+  examples: "Examples of devices implementation based on Combinator?"
+
+  connectors: "What connectors will be used?"
+
+

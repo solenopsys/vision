@@ -1,0 +1,11 @@
+include:
+  technologies: "What are the technologies?"
+  microchips: "What are the microchips?"
+  synthesis: "What are the synthesis?"
+  testing: "What are the testing?"
+  measurements: "What are the measurements?"
+  production: "What are the products?"
+  hardware: "What are the hardware?"
+  software: "What are the software?"
+
+

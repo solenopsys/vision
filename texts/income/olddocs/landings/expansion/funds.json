@@ -1,0 +1,17 @@
+{
+	"title": "Funds",
+	"tiles": [
+		{
+			"name": "Microfunds",
+			"description": "Funds for technology development"
+		},
+        {
+			"name": "Venture Funds",
+			"description": "Crypto based venture funds"
+		},
+        {
+			"name": "Rings",
+			"description": "Fund for phisical infrastructure"
+		}
+	]
+}

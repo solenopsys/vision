@@ -1,0 +1,117 @@
+{
+  "$schema":"iusb-shema2.json",
+  "name": "iusb",
+  "type": "connector",
+  "spec": {
+    "render": {
+      "top": {
+        "reverse": false
+      },
+      "bottom": {
+        "reverse": true
+      }
+    },
+    "groups": {
+      "top": ["A1","A2","A3","A4","A5","A6","A7","A8","A9","A10","A11","A12"],
+      "bottom":["B1","B2","B3","B4","B5","B6","B7","B8","B9","B10","B11","B12"]
+    },
+    "pins": [
+      {
+        "id": "A1",
+        "direction": "in"
+      },
+      {
+        "id": "A2",
+        "direction": "out"
+      },
+      {
+        "id": "A3",
+        "direction": "in"
+      },
+        {
+            "id": "A4",
+            "direction": "out"
+        },
+        {
+            "id": "A5",
+            "direction": "in"
+        },
+        {
+            "id": "A6",
+            "direction": "out"
+        },
+        {
+            "id": "A7",
+            "direction": "in"
+        },
+        {
+            "id": "A8",
+            "direction": "out"
+        },
+        {
+            "id": "A9",
+            "direction": "in"
+        },
+        {
+            "id": "A10",
+            "direction": "out"
+        },
+        {
+            "id": "A11",
+            "direction": "in"
+        },
+        {
+            "id": "A12",
+            "direction": "out"
+        },
+        {
+            "id": "B1",
+            "direction": "in"
+        },
+        {
+            "id": "B2",
+            "direction": "out"
+        },
+        {
+            "id": "B3",
+            "direction": "in"
+        },
+        {
+            "id": "B4",
+            "direction": "out"
+        },
+        {
+            "id": "B5",
+            "direction": "in"
+        },
+        {
+            "id": "B6",
+            "direction": "out"
+        },
+        {
+            "id": "B7",
+            "direction": "in"
+        },
+        {
+            "id": "B8",
+            "direction": "out"
+        },
+        {
+            "id": "B9",
+            "direction": "in"
+        },
+        {
+            "id": "B10",
+            "direction": "out"
+        },
+        {
+            "id": "B11",
+            "direction": "in"
+        },
+        {
+            "id": "B12",
+            "direction": "out"
+        }
+    ]
+  }
+}

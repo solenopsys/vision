@@ -1,0 +1,7 @@
+header: "header.md"
+footer: "footer.md"
+items:
+  - plan: "free.yaml"
+  - plan: "basic.yaml"
+  - plan: "professional.yaml" 
+  - plan: "advance.yaml"

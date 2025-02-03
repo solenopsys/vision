@@ -1,0 +1,17 @@
+include:
+  "improvements": Какие улучшения по сравнению с Cap'n Proto?
+  "shemas": Схемы и генерация кода
+  "difference": Отличительные черты
+  "applied": Применение
+
+status:
+  index: ok
+  applied: ok  
+  difference: ok
+  improvements: ok
+  shemas: 
+    - нужно дополнить схемой структуры данных
+
+todo:
+  - сделать логотип в более строгом стиле
+  - оптимизировать текст для b2b

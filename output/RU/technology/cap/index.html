@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Фреймворки</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/frameworks/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/frameworks/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><h1>CAP (Copyless Access Protocol)</h1>
+<p>CAP является краеугольным камнем инфраструктуры Solenopsys, определяющим формат сообщений, интерфейсов и структур данных. Этот протокол сериализации унаследован от Cap'n Proto, но переработан для эффективной работы в децентрализованной среде, представляя собой его минималистичного младшего брата.</p>
+<p>Название "CAP" (Copyless Access Protocol) было выбрано намеренно кратким по сравнению с более длинным названием его предшественника Cap'n Proto. Такое решение продиктовано практическими соображениями - более короткое название проще писать и запоминать.</p>
+</div><div><h2>Ключевые улучшения по сравнению с Cap'n Proto</h2>
+<p>Протокол принципиально отличается от Cap'n Proto в нескольких ключевых аспектах:</p>
+<ol>
+<li><p><strong>Отказ от случайных ID</strong>: Вместо использования случайных id, используются хеши узлов схемы, что исключает дублирование и конфликты в хранилище схем.</p>
+</li>
+<li><p><strong>Отказ от текстовых схем</strong>: Вместо текстового формата используется бинарный граф для более эффективного хранения и обработки схем.</p>
+</li>
+<li><p><strong>Генерация схем из TypeScript</strong>: Схемы генерируются непосредственно из типов TypeScript с помощью системы "organic", что делает разработку более интуитивной.</p>
+</li>
+<li><p><strong>Новый подход к хранению схем</strong>: Отказ от хранения схем в формате самого протокола в пользу использования CBOR для большей гибкости.</p>
+</li>
+<li><p><strong>Двухуровневая структура схемы</strong>:</p>
+<ul>
+<li>Packing (упаковка): описывает формат хранения байтов данных</li>
+<li>Mapping (сопоставление): связывает поля с именами функций для генерации кода</li>
+</ul>
+</li>
+<li><p><strong>Отказ от встроенного транспорта</strong>: Предоставление свободы выбора транспортного протокола.</p>
+</li>
+<li><p><strong>Поддержка перезаписи полей</strong>: Возможность перезаписи значений полей фиксированной длины без изменения структуры.</p>
+</li>
+</ol>
+</div><div><h2>Схемы и генерация кода</h2>
+<p>CAP использует бинарные графы схемы которые генерируются просто на основе типов TypeScript для определения интерфейсов и типов данных. Это делает разработку интуитивно понятной для разработчиков, знакомых с языком. Бинарный граф схемы служат основой для генерации кода на любом языке программирования через настраиваемые плагины. Для генерации необходимо всего лишь указать id-hash схемы.</p>
+</div><div><h2>Отличительные черты</h2>
+<ul>
+<li><strong>Использование хешей в место случайных id</strong>: Отсутвие дублирования и высокая надежность при хранении схем позволяет обеспечить более простую генерацию кода без конфликтов и дублирования.</li>
+<li><strong>Независимость от транспорта</strong>: Отсутствие встроенного транспортного уровня позволяет гибко использовать различные транспортные протоколы</li>
+<li><strong>TypeScript в основе</strong>: Схемы генерируются с помощью интерфейсов и типов TypeScript, что упрощает разработку</li>
+<li><strong>Строгое хранение схем</strong>: Использование CBOR сериализации для хранения схем CAP обеспечивает детерминированное хранение и валидацию на основе хешей</li>
+<li><strong>Гибкая генерация кода</strong>: Генератор кода написан на TypeScript, поддерживает множество языков и использует CLI Organic для расширяемой генерации</li>
+</ul>
+</div><div><h2>Применение</h2>
+<p>В инфраструктуре Solenopsys протокол CAP играет ключевую роль в обеспечении эффективного обмена данными. Его основное преимущество заключается в особом подходе к сериализации - в отличие от ProtoBuff, который выполняет полную сериализацию при получении пакета, CAP обращается к данным только в момент запроса конкретного поля. Это архитектурное решение существенно повышает производительность всей системы.</p>
+<h3>Мессенджинг и коммуникации</h3>
+<p>CAP обеспечивает многоуровневое взаимодействие компонентов системы:</p>
+<ul>
+<li>Связь между компонентами системы</li>
+<li>Обмен данными между пользовательским интерфейсом Converged (UI) и кластером Detonation</li>
+<li>Коммуникация между кластером и подключенными устройствами</li>
+<li>Прямое взаимодействие между UI и устройствами через WebSocket</li>
+</ul>
+<h3>Распределенное хранение данных</h3>
+<p>Протокол играет фундаментальную роль в файловой системе (SDFS), где он используется на всех уровнях архитектуры:</p>
+<ul>
+<li>Хранение метаданных файловой системы</li>
+<li>Управление драйверами файловой системы</li>
+<li>Организация распределенного хранения данных</li>
+</ul>
+</div></div>
+    </div>
+</body>
+</html>

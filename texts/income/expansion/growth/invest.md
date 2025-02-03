@@ -1,0 +1,3 @@
+### How are investments made?
+
+The Growth Team, which forms the Growth Funds, is responsible for selecting the sequence of funds and choosing projects for investment for each specific fund. The team works on selecting projects, while simultaneously accumulating funds for investment. Once the funds are accumulated, the fund is formed, and the investment in the selected projects is made automatically.

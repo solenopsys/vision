@@ -1,0 +1,31 @@
+{
+  "name": "landing-generator",
+  "version": "1.0.0",
+  "description": "Tools generate landing",
+  "main": "index.js",
+  "type": "commonjs",
+ 
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@biomejs/biome": "1.6.4",
+    "@elysiajs/static": "^1.2.0",
+    "@solenopsys/converged-renderer": "^1.0.12",
+    "jsdom": "^26.0.0",
+    "lightningcss": "^1.29.1",
+    "marked": "^15.0.6",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.16"
+  },
+
+  "scripts":{
+    "prebuild":"bun build src/tools/generator.ts --platform=bun --outdir ./dest --external @solenopsys/converged-renderer --external marked --external yaml --external @fileio",
+    "genhtml": "bun ./src/tools/static.ts",
+    "all": "npm run prebuild && npm run genhtml",
+    "serve": "bun run ./src/tools/server.ts"
+  }
+ 
+}

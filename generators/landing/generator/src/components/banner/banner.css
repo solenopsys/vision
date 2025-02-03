@@ -1,0 +1,7 @@
+.banner-image {
+   width: 100%;
+   height: 500px; /* или другая желаемая высота */
+   object-fit: cover;
+   object-position: center; /* контролирует позицию изображения */
+   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+ }

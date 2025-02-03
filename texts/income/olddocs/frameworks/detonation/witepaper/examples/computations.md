@@ -1,0 +1,35 @@
+### Types of Computations Examples
+
+- **Machine Learning**
+    - PCB (Printed Circuit Board) tracing
+    - Component placement
+    - Electronic chip synthesis
+    - Optimization
+    - Machine vision
+- **CNC Program Generation**
+    - Slicing for 3D printing
+    - CNC machine programs
+- **Software Compilation and Computer Logic Synthesis**
+    - Program compilation
+    - FPGA configurations
+    - Electronic chip configurations
+- **Generative Design**
+    - Generative design for 3D printing
+    - Finite element analysis
+    - Parametric optimization
+    - Design optimization for 3D printing
+- **Physical Process Simulation**
+    - Electromagnetic modeling
+    - Material flow modeling
+    - Heat transfer modeling
+    - Computational chemistry
+    - Mechanical process modeling
+- **Electronics Simulation**
+    - Electronic circuit operation modeling
+    - High-frequency data transmission line matching on PCBs
+    - PCB tracing
+    - Computer logic verification
+- **Data Analysis and Processing**
+    - Sensor data processing
+    - Log processing
+    - Streaming data transformation

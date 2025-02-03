@@ -1,0 +1,11 @@
+items:
+  - banner: "/images/factory5.webp"
+  - md: "../texts/mission.md" # В чем заключается миссия клуба
+  - md: "../texts/difference.md" # Чем клуб отличается от агрегаторов
+  - md: "../texts/problems.md" # Какие проблемы решает клуб
+  - md: "../texts/profit.md" # В чем выгода от участия в клубе
+  - plan: "../texts/plans" # Сколько нужно платить, и какие тарифные планы есть?
+
+
+  - banner: "/images/factory4.webp"
+  - md: "../texts/bujet.md"

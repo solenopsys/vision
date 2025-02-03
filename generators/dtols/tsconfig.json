@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+ 
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "types": [
+      "bun-types" // add Bun global
+    ],
+    "jsx": "preserve",
+    "jsxImportSource": "@solenopsys/converged-renderer",
+    "paths":{
+      "@solenopsys/converged-reactive":["./src/server/templates/libraries/solenopsys/converged-reactive/index.js"],
+      "@solenopsys/converged-renderer":["./src/server/templates/libraries/solenopsys/converged-renderer/index.js"],
+      "@solenopsys/converged-renderer/jsx-dev-runtime":["./src/server/templates/libraries/solenopsys/converged-renderer/index.js"]
+    }
+  }
+
+      
+     
+   
+}

@@ -1,0 +1,14 @@
+{
+	"name": "Low power robotics (up to 240 watts)",
+	"target": "3D printers (FDM)",
+	"microfunds": [
+		{ "product":"hub_8"},
+		{ "product":"stm32_arm_core"},
+        { "product":"power_relay_48v"},
+        { "product":"usb_module"},
+        { "product": "stepper_driver"},
+		{ "product":"termal_sensor"},
+		{ "product":"end_sensor"},
+        { "product":"optical_sensor"}
+	]
+}

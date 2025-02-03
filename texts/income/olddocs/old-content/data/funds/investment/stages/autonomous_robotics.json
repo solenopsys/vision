@@ -1,0 +1,12 @@
+{
+	"name": "Autonomous robotics drones & Autonomous power management",
+	"target": "robots and drones",
+	"microfunds": [
+		{ "product":"battery_controller"},
+		{ "product":"charging_controller"},
+		{ "product":"ecs_1000w"},
+		{ "product":"wifi_module"},
+    { "product":	"gps_module"},
+    { "product":	"accelerometer"}
+	]
+}

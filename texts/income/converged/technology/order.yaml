@@ -1,0 +1,6 @@
+include:
+  development: "What are the development tools?"
+  runtime: "What are the runtime tools?"
+  core: "What are the core modules?"
+  libraries: "What are the libraries?"
+  microfrontends: "What are the microfrontends?"
