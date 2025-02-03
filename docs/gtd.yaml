@@ -1,0 +1,16 @@
+RU:
+  technology:
+    cap: ok
+    sdfs: 
+      - Попробовать заджойнить с помощью o1 gemini 
+    shock: ok
+    slice: 
+      - Создать структуру
+  tools:
+    cocon: 
+      - vector logo 
+    fuze: 
+      - Нужно создать структуру  
+    sp2p  
+      - Нужно смерджить
+      - Создать структуру

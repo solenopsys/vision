@@ -7,7 +7,7 @@ import { convertMenuStructure } from "./menu_converter";
 const prefix="/vision"
 const lang="RU"
 const root = "../../texts/";
-const out="../../output/";
+const out="../../docs/";
 
  
 async function genPages(root: string,outDir:string) {
