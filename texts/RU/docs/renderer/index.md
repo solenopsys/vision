@@ -23,29 +23,29 @@ This works similarly to [Solid](https://www.solidjs.com), but without a custom B
 
 
 
-| [Methods](./methods/) | [Components](./components/) | [Hooks Core](./hooks-core/) | [Hooks Web](./hooks-web/) |
+| [Methods](./) | [Components](./) | [Hooks Core](./) | [Hooks Web](./) |
 | ------------------------------------ | ----------------------------- | ----------------------------- | ----------------------------- |
-| [`$`](./methods/#s)                  | [`Dynamic`](./components/#dynamic) | [`useBoolean`](./hooks-core/#useboolean) | [`useAbortController`](./hooks-web/#useabortcontroller) |
-| [`$$`](./methods/#ss)                | [`ErrorBoundary`](./components/#errorboundary) | [`useCleanup`](./hooks-core/#usecleanup) | [`useAbortSignal`](./hooks-web/#useabortsignal) |
-| [`batch`](./methods/#batch)          | [`For`](./components/#for)   | [`useContext`](./hooks-core/#usecontext) | [`useAnimationFrame`](./hooks-web/#useanimationframe) |
-| [`createContext`](./methods/#createcontext) | [`Fragment`](./components/#fragment) | [`useDisposed`](./hooks-core/#usedisposed) | [`useAnimationLoop`](./hooks-web/#useanimationloop) |
-| [`createDirective`](./methods/#createdirective) | [`If`](./components/#if)     | [`useEffect`](./hooks-core/#useeffect) | [`useEventListener`](./hooks-web/#useeventlistener) |
-| [`createElement`](./methods/#createelement) | [`KeepAlive`](./components/#keepalive) | [`useMemo`](./hooks-core/#usememo) | [`useFetch`](./hooks-web/#usefetch) |
-| [`h`](./methods/#h)                  | [`Portal`](./components/#portal) | [`usePromise`](./hooks-core/#usepromise) | [`useIdleCallback`](./hooks-web/#useidlecallback) |
-| [`hmr`](./methods/#hmr)              | [`Suspense`](./components/#suspense) | [`useReadonly`](./hooks-core/#usereadonly) | [`useIdleLoop`](./hooks-web/#useidleloop) |
-| [`html`](./methods/#html)            | [`Switch`](./components/#switch) | [`useResolved`](./hooks-core/#useresolved) | [`useInterval`](./hooks-web/#useinterval) |
-| [`isBatching`](./methods/#isbatching) | [`Ternary`](./components/#ternary) | [`useResource`](./hooks-core/#useresource) | [`useMicrotask`](./hooks-web/#usemicrotask) |
-| [`isObservable`](./methods/#isobservable) | [`DynamicLazy`](./components/#dynamicLazy) | [`useRoot`](./hooks-core/#useroot) | [`useTimeout`](./hooks-web/#usetimeout) |
-| [`isServer`](./methods/#isserver)    |                              | [`useSelector`](./hooks-core/#useselector) |                             |
-| [`isStore`](./methods/#isstore)      |                              | [`useSuspended`](./hooks-core/#usesuspended) |                             |
-| [`lazy`](./methods/#lazy)            |                              | [`useUntracked`](./hooks-core/#useuntracked) |                             |
-| [`render`](./methods/#render)        |                              |                              |                             |
-| [`renderToString`](./methods/#rendertostring) |                              |                              |                             |
-| [`resolve`](./methods/#resolve)      |                              |                              |                             |
-| [`store`](./methods/#store)          |                              |                              |                             |
-| [`template`](./methods/#template)    |                              |                              |                             |
-| [`tick`](./methods/#tick)            |                              |                              |                             |
-| [`untrack`](./methods/#untrack)      |                              |                              |                             |
+| [`$`](./#s)                  | [`Dynamic`](./#dynamic) | [`useBoolean`](./#useboolean) | [`useAbortController`](./#useabortcontroller) |
+| [`$$`](./#ss)                | [`ErrorBoundary`](./#errorboundary) | [`useCleanup`](./#usecleanup) | [`useAbortSignal`](./#useabortsignal) |
+| [`batch`](./#batch)          | [`For`](./#for)   | [`useContext`](./#usecontext) | [`useAnimationFrame`](./#useanimationframe) |
+| [`createContext`](./#createcontext) | [`Fragment`](./#fragment) | [`useDisposed`](./#usedisposed) | [`useAnimationLoop`](./#useanimationloop) |
+| [`createDirective`](./#createdirective) | [`If`](./#if)     | [`useEffect`](./#useeffect) | [`useEventListener`](./#useeventlistener) |
+| [`createElement`](./#createelement) | [`KeepAlive`](./#keepalive) | [`useMemo`](./#usememo) | [`useFetch`](./#usefetch) |
+| [`h`](./#h)                  | [`Portal`](./#portal) | [`usePromise`](./#usepromise) | [`useIdleCallback`](./#useidlecallback) |
+| [`hmr`](./#hmr)              | [`Suspense`](./#suspense) | [`useReadonly`](./#usereadonly) | [`useIdleLoop`](./#useidleloop) |
+| [`html`](./#html)            | [`Switch`](./#switch) | [`useResolved`](./#useresolved) | [`useInterval`](./#useinterval) |
+| [`isBatching`](./#isbatching) | [`Ternary`](./#ternary) | [`useResource`](./#useresource) | [`useMicrotask`](./#usemicrotask) |
+| [`isObservable`](./#isobservable) | [`DynamicLazy`](./#dynamicLazy) | [`useRoot`](./#useroot) | [`useTimeout`](./#usetimeout) |
+| [`isServer`](./#isserver)    |                              | [`useSelector`](./#useselector) |                             |
+| [`isStore`](./#isstore)      |                              | [`useSuspended`](./#usesuspended) |                             |
+| [`lazy`](./#lazy)            |                              | [`useUntracked`](./#useuntracked) |                             |
+| [`render`](./#render)        |                              |                              |                             |
+| [`renderToString`](./#rendertostring) |                              |                              |                             |
+| [`resolve`](./#resolve)      |                              |                              |                             |
+| [`store`](./#store)          |                              |                              |                             |
+| [`template`](./#template)    |                              |                              |                             |
+| [`tick`](./#tick)            |                              |                              |                             |
+| [`untrack`](./#untrack)      |                              |                              |                             |
 
 
 

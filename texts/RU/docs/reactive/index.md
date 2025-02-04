@@ -11,24 +11,24 @@ npm install --save reactive
 
 ## APIs
 
-| [Core](./core/)                     | [Flow](./flow/)             | [Utilities](./utilities/)     | [Types](./types/)                                     |
+| [Core](./)                     | [Flow](./)             | [Utilities](./)     | [Types](./)                                     |
 | --------------------------------- | ------------------------- | --------------------------- | --------------------------------------------------- |
-| [`$()`](./core/#s)                    | [`$.if`](./flow/#if)             | [`$.boolean`](./utilities/#boolean)     | [`EffectOptions`](./types/#effectoptions)                   |
-| [`$.batch`](./core/#batch)               | [`$.for`](./flow/#for)           | [`$.disposed`](./utilities/#disposed)   | [`ForOptions`](./types/#foroptions)                         |
-| [`$.cleanup`](./core/#cleanup)           | [`$.suspense`](./flow/#suspense) | [`$.get`](./utilities/#get)             | [`MemoOptions`](./types/#memooptions)                       |
-| [`$.context`](./core/#context)           | [`$.switch`](./flow/#switch)     | [`$.readonly`](./utilities/#readonly)   | [`Observable`](./types/#observable)                         |
-| [`$.effect`](./core/#effect)             | [`$.ternary`](./flow/#ternary)   | [`$.resolve`](./utilities/#resolve)     | [`ObservableLike`](./types/#observablelike)                 |
-| [`$.isBatching`](./core/#isbatching)     | [`$.tryCatch`](./flow/#trycatch) | [`$.selector`](./utilities/#selector)   | [`ObservableReadonly`](./types/#observablereadonly)         |
-| [`$.isObservable`](./core/#isobservable) |                           | [`$.suspended`](./utilities/#suspended) | [`ObservableReadonlyLike`](./types/#observablereadonlylike) |
-| [`$.isStore`](./core/#isstore)           |                           | [`$.untracked`](./utilities/#untracked) | [`ObservableOptions`](./types/#observableoptions)           |
-| [`$.memo`](./core/#memo)                 |                           |                             | [`StoreOptions`](./types/#storeoptions)                     |
-| [`$.observable`](./core/#observable)     |                           |                             |                                                     |
-| [`$.owner`](./core/#owner)               |                           |                             |                                                     |
-| [`$.root`](./core/#root)                 |                           |                             |                                                     |
-| [`$.store`](./core/#store)               |                           |                             |                                                     |
-| [`$.tick`](./core/#tick)                 |                           |                             |                                                     |
-| [`$.untrack`](./core/#untrack)           |                           |                             |                                                     |
-| [`$.with`](./core/#with)                 |                           |                             |                                                     |
+| [`$()`](./#s)                    | [`$.if`](./#if)             | [`$.boolean`](./#boolean)     | [`EffectOptions`](./#effectoptions)                   |
+| [`$.batch`](./#batch)               | [`$.for`](./#for)           | [`$.disposed`](./#disposed)   | [`ForOptions`](./#foroptions)                         |
+| [`$.cleanup`](./#cleanup)           | [`$.suspense`](./#suspense) | [`$.get`](./#get)             | [`MemoOptions`](./#memooptions)                       |
+| [`$.context`](./#context)           | [`$.switch`](./#switch)     | [`$.readonly`](./#readonly)   | [`Observable`](./#observable)                         |
+| [`$.effect`](./#effect)             | [`$.ternary`](./#ternary)   | [`$.resolve`](./#resolve)     | [`ObservableLike`](./#observablelike)                 |
+| [`$.isBatching`](./#isbatching)     | [`$.tryCatch`](./#trycatch) | [`$.selector`](./#selector)   | [`ObservableReadonly`](./#observablereadonly)         |
+| [`$.isObservable`](./#isobservable) |                           | [`$.suspended`](./#suspended) | [`ObservableReadonlyLike`](./#observablereadonlylike) |
+| [`$.isStore`](./#isstore)           |                           | [`$.untracked`](./#untracked) | [`ObservableOptions`](./#observableoptions)           |
+| [`$.memo`](./#memo)                 |                           |                             | [`StoreOptions`](./#storeoptions)                     |
+| [`$.observable`](./#observable)     |                           |                             |                                                     |
+| [`$.owner`](./#owner)               |                           |                             |                                                     |
+| [`$.root`](./#root)                 |                           |                             |                                                     |
+| [`$.store`](./#store)               |                           |                             |                                                     |
+| [`$.tick`](./#tick)                 |                           |                             |                                                     |
+| [`$.untrack`](./#untrack)           |                           |                             |                                                     |
+| [`$.with`](./#with)                 |                           |                             |                                                     |
 
 ## Usage
 
