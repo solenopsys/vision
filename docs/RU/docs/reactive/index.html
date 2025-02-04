@@ -1,0 +1,1266 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div><div><a href="/vision/RU/business/robotization" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Фонд Robotization</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Фреймворки</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/frameworks/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/frameworks/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Документация</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/docs/reactive" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Reactive</a></div><div><a href="/vision/RU/docs/renderer" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Renderer</a></div><div><a href="/vision/RU/docs/router" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Router</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><h1>Reactive</h1>
+<p>A rich Observable/Signal implementation, the brilliant primitive you need to build a powerful reactive system.</p>
+<h2>Install</h2>
+<pre><code class="language-sh">npm install --save reactive
+</code></pre>
+<h2>APIs</h2>
+<table>
+<thead>
+<tr>
+<th><a href="./core/">Core</a></th>
+<th><a href="./flow/">Flow</a></th>
+<th><a href="./utilities/">Utilities</a></th>
+<th><a href="./types/">Types</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./core/#s"><code>$()</code></a></td>
+<td><a href="./flow/#if"><code>$.if</code></a></td>
+<td><a href="./utilities/#boolean"><code>$.boolean</code></a></td>
+<td><a href="./types/#effectoptions"><code>EffectOptions</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#batch"><code>$.batch</code></a></td>
+<td><a href="./flow/#for"><code>$.for</code></a></td>
+<td><a href="./utilities/#disposed"><code>$.disposed</code></a></td>
+<td><a href="./types/#foroptions"><code>ForOptions</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#cleanup"><code>$.cleanup</code></a></td>
+<td><a href="./flow/#suspense"><code>$.suspense</code></a></td>
+<td><a href="./utilities/#get"><code>$.get</code></a></td>
+<td><a href="./types/#memooptions"><code>MemoOptions</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#context"><code>$.context</code></a></td>
+<td><a href="./flow/#switch"><code>$.switch</code></a></td>
+<td><a href="./utilities/#readonly"><code>$.readonly</code></a></td>
+<td><a href="./types/#observable"><code>Observable</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#effect"><code>$.effect</code></a></td>
+<td><a href="./flow/#ternary"><code>$.ternary</code></a></td>
+<td><a href="./utilities/#resolve"><code>$.resolve</code></a></td>
+<td><a href="./types/#observablelike"><code>ObservableLike</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#isbatching"><code>$.isBatching</code></a></td>
+<td><a href="./flow/#trycatch"><code>$.tryCatch</code></a></td>
+<td><a href="./utilities/#selector"><code>$.selector</code></a></td>
+<td><a href="./types/#observablereadonly"><code>ObservableReadonly</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#isobservable"><code>$.isObservable</code></a></td>
+<td></td>
+<td><a href="./utilities/#suspended"><code>$.suspended</code></a></td>
+<td><a href="./types/#observablereadonlylike"><code>ObservableReadonlyLike</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#isstore"><code>$.isStore</code></a></td>
+<td></td>
+<td><a href="./utilities/#untracked"><code>$.untracked</code></a></td>
+<td><a href="./types/#observableoptions"><code>ObservableOptions</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#memo"><code>$.memo</code></a></td>
+<td></td>
+<td></td>
+<td><a href="./types/#storeoptions"><code>StoreOptions</code></a></td>
+</tr>
+<tr>
+<td><a href="./core/#observable"><code>$.observable</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#owner"><code>$.owner</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#root"><code>$.root</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#store"><code>$.store</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#tick"><code>$.tick</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#untrack"><code>$.untrack</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./core/#with"><code>$.with</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Usage</h2>
+<p>The following functions are provided. They are just grouped and ordered alphabetically, the documentation for this library is relatively dry at the moment.</p>
+</div><div><h3>Core</h3>
+<p>The following core functions are provided. These are functions which can't be implemented on top of the library itself, and on top of which everything else is constructed.</p>
+</div><div><h4><code>$()</code></h4>
+<p>The main exported function wraps a value into an Observable, basically wrapping the value in a reactive shell.</p>
+<p>An Observable is a function that works both as a getter and as a setter, and it can be writable or read-only, it has the following interface:</p>
+<pre><code class="language-ts">type Observable&lt;T&gt; = {
+  (): T;
+  (value: T): T;
+  (fn: (value: T) =&gt; T): T;
+};
+
+type ObservableReadonly&lt;T&gt; = {
+  (): T;
+};
+</code></pre>
+<p>The <code>$()</code> function has the following interface:</p>
+<pre><code class="language-ts">type ObservableOptions&lt;T&gt; = {
+  equals?: ((value: T, valuePrev: T) =&gt; boolean) | false;
+};
+
+function $&lt;T&gt;(): Observable&lt;T | undefined&gt;;
+function $&lt;T&gt;(
+  value: undefined,
+  options?: ObservableOptions&lt;T | undefined&gt;,
+): Observable&lt;T | undefined&gt;;
+function $&lt;T&gt;(value: T, options?: ObservableOptions&lt;T&gt;): Observable&lt;T&gt;;
+</code></pre>
+<p>This is how to use it:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create an Observable without an initial value
+
+$&lt;number&gt;();
+
+// Create an Observable with an initial value
+
+$(1);
+
+// Create an Observable with an initial value and a custom equality function
+
+const equals = (value, valuePrev) =&gt; Object.is(value, valuePrev);
+
+const o = $(1, { equals });
+
+// Create an Observable with an initial value and a special "false" equality function, which is a shorthand for `() =&gt; false`, which causes the Observable to always notify its observers when its setter is called
+
+const oFalse = $(1, { equals: false });
+
+// Getter
+
+o(); // =&gt; 1
+
+// Setter
+
+o(2); // =&gt; 2
+
+// Setter via a function, which gets called with the current value
+
+o((value) =&gt; value + 1); // =&gt; 3
+
+// Setter that sets a function, it has to be wrapped in another function because the above form exists
+
+const noop = () =&gt; {};
+
+o(() =&gt; noop);
+</code></pre>
+</div><div><h4><code>$.batch</code></h4>
+<p>Synchronous calls to Observables' setters are batched automatically for you, so unless you explicitly call a memo, or you explicitly use a synchronous effect, no computations will be re-executed until the next microtask, providing you with a pretty convenient performance guarantee. So 99.9% of the time you don't really have think about batching updates at all.</p>
+<p>Asynchronous calls to Observable's setters though are not batched automatically, so in the niche use case where you want to pause re-executions of effects for an arbitrary period of time, until the provided function resolves, that's when you will want to use this function.</p>
+<ul>
+<li><strong>Note</strong>: Calling this function with a function that doesn't return a Promise is pointless, but that's supported for convenience too, it will just not do anything special.</li>
+<li><strong>Note</strong>: This is an advanced function that you may very well never need to call, and at most may just improve performance in some edge cases.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function batch&lt;T&gt;(fn: () =&gt; Promise&lt;T&gt; | T): Promise&lt;Awaited&lt;T&gt;&gt;;
+function batch&lt;T&gt;(fn: T): Promise&lt;Awaited&lt;T&gt;&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Batch updates until the provided async function resolves
+
+const o = $(0);
+
+$.effect(() =&gt; {
+  console.log(o());
+});
+
+$.batch(async () =&gt; {
+  o(1);
+  o(2);
+  o(3);
+
+  // Here the effect has not been called yet, because setters were called synchronously
+  // Even without explicitly batching, synchronous calls to setters will be batched for you automatically
+
+  await someAsyncAction();
+
+  // Here the effect has still not been called, because we are explicitly batching on an async function
+  // Without batching the effect would have been called by now
+});
+</code></pre>
+</div><div><h4><code>$.cleanup</code></h4>
+<p>This function allows you to register cleanup functions, which are executed automatically whenever the parent memo/effect/root is disposed of, which also happens before re-executing it.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function cleanup(fn: () =&gt; void): void;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Attaching some cleanup functions to an effect
+
+const callback = $(() =&gt; {});
+
+$.effect(() =&gt; {
+  const cb = callback();
+
+  document.body.addEventListener("click", cb);
+
+  $.cleanup(() =&gt; {
+    // Registering a cleanup function with the parent
+
+    document.body.removeEventListener("click", cb);
+  });
+
+  $.cleanup(() =&gt; {
+    // You can have as many cleanup functions as you want
+
+    console.log("cleaned up!");
+  });
+});
+
+await nextTask(); // Giving the effect a chance to run
+
+callback(() =&gt; () =&gt; {}); // Causing the effect to be scheduled for re-execution
+
+await nextTask(); // Giving the effect a chance to run. Once it runs it will call the previous cleanup functions and register new ones
+</code></pre>
+</div><div><h4><code>$.context</code></h4>
+<p>This function provides a dependency injection mechanism, you can use it to provide arbitrary values to its inner scope, and those values can be read, or overridden, at any point inside that inner scope.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function context&lt;T&gt;(symbol: symbol): T | undefined; // Read
+function context&lt;T&gt;(context: Record&lt;symbol, any&gt;, fn: () =&gt; T): T; // Write
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Reading and writing some values in the context
+
+const token = Symbol("Some Context Key");
+
+$.context({ [token]: 123 }, () =&gt; {
+  // Writing a value to the context for the inner scope
+
+  const value = $.context(token); // Reading a value from the context
+
+  console.log(value); // =&gt; 123
+
+  $.context({ [token]: 321 }, () =&gt; {
+    // Overriding some context for the inner scope
+
+    const value = $.context(token); // Reading again
+
+    console.log(value); // =&gt; 321
+  });
+});
+</code></pre>
+</div><div><h4><code>$.effect</code></h4>
+<p>An effect is similar to a memo, but it returns a function for manually disposing of it instead of an Observable, and if you return a function from inside it that's automatically registered as a cleanup function.</p>
+<p>Also effects are asynchronous by default, they will be re-executed automatically on the next microtask, when necessary. It's possible to make an effect synchronous also, but you are strongly discouraged to do that, because synchronous effects bypass any form of batching and are easy to misuse. It's also possible to make an effect that's asynchronous but executed immediately when created, that's way less problematic, but you probably still won't need it.</p>
+<p>Also effects can be paused inside a <code>$.suspense</code> boundary by default. It's possible to make an effect that won't be paused inside a <code>$.suspense</code> boundary also, which is mostly useful if the effect is synchronous also, but you are discouraged to do that, unless you really need that.</p>
+<p>There are no restrictions, you can nest these freely, create new Observables inside them, whatever you want.</p>
+<ul>
+<li><strong>Note</strong>: Effects are intended for encapsulating functions that interact with the outside world, or for writing to Observables in response to a user input, which is strongly discouraged to do inside memos instead.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">type EffectOptions = {
+  suspense?: boolean;
+  sync?: boolean;
+};
+
+function effect(
+  fn: () =&gt; (() =&gt; void) | void,
+  options?: EffectOptions,
+): () =&gt; void;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create an asynchronous effect with an automatically registered cleanup function
+
+const callback = $(() =&gt; {});
+
+$.effect(() =&gt; {
+  const cb = callback();
+
+  document.body.addEventListener("click", cb);
+
+  return () =&gt; {
+    // Automatically-registered cleanup function
+
+    document.body.removeEventListener("click", cb);
+  };
+});
+
+// Creating a synchronous effect, which is executed and re-executed immediately when needed
+
+$.effect(
+  () =&gt; {
+    // Do something...
+  },
+  { sync: true },
+);
+
+// Creating an asynchronous effect, but that is executed immediately on creation
+
+$.effect(
+  () =&gt; {
+    // Do something...
+  },
+  { sync: "init" },
+);
+
+// Creating an effect that will not be paused by suspense
+
+$.effect(
+  () =&gt; {
+    // Do something...
+  },
+  { suspense: false },
+);
+</code></pre>
+</div><div><h4><code>$.isBatching</code></h4>
+<p>This function tells you if explicit batching is currently active, or if there are any effects currently scheduled for execution via other means.</p>
+<ul>
+<li><strong>Note</strong>: This is an advanced function that you may very well never need to call.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function isBatching(): boolean;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Checking if currently batching
+
+$.isBatching(); // =&gt; false
+
+await $.batch(async () =&gt; {
+  $.isBatching(); // =&gt; true
+});
+
+$.isBatching(); // =&gt; false
+</code></pre>
+</div><div><h4><code>$.isObservable</code></h4>
+<p>This function allows you to tell apart Observables from other values.</p>
+<ul>
+<li><strong>Note</strong>: This function is intended mostly for internal usage, in user code you'll almost always want to unwrap whatever value you get with <code>$.get</code> instead, abstracting away the checks needed for understanding if something is an Observable or not.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function isObservable&lt;T = unknown&gt;(
+  value: unknown,
+): value is Observable&lt;T&gt; | ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Checking
+
+$.isObservable($()); // =&gt; true
+$.isObservable({}); // =&gt; false
+</code></pre>
+</div><div><h4><code>$.isStore</code></h4>
+<p>This function allows you to tell apart Stores from other values.</p>
+<ul>
+<li><strong>Note</strong>: This function is intended mostly for internal usage, in user code it's almost always better to not treat objects differently if they are stores or not, you can just treat them the same way and let the reactive system react to changes when needed.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function isStore(value: unknown): boolean;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Checking
+
+$.isStore($.store({})); // =&gt; true
+$.isStore({}); // =&gt; false
+</code></pre>
+</div><div><h4><code>$.memo</code></h4>
+<p>This is the function where most of the magic happens, it generates a new read-only Observable with the result of the function passed to it, the function is automatically marked as stale whenever its dependencies change, and its dependencies are tracked automatically. The value of the Observable is refreshed, if needed, by re-executing the memo when you ask the returned Observale for its current value, by calling it, or when any other computation depends on this memo.</p>
+<p>Memos are asynchronous by default, they will be re-executed automatically only when/if needed. It's possible to make a memo synchronous also, but you are strongly discouraged to do that, because synchronous memos can use over-executions and are easy to misuse. Though in some edge cases they could have their usefulness, hence why they are supported.</p>
+<p>Usually you can just pass a plain function around, in those cases the only thing you'll get out of <code>$.memo</code> is memoization, which is a performance optimization, hence the name.</p>
+<p>There are no restrictions, you can nest these freely, create new Observables inside them, whatever you want.</p>
+<ul>
+<li><strong>Note</strong>: The provided function is expected to be pure. For side effects, including for writing to other Observables, you should use <code>$.effect</code> instead.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function memo&lt;T&gt;(fn: () =&gt; T, options?: MemoOptions&lt;T&gt;): ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Make a new memoized Observable
+
+const a = $(1);
+const b = $(2);
+const c = $(3);
+
+const sum = $.memo(() =&gt; {
+  return a() + b() + c();
+});
+
+sum(); // =&gt; 6
+
+a(2);
+
+sum(); // =&gt; 7
+
+b(3);
+
+sum(); // =&gt; 8
+
+c(4);
+
+sum(); // =&gt; 9
+
+// Make a new synchronous memo, which is executed and re-executed immediately when needed
+
+const sumSync = $.memo(
+  () =&gt; {
+    return a() + b() + c();
+  },
+  { sync: true },
+);
+</code></pre>
+</div><div><h4><code>$.observable</code></h4>
+<p>This is just an alias for the <code>$</code> function, without all the extra functions attached to it, for better tree-shaking.</p>
+<p>Usage:</p>
+<pre><code class="language-ts">import { observable } from "reactive";
+
+// Creating an Observable
+
+const o = observable(1);
+
+// Getter
+
+o(); // =&gt; 1
+
+// Setter
+
+o(2); // =&gt; 2
+
+// Setter via a function, which gets called with the current value
+
+o((value) =&gt; value + 1); // =&gt; 3
+</code></pre>
+</div><div><h4><code>$.owner</code></h4>
+<p>This function tells you some metadata about the current owner/observer. There's always an owner.</p>
+<ul>
+<li><strong>Note</strong>: This is an advanced function intended mostly for internal usage, you almost certainly don't have a use case for using this function.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">type Owner = {
+  isSuperRoot: boolean; // This tells you if the nearest owner of your current code is a super root, which is kind of a default root that everything gets wrapped with
+  isRoot: boolean; // This tells you if the nearest owner of your current code is a root
+  isSuspense: boolean; // This tells you if the nearest owner of your current code is a suspense
+  isComputation: boolean; // This tells you if the nearest owner of your current code is an effect or a memo
+};
+
+function owner(): Owner;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Check if you are right below the super root or an effect
+
+$.owner().isSuperRoot; // =&gt; true
+$.owner().isComputation; // =&gt; false
+
+$.effect(() =&gt; {
+  $.owner().isSuperRoot; // =&gt; false
+  $.owner().isComputation; // =&gt; true
+});
+</code></pre>
+</div><div><h4><code>$.root</code></h4>
+<p>This function creates a computation root, computation roots are detached from parent roots/memos/effects and will outlive them, so they must be manually disposed of, disposing them ends all the reactvity inside them, except for any eventual nested roots.</p>
+<p>The value returned by the function is returned by the root itself.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function root&lt;T&gt;(fn: (dispose: () =&gt; void) =&gt; T): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create a root and dispose of it
+
+$.root((dispose) =&gt; {
+  let calls = 0;
+
+  const a = $(0);
+  const b = $.memo(() =&gt; {
+    calls += 1;
+    return a();
+  });
+
+  console.log(calls); // =&gt; 0, memos are not refreshed until necessary
+  b(); // =&gt; 0
+  console.log(calls); // =&gt; 1, now the memo got refreshed, because we asked for its value and it didn't have a fresh value
+
+  a(1);
+
+  console.log(calls); // =&gt; 1, not refreshed, because we don't need the new value yet
+  b(); // =&gt; 1
+  console.log(calls); // =&gt; 2, refreshed, because we asked for a new value
+
+  dispose(); // Now all the reactivity inside this root stops
+
+  a(2);
+
+  console.log(calls); // =&gt; 2, not refreshed, because we don't need the new value yet
+  b(); // =&gt; 1
+  console.log(calls); // =&gt; 2, still not refreshed, because we disposed of the memo so its value will never change anymore
+});
+</code></pre>
+</div><div><h4><code>$.store</code></h4>
+<p>This function returns a deeply reactive version of the passed object, where property accesses and writes are automatically interpreted as Observables reads and writes for you.</p>
+<p>You can just use the reactive object like you would with a regular non-reactive one, every aspect of the reactivity is handled for you under the hood, just remember to perform reads in a computation if you want to subscribe to them.</p>
+<ul>
+<li><strong>Note</strong>: Only the following types of values will be handled automatically by the reactivity system: plain objects, plain arrays, primitives.</li>
+<li><strong>Note</strong>: Assignments to the following properties won't be reactive, as making those reactive would have more cons than pros: <code>__proto__</code>, <code>prototype</code>, <code>constructor</code>, <code>hasOwnProperty</code>, <code>isPrototypeOf</code>, <code>propertyIsEnumerable</code>, <code>toLocaleString</code>, <code>toSource</code>, <code>toString</code>, <code>valueOf</code>, all <code>Array</code> methods.</li>
+<li><strong>Note</strong>: Getters and setters that are properties of arrays, if for whatever reason you have those, won't be reactive.</li>
+<li><strong>Note</strong>: Getters and setters that are assigned to symbols, if for whatever reason you have those, won't be reactive.</li>
+<li><strong>Note</strong>: A powerful function is provided, <code>$.store.on</code>, for listening to any changes happening <em>inside</em> a store. Changes are batched automatically within a microtask for you. If you use this function it's advisable to not have multiple instances of the same object inside a single store, or you may hit some edge cases where a listener doesn't fire because another path where the same object is available, and where it was edited from, hasn't been discovered yet, since discovery is lazy as otherwise it would be expensive.</li>
+<li><strong>Note</strong>: A powerful function is provided, <code>$.store.reconcile</code>, that basically merges the content of the second argument into the first one, preserving wrapper objects in the first argument as much as possible, which can avoid many unnecessary re-renderings down the line. Currently getters/setters/symbols from the second argument are ignored, as supporting those would make this function significantly slower, and you most probably don't need them anyway if you are using this function.</li>
+<li><strong>Note</strong>: The <code>$.store.unwrap</code> function unwraps the top-most proxy layer of the store only, which in most situations is equivalent to deeply unwrapping the store, and the fastest way to do it, except in one important edge case: if you are doing something that causes a proxy to be directly assigned to a property on the underlying unproxied plain object/array, which can happen when writing code like this: <code>myStore.foo = [myStore.obj]</code> for example, which should instead be written as <code>myStore.foo = [store.unwrap ( myStore.obj )]</code>. If you stumbled on this and you don't want to change your code refer to <a href="https://github.com/vreactivejs/reactive/issues/8#issuecomment-1755509198">this <code>deepUnwrap</code> function</a>.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">type StoreListenableTarget = Record&lt;string | number | symbol, any&gt; | (() =&gt; any);
+type StoreReconcileableTarget = Record&lt;string | number | symbol, any&gt; | Array&lt;any&gt;;
+
+type StoreOptions = {
+  equals?: (( value: unknown, valuePrev: unknown ) =&gt; boolean) | false
+};
+
+function store &lt;T&gt; ( value: T, options?: StoreOptions ): T;
+
+store.on = function on ( target: ArrayMaybe&lt;StoreListenableTarget&gt;, callback: () =&gt; void ): (() =&gt; void);
+store.reconcile = function reconcile &lt;T extends StoreReconcileableTarget&gt; ( prev: T, next: T ): T;
+store.untrack = function untrack &lt;T&gt; ( value: T ): T;
+store.unwrap = function unwrap &lt;T&gt; ( value: T ): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from 'reactive';
+
+// Make a reactive plain object
+
+const obj = $.store ({ foo: { deep: 123 } });
+
+$.effect ( () =&gt; {
+
+  obj.foo.deep; // Subscribe to "foo" and "foo.deep"
+
+});
+
+await nextTask (); // Giving the effect a chance to run
+
+obj.foo.deep = 321; // Cause the effect to re-run, eventually
+
+// Make a reactive array
+
+const arr = $.store ([ 1, 2, 3 ]);
+
+$.effect ( () =&gt; {
+
+  arr.forEach ( value =&gt; { // Subscribe to the entire array
+    console.log ( value );
+  });
+
+});
+
+await nextTask (); // Giving the effect a chance to run
+
+arr.push ( 123 ); // Cause the effect to re-run, eventually
+
+// Make a reactive object, with a custom equality function, which is inherited by children also
+
+const equals = ( value, valuePrev ) =&gt; Object.is ( value, valuePrev );
+
+const eobj = $.store ( { some: { arbitrary: { velue: true } } }, { equals } );
+
+// Untrack parts of a store, bailing out of automatic proxying
+
+const uobj = $.store ({
+  foo: {} // This object will become a store automatically
+  bar: $.store.untrack ( {} ) // This object will stay a plain object
+});
+
+// Get a non-reactive object out of a reactive one
+
+const pobj = $.store.unwrap ( obj );
+
+// Get a non-reactive array out of a reactive one
+
+const parr = $.store.unwrap ( arr );
+
+// Reconcile a store with new data
+
+const rec = $.store ({ foo: { deep: { value: 123, other: '123' } } });
+const dataNext = { foo: { deep: { value: 321, other: '321' } } };
+
+$.store.reconcile ( rec, dataNext ); // Now "rec" contains the data from "dataNext", but none of its internal objects, in this case, got deleted or created, they just got updated
+
+// Listen for changes inside a store using a selector, necessary if you want to listen to a primitive
+
+$.store.on ( () =&gt; obj.foo.deep, () =&gt; {
+  console.log ( '"obj.foo.deep" changed!' );
+});
+
+// Listen for changes inside a whole store
+
+$.store.on ( obj, () =&gt; {
+  console.log ( 'Something inside "obj" changed!' );
+});
+
+// Listen for changes inside a whole sub-store, which is just another store created automatically for you really
+
+$.store.on ( obj.foo, () =&gt; {
+  console.log ( 'Something inside "obj.foo" changed!' );
+});
+
+// Listen for changes inside multiple targets, the callback will still be fired once if multiple targets are edited within the same microtask
+
+$.store.on ( [obj, arr], () =&gt; {
+  console.log ( 'Something inside "obj" and/or "arr" changed!' );
+});
+</code></pre>
+</div><div><h4><code>$.tick</code></h4>
+<p>This function forces effects scheduled for execution to be executed immediately, bypassing automatic or manual batching.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function tick(): void;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+$.effect(() =&gt; {
+  console.log("effect called");
+});
+
+// Here the effect has not been called yet
+
+$.tick();
+
+// Here the effect has been called
+</code></pre>
+</div><div><h4><code>$.untrack</code></h4>
+<p>This function allows for reading Observables without creating dependencies on them, temporarily turning off tracking basically.</p>
+<ul>
+<li><strong>Note</strong>: This function turns off tracking for any arbitrary function, the function doesn't have to be an Observable necessarily.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function untrack&lt;T&gt;(fn: () =&gt; T): T;
+function untrack&lt;T&gt;(value: T): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Untracking a single Observable
+
+const o = $(0);
+
+$.untrack(o); // =&gt; 0
+
+// Untracking multiple Observables
+
+const a = $(1);
+const b = $(2);
+const c = $(3);
+
+const sum = $.untrack(() =&gt; {
+  return a() + b() + c();
+});
+
+console.log(sum); // =&gt; 6
+
+a(2);
+b(3);
+c(4);
+
+console.log(sum); // =&gt; 6, it's just a value, not a reactive Observable
+
+// Untracking a non function, it's just returned as is
+
+$.untrack(123); // =&gt; 123
+</code></pre>
+</div><div><h4><code>$.with</code></h4>
+<p>This function allows you to create a function for executing code as if it was a child of the owner/computation active when the function was originally created.</p>
+<ul>
+<li><strong>Note</strong>: This is an advanced function intended mostly for internal usage.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function with (): (&lt;T&gt; ( fn: () =&gt; T ): T);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Reading some values from the context as if the code was executing inside a different computation
+
+$.root(() =&gt; {
+  const token = Symbol("Some Context Key");
+
+  $.context({ [token]: 123 }, () =&gt; {
+    // Writing a value to the context for the inner scope
+
+    const runWithOuter = $.with();
+
+    $.effect(() =&gt; {
+      $.context({ [token]: 321 }, () =&gt; {
+        // Overriding some context for the inner scope
+
+        const value = $.context(token); // Reading the context
+
+        console.log(value); // =&gt; 321
+
+        runWithOuter(() =&gt; {
+          // Executing the function as if it was where `$.with` was called
+
+          const value = $.context(token); // Reading the context
+
+          console.log(value); // =&gt; 123
+        });
+      });
+    });
+  });
+});
+</code></pre>
+</div><div><h3>Flow</h3>
+<p>The following control flow functions are provided. These functions are like the reactive versions of native constructs in the language.</p>
+</div><div><h4><code>$.if</code></h4>
+<p>This is the reactive version of the native <code>if</code> statement. It returns a read-only Observable that resolves to the passed value if the condition is truthy, or to the optional fallback otherwise.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function if &lt;T, F&gt; ( when: (() =&gt; boolean) | boolean, valueTrue: T, valueFalse?: F ): ObservableReadonly&lt;T | F | undefined&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Toggling an if
+
+const bool = $(false);
+
+const result = $.if(bool, 123, 321);
+
+result(); // =&gt; 321
+
+bool(true);
+
+result(); // =&gt; 123
+</code></pre>
+</div><div><h4><code>$.for</code></h4>
+<p>This is the reactive version of the native <code>Array.prototype.map</code>, it maps over an array of values while caching results when possible.</p>
+<p>This function is crucial for achieving great performance when mapping over an array, as just calling <code>Array.prototype.map</code> inside a memo can be super expensive.</p>
+<p>There are multiple strategies that this function may use internally for caching results:</p>
+<ul>
+<li><strong>Keyed</strong>: with the default options results are cached for values that didn't change, and thrown away when those values are no longer used. So for example when going from mapping over <code>[1, 2, 3]</code> to mapping over <code>[1, 2, 4]</code> the results for <code>1</code> and <code>2</code> are entirely cached, the old result for <code>3</code> is discarded, and an entirely new result for <code>4</code> is created. This is the easiest and safest strategy to use (especially in a DOM context, read <a href="https://www.stefankrause.net/wp/?p=342">this</a> for more info). It's strongly recommended that the array of values to map over doesn't contain dulicates though.</li>
+<li><strong>Unkeyed</strong>: with the <code>unkeyed</code> option set to <code>true</code> results are cached for values that didn't change, and results for old values are transformed into results for new values, if possibile, or otherwise thrown away. So for example when going from mapping over <code>[1, 2, 3]</code> to mapping over <code>[1, 2, 4]</code> the results for <code>1</code> and <code>2</code> are entirely cached, and the result for <code>3</code> is transformed into the result for <code>4</code>. Basically the function that you pass <code>$.for</code> receives an observable to the value rather than the value itself, so it can update itself, it's no longer necessary to dispose of the old result and make an entirely new result. This option is the recommended one if your array may contain duplicated primitive values, or if you want to achieve maximum performance, though it's harder to use because you will receive an observable to the value rather than the value itself, and it can be easy to misuse (especially in a DOM context, read <a href="https://www.stefankrause.net/wp/?p=342">this</a> for more info).</li>
+<li><strong>Unkeyed+Pooled</strong>: with both <code>unkeyed</code> set to <code>true</code>, and <code>pooled</code> set to <code>true</code> results are cached not only between runs, but they are also put in a suspended pool when not currently used. This is useful to trade some memory usage for potentially better runtime performance.</li>
+</ul>
+<p>Interface:</p>
+<pre><code class="language-ts">function for &lt;T, R, F&gt; ( values: (() =&gt; readonly T[]) | readonly T[] | undefined, fn: (( value: T, index: FunctionMaybe&lt;number&gt; ) =&gt; R), fallback?: F | [], options?: { pooled?: false, unkeyed?: false } ): ObservableReadonly&lt;R[] | F&gt;;
+function for &lt;T, R, F&gt; ( values: (() =&gt; readonly T[]) | readonly T[] | undefined, fn: (( value: ObservableReadonly&lt;T&gt;, index: FunctionMaybe&lt;number&gt; ) =&gt; R), fallback?: F | [], options?: { pooled?: boolean, unkeyed?: true } ): ObservableReadonly&lt;R[] | F&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Map over an array of values
+
+const o1 = $(1);
+const o2 = $(2);
+const os = $([o1, o2]);
+
+const mapped = $.for(os, (o) =&gt; {
+  return someExpensiveFunction(o());
+});
+
+// Update the "mapped" Observable
+
+os([o1, o2, o3]);
+</code></pre>
+</div><div><h4><code>$.suspense</code></h4>
+<p>This function allows you to recursively pause and resume the execution of all, current and future, effects created inside it. Unless they are explicitly created with <code>suspense: false</code>.</p>
+<p>This is very useful in some scenarios, for example you may want to keep a particular branch of computation around, if it'd be expensive to dispose of it and re-create it again, but you may not want its effects to be executing as they would probably interact with the rest of your application.</p>
+<p>A parent suspense boundary will also recursively pause children suspense boundaries.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function suspense&lt;T&gt;(suspended: FunctionMaybe&lt;unknown&gt;, fn: () =&gt; T): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create a suspendable branch of computation
+
+const title = $("Some Title");
+const suspended = $(false);
+
+$.suspense(suspended, () =&gt; {
+  $.effect(() =&gt; {
+    document.title = title(); // Changing something in the outside world, in other words performing a side effect
+  });
+});
+
+// Pausing effects inside the suspense boundary
+
+suspended(true);
+
+title("Some Other Title"); // This won't cause the effect to be re-executed, since it's paused
+
+// Resuming effects inside the suspense boundary
+
+suspended(false); // This will cause the effect to be re-executed, as it had pending updates
+</code></pre>
+</div><div><h4><code>$.switch</code></h4>
+<p>This is the reactive version of the native <code>switch</code> statement. It returns a read-only Observable that resolves to the value of the first matching case, or the value of the default condition, or <code>undefined</code> otherwise.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type SwitchCase&lt;T, R&gt; = [T, R];
+type SwitchDefault&lt;R&gt; = [R];
+type SwitchValue&lt;T, R&gt; = SwitchCase&lt;T, R&gt; | SwitchDefault&lt;R&gt;;
+
+function switch &lt;T, R, F&gt; ( when: (() =&gt; T) | T, values: SwitchValue&lt;T, R&gt;[], fallback?: F ): ObservableReadonly&lt;R | F | undefined&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Switching cases
+
+const o = $(1);
+
+const result = $.switch(o, [[1, "1"], [2, "2"], [1, "1.1"], ["default"]]);
+
+result(); // =&gt; '1'
+
+o(2);
+
+result(); // =&gt; '2'
+
+o(3);
+
+result(); // =&gt; 'default'
+</code></pre>
+</div><div><h4><code>$.ternary</code></h4>
+<p>This is the reactive version of the native ternary operator. It returns a read-only Observable that resolves to the first value if the condition is truthy, or the second value otherwise.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function ternary&lt;T, F&gt;(
+  when: (() =&gt; boolean) | boolean,
+  valueTrue: T,
+  valueFalse: T,
+): ObservableReadonly&lt;T | F&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Toggling an ternary
+
+const bool = $(false);
+
+const result = $.ternary(bool, 123, 321);
+
+result(); // =&gt; 321
+
+bool(true);
+
+result(); // =&gt; 123
+</code></pre>
+</div><div><h4><code>$.tryCatch</code></h4>
+<p>This is the reactive version of the native <code>try..catch</code> block. If no errors happen the regular value function is executed, otherwise the fallback function is executed, whatever they return is returned wrapped in a read-only Observable.</p>
+<p>This is also commonly referred to as an "error boundary".</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function tryCatch&lt;T, F&gt;(
+  value: T,
+  catchFn: ({ error, reset }: { error: Error; reset: () =&gt; void }) =&gt; F,
+): ObservableReadonly&lt;T | F&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create an tryCatch boundary
+
+const o = $(false);
+
+const fallback = ({ error, reset }) =&gt; {
+  console.log(error);
+  setTimeout(() =&gt; {
+    // Attempting to recovering after 1s
+    o(false);
+    reset();
+  }, 1000);
+  return "fallback!";
+};
+
+const regular = () =&gt; {
+  if (o()) throw "whoops!";
+  return "regular!";
+};
+
+const result = $.tryCatch(fallback, regular);
+
+result(); // =&gt; 'regular!'
+
+// Cause an error to be thrown inside the boundary
+
+o(true);
+
+result(); // =&gt; 'fallback!'
+</code></pre>
+</div><div><h3>Types</h3>
+<p>The following TypeScript types are provided.</p>
+</div><div><h4><code>EffectOptions</code></h4>
+<p>This type describes the options object that effects can accept to tweak how they work.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type EffectOptions = {
+  suspense?: boolean;
+  sync?: boolean;
+};
+</code></pre>
+</div><div><h4><code>ForOptions</code></h4>
+<p>This type describes the options object that <code>$.for</code> can accept to tweak how it works.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ForOptions = {
+  pooled?: boolean;
+  unkeyed?: boolean;
+};
+</code></pre>
+</div><div><h4><code>MemoOptions</code></h4>
+<p>This type describes the options object that memos can accept to tweak how they work.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type MemoOptions&lt;T = unknown&gt; = {
+  equals?: ((value: T, valuePrev: T) =&gt; boolean) | false;
+  sync?: boolean;
+};
+</code></pre>
+</div><div><h4><code>Observable</code></h4>
+<p>This type describes a regular writable Observable, like what you'd get from <code>$()</code>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type Observable&lt;T&gt; = {
+  (): T;
+  (value: T): T;
+  (fn: (value: T) =&gt; T): T;
+  readonly [ObservableSymbol]: true;
+};
+</code></pre>
+</div><div><h4><code>ObservableLike</code></h4>
+<p>This type describes an object with the same interface as a regular writable Observable, but which may not actually be an Observable.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableLike&lt;T&gt; = {
+  (): T;
+  (value: T): T;
+  (fn: (value: T) =&gt; T): T;
+};
+</code></pre>
+</div><div><h4><code>ObservableReadonly</code></h4>
+<p>This type describes a read-only Observable, like what you'd get from <code>$.memo</code> or <code>$.readonly</code>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableReadonly&lt;T&gt; = {
+  (): T;
+  readonly [ObservableSymbol]: true;
+};
+</code></pre>
+</div><div><h4><code>ObservableOptions</code></h4>
+<p>This type describes the options object that various functions can accept to tweak how the underlying Observable works.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableOptions&lt;T&gt; = {
+  equals?: ((value: T, valuePrev: T) =&gt; boolean) | false;
+};
+</code></pre>
+</div><div><h4><code>ObservableReadonlyLike</code></h4>
+<p>This type describes an object with the same interface as a read-only Observable, but which may not actually be an Observable.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableReadonlyLike&lt;T&gt; = {
+  (): T;
+};
+</code></pre>
+</div><div><h4><code>StoreOptions</code></h4>
+<p>This type describes the options object that the <code>$.store</code> function can accept.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type StoreOptions = {
+  equals?: ((value: unknown, valuePrev: unknown) =&gt; boolean) | false;
+};
+</code></pre>
+</div><div><h3>Utilities</h3>
+<p>The following utilities functions are provided. These functions are either simple to implement and pretty handy, or pretty useful in edge scenarios and hard to implement, so they are provided for you.</p>
+</div><div><h4><code>$.boolean</code></h4>
+<p>This function is like the reactive equivalent of the <code>!!</code> operator, it returns you a boolean, or a function to a boolean, depending on the input that you give it.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function boolean(value: FunctionMaybe&lt;unknown&gt;): FunctionMaybe&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from 'reactive';
+
+// Implementing a custom if function
+
+function if ( when: FunctionMaybe&lt;unknown&gt;, whenTrue: FunctionMaybe&lt;unknown&gt;, whenFalse: FunctionMaybe&lt;unknown&gt; ) {
+
+  const condition = $.boolean ( when );
+
+  return $.memo ( () =&gt; {
+
+    return $.resolve ( $.get ( condition ) ? whenTrue : whenFalse );
+
+  });
+
+}
+</code></pre>
+</div><div><h4><code>$.disposed</code></h4>
+<p>This function returns a read-only Observable that tells you if the parent computation got disposed of or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function disposed(): ObservableReadonly&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Create an effect whose function knows when it's disposed
+
+const url = $("htts://my.api");
+
+$.effect(() =&gt; {
+  const disposed = $.disposed();
+
+  const onResolve = (response: Response): void =&gt; {
+    if (disposed()) return; // The effect got disposed, no need to handle the response anymore
+
+    // Do something with the response
+  };
+
+  const onReject = (error: unknown): void =&gt; {
+    if (disposed()) return; // The effect got disposed, no need to handle the error anymore
+
+    // Do something with the error
+  };
+
+  fetch(url()).then(onResolve, onReject);
+});
+
+await nextTask(); // Giving the effect a chance to run
+
+url("https://my.api2"); // This causes the effect to be re-executed, and the previous `disposed` Observable will be set to `true`
+</code></pre>
+</div><div><h4><code>$.get</code></h4>
+<p>This function gets the value out of something, if it gets passed an Observable or a function then by default it calls it, otherwise it just returns the value. You can also opt-out of calling plain functions, which is useful when dealing with callbacks.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function get&lt;T&gt;(value: T, getFunction?: true): T extends () =&gt; infer U ? U : T;
+function get&lt;T&gt;(
+  value: T,
+  getFunction: false,
+): T extends ObservableReadonly&lt;infer U&gt; ? U : T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Getting the value out of an Observable
+
+const o = $(123);
+
+$.get(o); // =&gt; 123
+
+// Getting the value out of a function
+
+$.get(() =&gt; 123); // =&gt; 123
+
+// Getting the value out of an Observable but not out of a function
+
+$.get(o, false); // =&gt; 123
+$.get(() =&gt; 123, false); // =&gt; () =&gt; 123
+
+// Getting the value out of a non-Observable and non-function
+
+$.get(123); // =&gt; 123
+</code></pre>
+</div><div><h4><code>$.readonly</code></h4>
+<p>This function makes a read-only Observable out of any Observable you pass it. It's useful when you want to pass an Observable around but you want to be sure that they can't change it's value but only read it.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function readonly&lt;T&gt;(
+  observable: Observable&lt;T&gt; | ObservableReadonly&lt;T&gt;,
+): ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Making a read-only Observable
+
+const o = $(123);
+const ro = $.readonly(o);
+
+// Getting
+
+ro(); // =&gt; 123
+
+// Setting throws
+
+ro(321); // An error will be thrown, read-only Observables can't be set
+</code></pre>
+</div><div><h4><code>$.resolve</code></h4>
+<p>This function recursively resolves reactivity in the passed value. Basically it replaces each function it can find with the result of <code>$.memo ( () =&gt; $.resolve ( fn () ) )</code>.</p>
+<p>You may never need to use this function yourself, but it's necessary internally at times to make sure that a child value is properly tracked by its parent computation.</p>
+<p>This function is used internally by <code>$.if</code>, <code>$.for</code>, <code>$.switch</code>, <code>$.ternary</code>, <code>$.tryCatch</code>, as they need to resolve values to make sure the memo they give you can properly keep track of dependencies.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ResolvablePrimitive = null | undefined | boolean | number | bigint | string | symbol;
+type ResolvableArray = Resolvable[];
+type ResolvableObject = { [Key in string | number | symbol]?: Resolvable };
+type ResolvableFunction = () =&gt; Resolvable;
+type Resolvable = ResolvablePrimitive | ResolvableObject | ResolvableArray | ResolvableFunction;
+
+const resolve = &lt;T&gt; ( value: T ): T extends Resolvable ? T : never;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Resolve a plain value
+
+$.resolve(123); // =&gt; 123
+
+// Resolve a function
+
+$.resolve(() =&gt; 123); // =&gt; ObservableReadonly&lt;123&gt;
+
+// Resolve a nested function
+
+$.resolve(() =&gt; () =&gt; 123); // =&gt; ObservableReadonly&lt;ObservableReadonly&lt;123&gt;&gt;
+
+// Resolve a plain array
+
+$.resolve([123]); // =&gt; [123]
+
+// Resolve an array containing a function
+
+$.resolve([() =&gt; 123]); // =&gt; [ObservableReadonly&lt;123&gt;]
+
+// Resolve an array containing arrays and functions
+
+$.resolve([() =&gt; 123, [() =&gt; [() =&gt; 123]]]); // =&gt; [ObservableReadonly&lt;123&gt;, [ObservableReadonly&lt;[ObservableReadonly&lt;123&gt;]&gt;]]
+
+// Resolve a plain object
+
+$.resolve({ foo: 123 }); // =&gt; { foo: 123 }
+
+// Resolve a plain object containing a function, plain objects are simply returned as is
+
+$.resolve({ foo: () =&gt; 123 }); // =&gt; { foo: () =&gt; 123 }
+</code></pre>
+</div><div><h4><code>$.selector</code></h4>
+<p>This function is useful for optimizing performance when you need to, for example, know when an item within a set is the selected one.</p>
+<p>If you use this function then when a new item should be the selected one the old one is unselected, and the new one is selected, directly, without checking if each element in the set is the currently selected one. This turns a <code>O(n)</code> operation into an <code>O(1)</code> one.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type SelectorFunction&lt;T&gt; = (value: T) =&gt; ObservableReadonly&lt;boolean&gt;;
+
+function selector&lt;T&gt;(source: () =&gt; T): SelectorFunction&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Making a selector
+
+const values = [1, 2, 3, 4, 5];
+const selected = $(-1);
+
+const select = (value) =&gt; selected(value);
+const selector = $.selector(selected);
+
+values.forEach((value) =&gt; {
+  $.effect(() =&gt; {
+    const selected = selector(value);
+
+    if (selected()) return;
+
+    console.log(`${value} selected!`);
+  });
+});
+
+await nextTask(); // Giving the effects a chance to run
+
+select(1); // It causes only 2 effect to re-execute, not 5 or however many there are
+
+await nextTask(); // Giving the effects a chance to run
+
+select(5); // It causes only 2 effect to re-execute, not 5 or however many there are
+</code></pre>
+</div><div><h4><code>$.suspended</code></h4>
+<p>This function returns a read-only Observable that tells you if the closest suspense boundary is currently suspended or not.</p>
+<p>You may never need this function, but it's useful to pause or skip the execution of effectfull code scheduled outside of effects while suspense is active, since you shouldn't execute any side effects while the computation you are on is suspended, and in general you want suspended computations to stay as idle as possible.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function suspended(): ObservableReadonly&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import { $ } from "reactive";
+
+// Scheduling an interval that won't be executed while the nearest suspense boundary is suspended
+
+const suspended = $.suspended();
+
+$.effect(
+  () =&gt; {
+    if (suspended()) return; // Do nothing while suspended
+
+    const intervalId = setInterval(doSomething, 1000);
+
+    return () =&gt; {
+      clearInterval(intervalId);
+    };
+  },
+  { suspense: false },
+);
+</code></pre>
+</div><div><h4><code>$.untracked</code></h4>
+<p>This function creates an untracked version of a value.</p>
+<p>It's functionally equivalent to a simple <code>() =&gt; untrack ( value )</code>, but the returned function is also marked as being untracked, which allows for some optimizations internally.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function untracked&lt;T&gt;(fn: () =&gt; T): () =&gt; T;
+function untracked&lt;T&gt;(value: T): () =&gt; T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import $ from "reactive";
+
+// Creating an untracked function
+
+const a = $(1);
+const b = $(2);
+const c = $(3);
+
+const sum = $.untracked(() =&gt; {
+  return a() + b() + c();
+});
+
+console.log(sum()); // =&gt; 6
+
+a(2);
+b(3);
+c(4);
+
+console.log(sum()); // =&gt; 9
+</code></pre>
+</div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1523 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div><div><a href="/vision/RU/business/robotization" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Фонд Robotization</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Фреймворки</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/frameworks/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/frameworks/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Документация</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/docs/reactive" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Reactive</a></div><div><a href="/vision/RU/docs/renderer" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Renderer</a></div><div><a href="/vision/RU/docs/router" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Router</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><h1>Renderer</h1>
+<p>A high-performance framework with fine-grained observable/signal-based reactivity for building rich applications.</p>
+<h2>Features</h2>
+<p>This works similarly to <a href="https://www.solidjs.com">Solid</a>, but without a custom Babel transform and with a different API.</p>
+<ul>
+<li><strong>No VDOM</strong>: there's no VDOM overhead, the framework deals with raw DOM nodes directly.</li>
+<li><strong>No stale closures</strong>: functions are always executed afresh, no need to worry about previous potential executions of the current function, ever.</li>
+<li><strong>No rules of hooks</strong>: hooks are just regular functions, which you can nest indefinitely, call conditionally, use outside components, whatever you want.</li>
+<li><strong>No dependencies arrays</strong>: the framework is able to detect what depends on what else automatically, no need to specify dependencies manually.</li>
+<li><strong>No props diffing</strong>: updates are fine grained, there's no props diffing, whenever an attribute/property/class/handler/etc. should be updated it's updated directly and immediately.</li>
+<li><strong>No key prop</strong>: you can just map over arrays, or use the <code>For</code> component with an array of unique values, no need to specify keys explicitly.</li>
+<li><strong>No Babel</strong>: there's no need to use Babel with this framework, it works with plain old JS (plus JSX if you are into that). As a consequence we have 0 transform function bugs, because we don't have a transform function.</li>
+<li><strong>No magic</strong>: what you see is what you get, your code is not transformed to actually do something different than what you write, there are no surprises.</li>
+<li><strong>No server support</strong>: for the time being this framework is focused on local-first rich applications, most server-related features are not implemented: no hydration, no server components, no streaming etc.</li>
+<li><strong>Observable-based</strong>: observables, also known as "signals", are at the core of our reactivity system. The way it works is very different from a React-like system, it may be more challenging to learn, but it's well worth the effort.</li>
+<li><strong>Work in progress</strong>: this is probably beta software, I'm working on it because I need something with great performance for <a href="https://github.com/notable/notable">Notable</a>, I'm allergic to third-party dependencies, I'd like something with an API that resonates with me, and I wanted to deeply understand how the more solid <a href="https://www.solidjs.com">Solid</a>, which you should also check out, works.</li>
+</ul>
+<h2>APIs</h2>
+<table>
+<thead>
+<tr>
+<th><a href="./methods/">Methods</a></th>
+<th><a href="./components/">Components</a></th>
+<th><a href="./hooks-core/">Hooks Core</a></th>
+<th><a href="./hooks-web/">Hooks Web</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./methods/#s"><code>$</code></a></td>
+<td><a href="./components/#dynamic"><code>Dynamic</code></a></td>
+<td><a href="./hooks-core/#useboolean"><code>useBoolean</code></a></td>
+<td><a href="./hooks-web/#useabortcontroller"><code>useAbortController</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#ss"><code>$$</code></a></td>
+<td><a href="./components/#errorboundary"><code>ErrorBoundary</code></a></td>
+<td><a href="./hooks-core/#usecleanup"><code>useCleanup</code></a></td>
+<td><a href="./hooks-web/#useabortsignal"><code>useAbortSignal</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#batch"><code>batch</code></a></td>
+<td><a href="./components/#for"><code>For</code></a></td>
+<td><a href="./hooks-core/#usecontext"><code>useContext</code></a></td>
+<td><a href="./hooks-web/#useanimationframe"><code>useAnimationFrame</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#createcontext"><code>createContext</code></a></td>
+<td><a href="./components/#fragment"><code>Fragment</code></a></td>
+<td><a href="./hooks-core/#usedisposed"><code>useDisposed</code></a></td>
+<td><a href="./hooks-web/#useanimationloop"><code>useAnimationLoop</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#createdirective"><code>createDirective</code></a></td>
+<td><a href="./components/#if"><code>If</code></a></td>
+<td><a href="./hooks-core/#useeffect"><code>useEffect</code></a></td>
+<td><a href="./hooks-web/#useeventlistener"><code>useEventListener</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#createelement"><code>createElement</code></a></td>
+<td><a href="./components/#keepalive"><code>KeepAlive</code></a></td>
+<td><a href="./hooks-core/#usememo"><code>useMemo</code></a></td>
+<td><a href="./hooks-web/#usefetch"><code>useFetch</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#h"><code>h</code></a></td>
+<td><a href="./components/#portal"><code>Portal</code></a></td>
+<td><a href="./hooks-core/#usepromise"><code>usePromise</code></a></td>
+<td><a href="./hooks-web/#useidlecallback"><code>useIdleCallback</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#hmr"><code>hmr</code></a></td>
+<td><a href="./components/#suspense"><code>Suspense</code></a></td>
+<td><a href="./hooks-core/#usereadonly"><code>useReadonly</code></a></td>
+<td><a href="./hooks-web/#useidleloop"><code>useIdleLoop</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#html"><code>html</code></a></td>
+<td><a href="./components/#switch"><code>Switch</code></a></td>
+<td><a href="./hooks-core/#useresolved"><code>useResolved</code></a></td>
+<td><a href="./hooks-web/#useinterval"><code>useInterval</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#isbatching"><code>isBatching</code></a></td>
+<td><a href="./components/#ternary"><code>Ternary</code></a></td>
+<td><a href="./hooks-core/#useresource"><code>useResource</code></a></td>
+<td><a href="./hooks-web/#usemicrotask"><code>useMicrotask</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#isobservable"><code>isObservable</code></a></td>
+<td><a href="./components/#dynamicLazy"><code>DynamicLazy</code></a></td>
+<td><a href="./hooks-core/#useroot"><code>useRoot</code></a></td>
+<td><a href="./hooks-web/#usetimeout"><code>useTimeout</code></a></td>
+</tr>
+<tr>
+<td><a href="./methods/#isserver"><code>isServer</code></a></td>
+<td></td>
+<td><a href="./hooks-core/#useselector"><code>useSelector</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#isstore"><code>isStore</code></a></td>
+<td></td>
+<td><a href="./hooks-core/#usesuspended"><code>useSuspended</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#lazy"><code>lazy</code></a></td>
+<td></td>
+<td><a href="./hooks-core/#useuntracked"><code>useUntracked</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#render"><code>render</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#rendertostring"><code>renderToString</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#resolve"><code>resolve</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#store"><code>store</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#template"><code>template</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#tick"><code>tick</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./methods/#untrack"><code>untrack</code></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><a href="./types/">Types</a></th>
+<th><a href="./extras/">Extras</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./types/#context"><code>Context</code></a></td>
+<td><a href="./extras/#contributing"><code>Contributing</code></a></td>
+</tr>
+<tr>
+<td><a href="./types/#directive"><code>Directive</code></a></td>
+<td><a href="./extras/#globals"><code>Globals</code></a></td>
+</tr>
+<tr>
+<td><a href="./types/#directiveoptions"><code>DirectiveOptions</code></a></td>
+<td><a href="./extras/#jsx"><code>JSX</code></a></td>
+</tr>
+<tr>
+<td><a href="./types/#effectoptions"><code>EffectOptions</code></a></td>
+<td><a href="./extras/#tree-shaking"><code>Tree Shaking</code></a></td>
+</tr>
+<tr>
+<td><a href="./types/#functionmaybe"><code>FunctionMaybe</code></a></td>
+<td><a href="./extras/#typescript"><code>TypeScript</code></a></td>
+</tr>
+<tr>
+<td><a href="./types/#memooptions"><code>MemoOptions</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observable"><code>Observable</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observablelike"><code>ObservableLike</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observablereadonly"><code>ObservableReadonly</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observablereadonlylike"><code>ObservableReadonlyLike</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observablemaybe"><code>ObservableMaybe</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#observableoptions"><code>ObservableOptions</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#resource"><code>Resource</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./types/#storeoptions"><code>StoreOptions</code></a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Usage</h2>
+<p>This framework is simply a view layer built on top of the Observable library <a href="https://github.com/solenopsys/converged-reactive"><code>reactive</code></a>, knowing how that works is necessary to understand how this works.</p>
+<p>This framework basically re-exports everything that <code>reactive</code> exports, sometimes with a slightly different interface, adjusted for usage as components or hooks, plus some additional functions.</p>
+</div><div><h3>Methods</h3>
+<p>The following top-level functions are provided.</p>
+</div><div><h4><code>$</code></h4>
+<p>This function is just the default export of <code>reactive</code>, it can be used to wrap a value in an observable.</p>
+<p>No additional methods are attached to this function. Everything that <code>reactive</code> attaches to it is instead exported as components and hooks.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#core">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function $ &lt;T&gt; (): Observable&lt;T | undefined&gt;;
+function $ &lt;T&gt; ( value: undefined, options?: ObservableOptions&lt;T | undefined&gt; ): Observable&lt;T | undefined&gt;;
+function $ &lt;T&gt; ( value: T, options?: ObservableOptions&lt;T&gt; ): Observable&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {$} from 'renderer';
+
+// Create an observable without an initial value
+
+$&lt;number&gt; ();
+
+// Create an observable with an initial value
+
+$(1);
+
+// Create an observable with an initial value and a custom equality function
+
+const equals = ( value, valuePrev ) =&gt; Object.is ( value, valuePrev );
+
+const o = $( 1, { equals } );
+
+// Create an observable with an initial value and a special "false" equality function, which is a shorthand for `() =&gt; false`, which causes the observable to always emit when its setter is called
+
+const oFalse = $( 1, { equals: false } );
+
+// Getter
+
+o (); // =&gt; 1
+
+// Setter
+
+o ( 2 ); // =&gt; 2
+
+// Setter via a function, which gets called with the current value
+
+o ( value =&gt; value + 1 ); // =&gt; 3
+
+// Setter that sets a function, it has to be wrapped in another function because the above form exists
+
+const noop = () =&gt; {};
+
+o ( () =&gt; noop );
+</code></pre>
+</div><div><h4><code>$$</code></h4>
+<p>This function unwraps a potentially observable value.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#get">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function $$ &lt;T&gt; ( value: T ): (T extends ObservableReadonly&lt;infer U&gt; ? U : T);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {$$} from 'renderer';
+
+// Getting the value out of an observable
+
+const o = $(123);
+
+$$ ( o ); // =&gt; 123
+
+// Getting the value out of a function
+
+$$ ( () =&gt; 123 ); // =&gt; 123
+
+// Getting the value out of an observable but not out of a function
+
+$$ ( o, false ); // =&gt; 123
+$$ ( () =&gt; 123, false ); // =&gt; () =&gt; 123
+
+// Getting the value out of a non-observable and non-function
+
+$$ ( 123 ); // =&gt; 123
+</code></pre>
+</div><div><h4><code>createContext</code></h4>
+<p>This function creates a context object, optionally with a default value, which can later be used to provide a new value for the context or to read the current value.</p>
+<p>A context's <code>Provider</code> will register the value of context with its children.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ContextProvider&lt;T&gt; = ( props: { value: T, children: JSX.Element } ) =&gt; JSX.Element;
+type Context&lt;T&gt; = { Provider: ContextProvider&lt;T&gt; };
+
+function createContext &lt;T&gt; ( defaultValue?: T ): Context&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {createContext, useContext} from 'renderer';
+
+const App = () =&gt; {
+  const Context = createContext ( 123 );
+  return (
+    &lt;&gt;
+      {() =&gt; {
+        const value = useContext ( Context );
+        return &lt;p&gt;{value}&lt;/p&gt;;
+      }}
+      &lt;Context.Provider value={312}&gt;
+        {() =&gt; {
+          const value = useContext ( Context );
+          return &lt;p&gt;{value}&lt;/p&gt;;
+        }}
+      &lt;/Context.Provider&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>createDirective</code></h4>
+<p>This function creates a directive provider, which can be used to register a directive with its children.</p>
+<p>A directive is a function that always receives an <code>Element</code> as its first argument, which is basically a ref to the target element, and arbitrary user-provided arguments after that.</p>
+<p>Each directive has a unique name and it can be called by simply writing <code>use:directivename={[arg1, arg2, ...argN]]}</code> in the JSX.</p>
+<p>Directives internally are registered using context providers, so you can also override directives for a particular scope just by registering another directive with the same name closer to where you are reading it.</p>
+<p>A directive's <code>Provider</code> will register the directive with its children, which is always what you want, but it can lead to messy code due to nesting.</p>
+<p>A directive's <code>register</code> function will register the directive with the current parent observer, which is usually only safe to do at the root level, but it will lead to very readable code.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type DirectiveFunction = &lt;T extends unknown[]&gt; ( ref: Element, ...args: T ) =&gt; void;
+type DirectiveProvider = ( props: { children: JSX.Element } ) =&gt; JSX.Element;
+type DirectiveRef&lt;T extends unknown[]&gt; = ( ...args: T ) =&gt; (( ref: Element ) =&gt; void);
+type DirectiveRegister = () =&gt; void;
+type Directive = { Provider: DirectiveProvider, ref: DirectiveRef, register: DirectiveRegister };
+
+function createDirective &lt;T extends unknown[] = []&gt; ( name: string, fn: DirectiveFunction&lt;T&gt;, options?: DirectiveOptions ): Directive;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {createDirective, useEffect} from 'renderer';
+
+// First of all if you are using TypeScript you should extend the "JSX.Directives" interface, so that TypeScript will know about your new directive
+
+namespace JSX {
+  interface Directives {
+    tooltip: [title: string] // Mapping the name of the directive to the array of arguments it accepts
+  }
+}
+
+// Then you should create a directive provider
+
+const TooltipDirective = createDirective ( 'tooltip', ( ref, title: string ) =&gt; {
+
+  useEffect ( () =&gt; {
+
+    if ( !ref () ) return; // The element may not be available yet, or it might have been unmounted
+
+    // Code that implements a tooltip for the given element here...
+
+  });
+
+});
+
+// Then you can use the new "tooltip" directive anywhere inside the "TooltipDirective.Provider"
+
+const App = () =&gt; {
+  return (
+    &lt;TooltipDirective.Provider&gt;
+      &lt;input value="Placeholder..." use:tooltip={['This is a tooltip!']} /&gt;
+    &lt;/TooltipDirective.Provider&gt;
+  );
+};
+
+// You can also use directives directly by padding them along as refs
+
+const App = () =&gt; {
+  return &lt;input ref={TooltipDirective.ref ( 'This is a tooltip!' )} value="Placeholder..." /&gt;;
+};
+</code></pre>
+</div><div><h4><code>createElement</code></h4>
+<p>This is the internal function that will make DOM nodes and call/instantiate components, it will be called for you automatically via JSX.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function createElement &lt;P = {}&gt; ( component: JSX.Component&lt;P&gt;, props: P | null, ...children: JSX.Element[] ): () =&gt; JSX.Element);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {createElement} from 'renderer';
+
+const element = createElement ( 'div', { class: 'foo' }, 'child' ); // =&gt; () =&gt; HTMLDivElement
+</code></pre>
+</div><div><h4><code>hmr</code></h4>
+<p>This function wraps a component and makes it HMR-aware, for implementations of HMR like Vite's, this makes the component refresh itself and its children without requiring a reload of the whole page.</p>
+<p>For an automated way to make all your components HMR-aware check out <a href="https://github.com/rendererjs/renderer-vite"><code>renderer-vite</code></a> instead.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function hmr &lt;T extends Function&gt; ( accept: Function, component: T ): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {hmr} from 'renderer';
+
+// Define a component
+
+const Counter = ({ value }): JSX.Element =&gt; {
+  // Return something...
+};
+
+// Optionally attach components and other values to it
+
+Counter.Button = ({ onClick }): JSX.Element =&gt; {
+  // Return something...
+};
+
+Counter.INITIAL_VALUE = 0;
+
+// Lastly export it as "default", wrapped in "hmr"
+// Only components exported as "default" are supported
+
+export default hmr ( import.meta.hot?.accept, Counter );
+</code></pre>
+</div><div><h4><code>html</code></h4>
+<p>This function provides an alternative way to use the framework, without writing JSX or using the <code>h</code> function manually, it instead allows you to write your markup as tagged template literals.</p>
+<p><a href="https://github.com/developit/htm"><code>htm</code></a> is used under the hood, read its documentation.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function html ( strings: TemplateStringsArray, ...values: any[] ): JSX.Element;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {html, If} from 'renderer';
+
+const Counter = (): JSX.Element =&gt; {
+  const value = $(0);
+  const increment = () =&gt; value ( prev =&gt; prev + 1 );
+  const decrement = () =&gt; value ( prev =&gt; prev - 1 );
+  return html`
+    &lt;h1&gt;Counter&lt;/h1&gt;
+    &lt;p&gt;${value}&lt;/p&gt;
+    &lt;button onClick=${increment}&gt;+&lt;/button&gt;
+    &lt;button onClick=${decrement}&gt;-&lt;/button&gt;
+  `;
+};
+
+// Using a custom component without registering it
+
+const NoRegistration = (): JSX.Element =&gt; {
+  return html`
+    &lt;${If} when=${true}&gt;
+      &lt;p&gt;content&lt;/p&gt;
+    &lt;/${If}&gt;
+  `;
+};
+
+// Using a custom component after registering it, so you won't need to interpolate it anymore
+
+html.register ({ If });
+
+const NoRegistration = (): JSX.Element =&gt; {
+  return html`
+    &lt;If when=${true}&gt;
+      &lt;p&gt;content&lt;/p&gt;
+    &lt;/If&gt;
+  `;
+};
+</code></pre>
+</div><div><h4><code>isBatching</code></h4>
+<p>This function tells you if batching is currently active or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function isBatching (): boolean;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {batch, isBatching} from 'renderer';
+
+// Checking if currently batching
+
+isBatching (); // =&gt; false
+
+batch ( () =&gt; {
+
+  isBatching (); // =&gt; true
+
+});
+
+isBatching (); // =&gt; false
+</code></pre>
+</div><div><h4><code>isObservable</code></h4>
+<p>This function tells you if a variable is an observable or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function isObservable &lt;T = unknown&gt; ( value: unknown ): value is Observable&lt;T&gt; | ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {$, isObservable} from 'renderer';
+
+isObservable ( 123 ); // =&gt; false
+isObservable ( $(123) ); // =&gt; true
+</code></pre>
+</div><div><h4><code>isServer</code></h4>
+<p>This function tells you if your code is executing in a browser environment or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function isServer (): boolean;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {isServer} from 'renderer';
+
+isServer (); // =&gt; true or false
+</code></pre>
+</div><div><h4><code>isStore</code></h4>
+<p>This function tells you if a variable is a store or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function isStore ( value: unknown ): boolean;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {store, isStore} from 'renderer';
+
+isStore ( {} ); // =&gt; false
+isStore ( store ( {} ) ); // =&gt; true
+</code></pre>
+</div><div><h4><code>lazy</code></h4>
+<p>This function creates a lazy component, which is loaded via the provided function only when/if needed.</p>
+<p>This function uses <code>useResource</code> internally, so it's significant for <code>Suspense</code> too.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type LazyComponent&lt;P = {}&gt; = ( props: P ) =&gt; ObservableReadonly&lt;Child&gt;;
+type LazyFetcher&lt;P = {}&gt; = () =&gt; Promise&lt;{ default: JSX.Component&lt;P&gt; } | JSX.Component&lt;P&gt;&gt;;
+type LazyResult&lt;P = {}&gt; = LazyComponent&lt;P&gt; &amp; ({ preload: () =&gt; Promise&lt;void&gt; });
+
+function lazy &lt;P = {}&gt; ( fetcher: LazyFetcher&lt;P&gt; ): LazyResult&lt;P&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import {lazy} from 'renderer';
+
+const LazyComponent = lazy ( () =&gt; import ( './component' ) );
+</code></pre>
+</div><div><h4><code>render</code></h4>
+<p>This function mounts a component inside a provided DOM element and returns a disposer function for unmounting it and stopping all reactivity inside it.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function render ( child: JSX.Element, parent?: HTMLElement | null ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {render} from 'renderer';
+
+const App = () =&gt; &lt;p&gt;Hello, World!&lt;/p&gt;;
+
+const dispose = render ( &lt;App /&gt;, document.body );
+
+dispose (); // Unmounted and all reactivity inside it stopped
+</code></pre>
+</div><div><h4><code>renderToString</code></h4>
+<p>This works just like <code>render</code>, but it returns a Promise to the HTML representation of the rendered component.</p>
+<p>This is currently implemented in a way that works only inside a browser-like environement, so you'll need to use <a href="https://github.com/jsdom/jsdom">JSDOM</a> or similar for this to work server-side, but it can work server-side too potentially.</p>
+<p>This function automatically waits for all <code>Suspense</code> boundaries to resolve before returning.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function renderToString ( child: JSX.Element ): Promise&lt;string&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {renderToString} from 'renderer';
+
+const App = () =&gt; &lt;p&gt;Hello, World!&lt;/p&gt;;
+
+const html = await renderToString ( &lt;App /&gt; );
+</code></pre>
+</div><div><h4><code>template</code></h4>
+<p>This function enables constructing elements with <a href="https://www.solidjs.com">Solid</a>-level performance without using the Babel transform, but also without the convenience of that.</p>
+<p>It basically works like <a href="https://github.com/luwes/sinuous/tree/master">sinuous</a>'s template function, but with a cleaner API, since you don't have to access your props any differently inside the template here.</p>
+<p>Basically you can use this to wrap a component that doesn't directly create any observables or call any hooks to significanly improve performance when instantiating that component.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function template &lt;P = {}&gt; ( fn: (( props: P ) =&gt; JSX.Element) ): (( props: P ) =&gt; () =&gt; Element);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {template} from 'renderer';
+
+const Row = template ( ({ id, cls, label, onSelect, onRemove }) =&gt; { // Now Row is super fast to instantiate
+  return (
+    &lt;tr class={cls}&gt;
+      &lt;td class="col-md-1"&gt;{id}&lt;/td&gt;
+      &lt;td class="col-md-4"&gt;
+        &lt;a onClick={onSelect}&gt;{label}&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td class="col-md-1"&gt;
+        &lt;a onClick={onRemove}&gt;
+          &lt;span class="glyphicon glyphicon-remove" ariaHidden={true}&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td class="col-md-6"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  );
+});
+
+const Table = () =&gt; {
+  const rows = [ /* props for all your rows here */ ];
+  return rows.map ( row =&gt; &lt;Row {...row}&gt; );
+};
+
+</code></pre>
+</div><div><h3>Components</h3>
+<p>The following components are provided.</p>
+<p>Crucially some components are provided for control flow, since regular JavaScript control flow primitives are not reactive, and we need to have reactive alternatives to them to have great performance.</p>
+</div><div><h4><code>Dynamic</code></h4>
+<p>This component is just an alternative to <code>createElement</code> that can be used in JSX, it's useful to create a new element dynamically.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Dynamic &lt;P = {}&gt; ( props: { component: ObservableMaybe&lt;JSX.Component&lt;P&gt;, props?: FunctionMaybe&lt;P | null&gt;, children?: JSX.Element }): JSX. Element;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Dynamic} from 'renderer';
+
+const App = () =&gt; {
+  const heading = 'h2';
+  return (
+    &lt;Dynamic component={heading}&gt;
+      Some content
+    &lt;/Dynamic&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>DynamicLazy</code></h4>
+<p>This component load component from module dynamically.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function DynamicLazy &lt;P = {}&gt; ( props: { component: "path [module]:[component]", props?: FunctionMaybe&lt;P | null&gt;, children?: JSX.Element }): JSX. Element;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Dynamic} from 'renderer';
+
+const App = () =&gt; {
+  const heading = 'h2';
+  return (
+    &lt;DynamicLazy component={"@solenopsys/my-module:MyComponent"}&gt;
+      Some content
+    &lt;/DynamicLazy&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>ErrorBoundary</code></h4>
+<p>The error boundary catches errors thrown inside it, and renders a fallback component when that happens.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function ErrorBoundary ( props: { fallback: JSX.Element | (( props: { error: Error, reset: Callback } ) =&gt; JSX.Element), children: JSX.Element }): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {ErrorBoundary} from 'renderer';
+
+const Fallback = ({ reset, error }: { reset: () =&gt; void, error: Error }) =&gt; {
+  return (
+    &lt;&gt;
+      &lt;p&gt;Error: {error.message}&lt;/p&gt;
+      &lt;button onClick={error}&gt;Recover&lt;/button&gt;
+    &lt;/&gt;
+  );
+};
+
+const SomeComponentThatThrows = () =&gt; {
+  throw 'whatever';
+};
+
+const App = () =&gt; {
+  return (
+    &lt;ErrorBoundary fallback={Fallback}&gt;
+      &lt;SomeComponentThatThrows /&gt;
+    &lt;/ErrorBoundary&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>For</code></h4>
+<p>This component is the reactive alternative to natively mapping over an array.</p>
+<p>It must be called with an array, or a function that returns an array, of <em>unique</em> values, and each of them are passed to the child function to render something.</p>
+<p>It can be used to map over values either with a keyed (default) or unkeyed (opt-in) strategy. Read <a href="https://www.stefankrause.net/wp/?p=342">this</a> for some details about the differences between those, and the <a href="https://github.com/solenopsys/converged-reactive#for">upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function For &lt;T&gt; ( props: { values?: FunctionMaybe&lt;readonly T[]&gt;, fallback?: JSX.ELement, children: (( value: T, index: FunctionMaybe&lt;number&gt; ) =&gt; JSX.Element) }): ObservableReadonly&lt;JSX.Element&gt;;
+function For &lt;T&gt; ( props: { values?: FunctionMaybe&lt;readonly T[]&gt;, fallback?: JSX.ELement, pooled?: true, unkeyed?: true, children: (( value: ObservableReadonly&lt;T&gt;, index: FunctionMaybe&lt;number&gt; ) =&gt; JSX.Element) }): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {For} from 'renderer';
+
+const App = () =&gt; {
+  const numbers = [1, 2, 3, 4, 5];
+  return (
+    &lt;For values={numbers}&gt;
+      {( value ) =&gt; {
+        return &lt;p&gt;Value: {value}&lt;/p&gt;
+      }}
+    &lt;/For&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Fragment</code></h4>
+<p>This is just the internal component used for rendering fragments: <code>&lt;&gt;&lt;/&gt;</code>, you probably would never use this directly even if you are not using JSX, since you can return plain arrays from your components anyway.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Fragment ( props: { children: JSX.Element }): JSX.Element;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Fragment} from 'renderer';
+
+const App = () =&gt; {
+  return (
+    &lt;Fragment&gt;
+      &lt;p&gt;child 1&lt;/p&gt;
+      &lt;p&gt;child 2&lt;/p&gt;
+    &lt;/Fragment&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>If</code></h4>
+<p>This component is the reactive alternative to the native <code>if</code>.</p>
+<p>If a function is passed as the children then it will be called with a read-only observable that contains the current, always truthy, value of the "when" condition.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type Truthy&lt;T = unknown&gt; = Extract&lt;T, number | bigint | string | true | object | symbol | Function&gt;;
+
+function If &lt;T&gt; ( props: { when: FunctionMaybe&lt;T&gt;, fallback?: JSX.Element, children: JSX.Element | (( value: (() =&gt; Truthy&lt;T&gt;) ) =&gt; JSX.Element) }): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {If} from 'renderer';
+
+const App = () =&gt; {
+  const visible = $(false);
+  const toggle = () =&gt; visible ( !visible () );
+  return (
+    &lt;&gt;
+      &lt;button onClick={toggle}&gt;Toggle&lt;/button&gt;
+      &lt;If when={visible}&gt;
+        &lt;p&gt;Hello!&lt;/p&gt;
+      &lt;/If&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>KeepAlive</code></h4>
+<p>This component allows you to create singleton instances of other components that survive their parent components being disposed, and can therefore be reused cheaply.</p>
+<p>Components rendered inside a <code>KeepAlive</code> are detached from the rest of the reactivity graph, so they don't inherit any context provided outside of their parent <code>KeepAlive</code> wrapper.</p>
+<p>Components rendered inside a <code>KeepAlive</code> are kept in memory until the wrapper <code>KeepAlive</code> is unmounted and <code>ttl</code> milliseconds have passed without another <code>KeepAlive</code> with the same <code>id</code> being mounted. Or never, if no <code>ttl</code> prop is provided.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function KeepAlive ( props: { id: FunctionMaybe&lt;string&gt;, ttl?: FunctionMaybe&lt;number&gt;, children: JSX.Element } ): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {KeepAlive} from 'renderer';
+
+// Render some expensive component inside a KeepAlive
+
+const App = () =&gt; {
+  return (
+    &lt;KeepAlive id="some-unique-id" ttl={60_000}&gt;
+      &lt;SomeExpensiveComponent /&gt;
+    &lt;/KeepAlive&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Portal</code></h4>
+<p>This component mounts its children inside a provided DOM element, or inside <code>document.body</code> otherwise.</p>
+<p>The <code>mount</code> prop can also be an observable, if its value changes the portal is reparented.</p>
+<p>The <code>when</code> prop can be used to apply the portal conditionally, if it explicitly resolves to false then children are mounted normally, as if they weren't wrapped in a portal.</p>
+<p>Events will propagate natively, according to the resulting DOM hierarchy, not the components hierarchy.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Portal ( props: { when: boolean, mount?: JSX.Element, wrapper?: JSX.Element, children: JSX.Element }): (() =&gt; JSX.Element | null) &amp; ({ metadata: { portal: HTMLDivElement } });
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Portal} from 'renderer';
+
+const Modal = () =&gt; {
+  // Some modal component maybe...
+};
+
+const App = () =&gt; {
+  return (
+    &lt;Portal mount={document.body}&gt;
+      &lt;Modal /&gt;
+    &lt;/Portal&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Suspense</code></h4>
+<p>This component is like <code>If</code>, the reactive alternative to the native <code>if</code>, but the fallback branch is shown automatically while there are some resources loading in the main branch, and the main branch is kept alive under the hood.</p>
+<p>So this can be used to show some fallback content while the actual content is loading in the background.</p>
+<p>This component relies on <code>useResource</code> to understand if there's a resource loading or not.</p>
+<p>This component also supports a manual "when" prop for manually deciding whether the fallback branch should be rendered or not.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Suspense ( props: { when?: FunctionMaybe&lt;unknown&gt;, fallback?: JSX.Element, children: JSX.Element }): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Suspense} from 'renderer';
+
+const App = () =&gt; {
+  const Content = () =&gt; {
+    const resource = useResource ( () =&gt; makeSomePromise () );
+    return (
+      &lt;If when={() =&gt; !resource ().pending &amp;&amp; !resource ().error}&gt;
+        {resource ().value}
+      &lt;/If&gt;
+    );
+  };
+  const Spinner = () =&gt; {
+    return &lt;p&gt;Loading...&lt;/p&gt;;
+  };
+  return (
+    &lt;Suspense fallback={&lt;Spinner /&gt;}&gt;
+      &lt;Content /&gt;
+    &lt;/Suspense&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Switch</code></h4>
+<p>This component is the reactive alternative to the native <code>switch</code>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Switch &lt;T&gt; ( props: { when: FunctionMaybe&lt;T&gt;, fallback?: JSX.Element, children: JSX.Element }): ObservableReadonly&lt;JSX.Element&gt;;
+
+Switch.Case = function &lt;T&gt; ( props: { when: T, children: JSX.Element } ): (() =&gt; JSX.Element) &amp; ({ metadata: [T, JSX.Element] });
+Switch.Default = function ( props: { children: JSX.Element } ): (() =&gt; JSX.Element) &amp; ({ metadata: [JSX.Element] });
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Switch} from 'renderer';
+
+const App = () =&gt; {
+  const value = $(0);
+  const increment = () =&gt; value ( value () + 1 );
+  const decrement = () =&gt; value ( value () - 1 );
+  return (
+    &lt;&gt;
+      &lt;Switch when={value}&gt;
+        &lt;Switch.Case when={0}&gt;
+          &lt;p&gt;0, the boundary between positives and negatives! (?)&lt;/p&gt;
+        &lt;/Switch.Case&gt;
+        &lt;Switch.Case when={1}&gt;
+          &lt;p&gt;1, the multiplicative identity!&lt;/p&gt;
+        &lt;/Switch.Case&gt;
+        &lt;Switch.Default&gt;
+          &lt;p&gt;{value}, I don't have anything interesting to say about that :(&lt;/p&gt;
+        &lt;/Switch.Default&gt;
+      &lt;/Switch&gt;
+      &lt;button onClick={increment}&gt;+&lt;/button&gt;
+      &lt;button onClick={decrement}&gt;-&lt;/button&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Ternary</code></h4>
+<p>This component is the reactive alternative to the native ternary operator.</p>
+<p>The first child will be rendered when the condition is truthy, otherwise the second child will be rendered.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function Ternary ( props: { when: FunctionMaybe&lt;unknown&gt;, children: [JSX.Element, JSX.Element] } ): ObservableReadonly&lt;JSX.Element&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {Ternary} from 'renderer';
+
+const App = () =&gt; {
+  const visible = $(false);
+  const toggle = () =&gt; visible ( !visible () );
+  return (
+    &lt;&gt;
+      &lt;button onClick={toggle}&gt;Toggle&lt;/button&gt;
+      &lt;Ternary when={visible}&gt;
+        &lt;p&gt;Visible :)&lt;/p&gt;
+        &lt;p&gt;Invisible :(&lt;/p&gt;
+      &lt;/Ternary&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+</div><div><h3>Hooks <sub>core</sub></h3>
+<p>The following core hooks are provided.</p>
+<p>Most of these are just functions that <code>reactive</code> provides, re-exported as <code>use*</code> functions.</p>
+</div><div><h4><code>useBoolean</code></h4>
+<p>This hook is like the reactive equivalent of the <code>!!</code> operator, it returns you a boolean, or a function to a boolean, depending on the input that you give it.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#boolean">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useBoolean ( value: FunctionMaybe&lt;unknown&gt; ): FunctionMaybe&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useBoolean} from 'renderer';
+
+useBoolean // =&gt; Same as require ( 'reactive' ).boolean
+</code></pre>
+</div><div><h4><code>useCleanup</code></h4>
+<p>This hook registers a function to be called when the parent computation is disposed.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#cleanup">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useCleanup ( fn: () =&gt; void ): void;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useCleanup} from 'renderer';
+
+useCleanup // =&gt; Same as require ( 'reactive' ).cleanup
+</code></pre>
+</div><div><h4><code>useContext</code></h4>
+<p>This hook retrieves the value out of a context object.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useContext &lt;T&gt; ( context: Context&lt;T&gt; ): T | undefined;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {createContext, useContext} from 'renderer';
+
+const App = () =&gt; {
+  const ctx = createContext ( 123 );
+  const value = useContext ( ctx );
+  return &lt;p&gt;{value}&lt;/p&gt;;
+};
+</code></pre>
+</div><div><h4><code>useDisposed</code></h4>
+<p>This hook returns a boolean read-only observable that is set to <code>true</code> when the parent computation gets disposed of.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#disposed">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useDisposed (): ObservableReadonly&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useDisposed} from 'renderer';
+
+useDisposed // =&gt; Same as require ( 'reactive' ).disposed
+</code></pre>
+</div><div><h4><code>useEffect</code></h4>
+<p>This hook registers a function to be called when any of its dependencies change. If a function is returned it's automatically registered as a cleanup function.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#effect">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useEffect ( fn: () =&gt; (() =&gt; void) | void ): (() =&gt; void);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useEffect} from 'renderer';
+
+useEffect // =&gt; Same as require ( 'reactive' ).effect
+</code></pre>
+<h4><code>useEffect</code></h4>
+<p>This hook registers a function to be called when any of its dependencies change. If a function is returned it's automatically registered as a cleanup function.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#effect">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useEffect ( fn: () =&gt; (() =&gt; void) | void ): (() =&gt; void);
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useEffect} from 'renderer';
+
+useEffect // =&gt; Same as require ( 'reactive' ).effect
+</code></pre>
+</div><div><h4><code>useMemo</code></h4>
+<p>This hook is the crucial other ingredient that we need, other than observables themselves, to have a powerful reactive system that can track dependencies and re-execute computations when needed.</p>
+<p>This hook registers a function to be called when any of its dependencies change, and the return of that function is wrapped in a read-only observable and returned.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#memo">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useMemo &lt;T&gt; ( fn: () =&gt; T, options?: MemoOptions&lt;T | undefined&gt; ): ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useMemo} from 'renderer';
+
+useMemo // =&gt; Same as require ( 'reactive' ).memo
+</code></pre>
+</div><div><h4><code>usePromise</code></h4>
+<p>This hook wraps a promise in an observable, so that you can be notified when it resolves or rejects.</p>
+<p>This hook uses <code>useResource</code> internally, so it's significant for <code>Suspense</code> too.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function usePromise &lt;T&gt; ( promise: FunctionMaybe&lt;Promise&lt;T&gt;&gt; ): ObservableReadonly&lt;Resource&lt;T&gt;&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {usePromise} from 'renderer';
+
+const App = () =&gt; {
+  const request = fetch ( 'https://my.api' ).then ( res =&gt; res.json ( 0 ) );
+  const resource = usePromise ( request );
+  return () =&gt; {
+    const state = resource ();
+    if ( state.pending ) return &lt;p&gt;pending...&lt;/p&gt;;
+    if ( state.error ) return &lt;p&gt;{state.error.message}&lt;/p&gt;;
+    return &lt;p&gt;{JSON.stringify ( state.value )}&lt;/p&gt;
+  };
+};
+</code></pre>
+</div><div><h4><code>useReadonly</code></h4>
+<p>This hook creates a read-only observable out of another observable.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#readonly">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useReadonly &lt;T&gt; ( observable: Observable&lt;T&gt; | ObservableReadonly&lt;T&gt; ): ObservableReadonly&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useReadonly} from 'renderer';
+
+useReadonly // =&gt; Same as require ( 'reactive' ).readonly
+</code></pre>
+</div><div><h4><code>useResolved</code></h4>
+<p>This hook receives a value, or an array of values, potentially wrapped in functions and/or observables, and unwraps it/them.</p>
+<p>If no callback is used then it returns the unwrapped value, otherwise it returns whatever the callback returns.</p>
+<p>This is useful for handling reactive and non reactive values the same way. Usually if the value is a function, or always for convenience, you'd want to wrap the <code>useResolved</code> call in a <code>useMemo</code>, to maintain reactivity.</p>
+<p>This is potentially a more convenient version of <code>$$</code>, made especially for handling nicely arguments passed that your hooks receive that may or may not be observables.</p>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {$, useResolved} from 'renderer';
+
+useResolved ( 123 ); // =&gt; 123
+
+useResolved ( $(123) ); // =&gt; 123
+
+useResolved ( () =&gt; 123 ); // =&gt; 123
+
+useResolved ( () =&gt; 123, false ); // =&gt; () =&gt; 123
+
+useResolved ( $(123), value =&gt; 321 ); // =&gt; 321
+
+useResolved ( [$(123), () =&gt; 123], ( a, b ) =&gt; 321 ); // =&gt; 321
+</code></pre>
+</div><div><h4><code>useResource</code></h4>
+<p>This hook wraps the result of a function call with an observable, handling the cases where the function throws, the result is an observable, the result is a promise or an observale that resolves to a promise, and the promise rejects, so that you don't have to worry about these issues.</p>
+<p>This basically provides a unified way to handle sync and async results, observable and non observable results, and functions that throw and don't throw.</p>
+<p>This function is also the mechanism through which <code>Suspense</code> understands if there are things loading under the hood or not.</p>
+<p>When the <code>value</code> property is read while fetching, or when the <code>latest</code> property is read the first time, or after an error, while fetching, then <code>Suspense</code> boundaries will be triggered.</p>
+<p>When the <code>value</code> property or the <code>latest</code> property are read after the fetch errored they will throw, triggering <code>ErrorBoundary</code>.</p>
+<p>The passed function is tracked and it will be automatically re-executed whenever any of the observables it reads change.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useResource &lt;T&gt; ( fetcher: (() =&gt; ObservableMaybe&lt;PromiseMaybe&lt;T&gt;&gt;) ): Resource&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useResource} from 'renderer';
+
+const fetcher = () =&gt; fetch ( 'https://my.api' );
+
+const resource = useResource ( fetcher );
+</code></pre>
+</div><div><h4><code>useRoot</code></h4>
+<p>This hook creates a new computation root, detached from any parent computation.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#root">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useRoot &lt;T&gt; ( fn: ( dispose: () =&gt; void ) =&gt; T ): T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useRoot} from 'renderer';
+
+useRoot // =&gt; Same as require ( 'reactive' ).root
+</code></pre>
+</div><div><h4><code>useSelector</code></h4>
+<p>This hook massively optimizes <code>isSelected</code> kind of workloads.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#selector">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type SelectorFunction&lt;T&gt; = ( value: T ) =&gt; ObservableReadonly&lt;boolean&gt;;
+
+function useSelector &lt;T&gt; ( source: () =&gt; T | ObservableReadonly&lt;T&gt; ): SelectorFunction&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useSelector} from 'renderer';
+
+useSelector // =&gt; Same as require ( 'reactive' ).selector
+</code></pre>
+</div><div><h4><code>useSuspended</code></h4>
+<p>This hook returns a read-only observable that tells you if the closest suspense boundary is currently suspended or not.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#suspended">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useSuspended (): ObservableReadonly&lt;boolean&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useSuspended} from 'renderer';
+
+useSuspended // =&gt; Same as require ( 'reactive' ).suspended
+</code></pre>
+</div><div><h4><code>useUntracked</code></h4>
+<p>This hook returns an untracked version of a value.</p>
+<p><a href="https://github.com/solenopsys/converged-reactive#untracked">Read upstream documentation</a>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useUntracked &lt;T&gt; ( fn: () =&gt; T ): () =&gt; T;
+function useUntracked &lt;T&gt; ( value: T ): () =&gt; T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useUntracked} from 'renderer';
+
+useUntracked // =&gt; Same as require ( 'reactive' ).untracked
+</code></pre>
+</div><div><h3>Hooks web</h3>
+<p>The following web hooks are provided.</p>
+<p>Most of these are just reactive alternatives to native web APIs.</p>
+</div><div><h4><code>useAbortController</code></h4>
+<p>This hook is just an alternative to <code>new AbortController ()</code> that automatically aborts itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useAbortController ( signals?: ArrayMaybe&lt;AbortSignal&gt; ): AbortController;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useAbortController} from 'renderer';
+
+const controller = useAbortController ();
+</code></pre>
+</div><div><h4><code>useAbortSignal</code></h4>
+<p>This hook is just a convenient alternative to <code>useAbortController</code>, if you are only interested in its signal, which is automatically aborted when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useAbortSignal ( signals?: ArrayMaybe&lt;AbortSignal&gt; ): AbortSignal;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useAbortSignal} from 'renderer';
+
+const signal = useAbortSignal ();
+</code></pre>
+</div><div><h4><code>useAnimationFrame</code></h4>
+<p>This hook is just an alternative to <code>requestAnimationFrame</code> that automatically clears itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useAnimationFrame ( callback: ObservableMaybe&lt;FrameRequestCallback&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useAnimationFrame} from 'renderer';
+
+useAnimationFrame ( () =&gt; console.log ( 'called' ) );
+</code></pre>
+</div><div><h4><code>useAnimationLoop</code></h4>
+<p>This hook is just a version of <code>useAnimationFrame</code> that loops until the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useAnimationLoop ( callback: ObservableMaybe&lt;FrameRequestCallback&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useAnimationLoop} from 'renderer';
+
+useAnimationLoop ( () =&gt; console.log ( 'called' ) );
+</code></pre>
+</div><div><h4><code>useEventListener</code></h4>
+<p>This hook is just an alternative to <code>addEventListener</code> that automatically clears itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useEventListener ( target: FunctionMaybe&lt;EventTarget&gt;, event: FunctionMaybe&lt;string&gt;, handler: ObservableMaybe&lt;( event: Event ) =&gt; void&gt;, options?: FunctionMaybe&lt;true | AddEventListenerOptions&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useEventListener} from 'renderer';
+
+useEventListener ( document, 'click', console.log );
+</code></pre>
+</div><div><h4><code>useFetch</code></h4>
+<p>This hook wraps the output of a fetch request in an observable, so that you can be notified when it resolves or rejects. The request is also aborted automatically when the parent computation gets disposed of.</p>
+<p>This hook uses <code>useResource</code> internally, so it's significant for <code>Suspense</code> too.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useFetch ( request: FunctionMaybe&lt;RequestInfo&gt;, init?: FunctionMaybe&lt;RequestInit&gt; ): ObservableReadonly&lt;Resource&lt;Response&gt;&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useFetch} from 'renderer';
+
+const App = () =&gt; {
+  const resource = useFetch ( 'https://my.api' );
+  return () =&gt; {
+    const state = resource ();
+    if ( state.pending ) return &lt;p&gt;pending...&lt;/p&gt;;
+    if ( state.error ) return &lt;p&gt;{state.error.message}&lt;/p&gt;;
+    return &lt;p&gt;Status: {state.value.status}&lt;/p&gt;
+  };
+};
+</code></pre>
+</div><div><h4><code>useIdleCallback</code></h4>
+<p>This hook is just an alternative to <code>requestIdleCallback</code> that automatically clears itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useIdleCallback ( callback: ObservableMaybe&lt;IdleRequestCallback&gt;, options?: FunctionMaybe&lt;IdleRequestOptions&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useIdleCallback} from 'renderer';
+
+useIdleCallback ( () =&gt; console.log ( 'called' ) );
+</code></pre>
+</div><div><h4><code>useIdleLoop</code></h4>
+<p>This hook is just a version of <code>useIdleCallback</code> that loops until the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useIdleLoop ( callback: ObservableMaybe&lt;IdleRequestCallback&gt;, options?: FunctionMaybe&lt;IdleRequestOptions&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useIdleLoop} from 'renderer';
+
+useIdleLoop ( () =&gt; console.log ( 'called' ) );
+</code></pre>
+</div><div><h4><code>useInterval</code></h4>
+<p>This hook is just an alternative to <code>setInterval</code> that automatically clears itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useInterval ( callback: ObservableMaybe&lt;Callback&gt;, ms?: FunctionMaybe&lt;number&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useInterval} from 'renderer';
+
+useInterval ( () =&gt; console.log ( 'called' ), 1000 );
+</code></pre>
+</div><div><h4><code>useMicrotask</code></h4>
+<p>This hook is just an alternative to <code>queueMicrotask</code> that automatically clears itself when the parent computation is disposed, and that ensures things like contexts, error boundaries etc. keep working inside the microtask.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useMicrotask ( fn: () =&gt; void ): void;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useMicrotask} from 'renderer';
+
+useMicrotask ( () =&gt; console.log ( 'called' ) );
+</code></pre>
+</div><div><h4><code>useTimeout</code></h4>
+<p>This hook is just an alternative to <code>setTimeout</code> that automatically clears itself when the parent computation is disposed.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">function useTimeout ( callback: ObservableMaybe&lt;Callback&gt;, ms?: FunctionMaybe&lt;number&gt; ): Disposer;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useTimeout} from 'renderer';
+
+useTimeout ( () =&gt; console.log ( 'called' ), 1000 );
+</code></pre>
+</div><div><h3>Types</h3>
+<p> todo: remove duplicates (reactive)</p>
+</div><div><h4><code>Context</code></h4>
+<p>This type describes the object that <code>createContext</code> gives you.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type Context&lt;T = unknown&gt; = {
+  Provider ( props: { value: T, children: JSX.Element } ): JSX.Element
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import {useContext} from 'renderer';
+import type {Context} from 'renderer';
+
+// Create an alternative useContext that throws if the context is not available
+
+const useNonNullableContext = &lt;T&gt; ( context: Context&lt;T&gt; ): NonNullable&lt;T&gt; =&gt; {
+  const value = useContext ( context );
+  if ( value === null || value === undefined ) throw new Error ( 'Missing context' );
+  return value;
+};
+</code></pre>
+</div><div><h4><code>Directive</code></h4>
+<p>This type describes the object that <code>createDirective</code> gives you.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type Directive&lt;Arguments extends unknown[] = []&gt; = {
+  Provider: ( props: { children: JSX.Element } ) =&gt; JSX.Element,
+  ref: ( ...args: Arguments ) =&gt; (( ref: Element ) =&gt; void),
+  register: () =&gt; void
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import {$$, useEffect} from 'renderer';
+import type {Directive, FunctionMaybe} from 'renderer';
+
+// Example hook for turning a directive into a hook
+
+const useDirective = &lt;T extends unknown[] = []&gt; ( directive: Directive&lt;T&gt; ) =&gt; {
+  return ( ref: FunctionMaybe&lt;Element | undefined&gt;, ...args: T ): void =&gt; {
+    useEffect ( () =&gt; {
+      const target = $$(ref);
+      if ( !target ) return;
+      directive.ref ( ...args )( target );
+    });
+  };
+};
+</code></pre>
+</div><div><h4><code>DirectiveOptions</code></h4>
+<p>This type describes the options object that the <code>createDirective</code> function accepts.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type DirectiveOptions = {
+  immediate?: boolean // If `true` the directive is called as soon as the node is created, otherwise it also waits for that node to be attached to the DOM
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {createDirective} from 'renderer';
+
+// Create an regular, non-immediate, directive
+
+const TooltipDirective = createDirective ( 'tooltip', ( ref, title: string ) =&gt; {
+  // Implementation...
+});
+
+// Create an immediate directive
+
+const TooltipDirectiveImmediate = createDirective ( 'tooltip', ( ref, title: string ) =&gt; {
+  // Implementation...
+}, { immediate: true } );
+</code></pre>
+</div><div><h4><code>EffectOptions</code></h4>
+<p>This type describes the options object that the <code>useEffect</code> hook accepts.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type EffectOptions = {
+  suspense?: boolean,
+  sync?: boolean | 'init'
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useEffect} from 'renderer';
+
+// Make a regular asynchronous effect
+
+useEffect ( () =&gt; {
+  // Do something...
+});
+
+// Make a synchronous effect, which is strongly discouraged
+
+useEffect ( () =&gt; {
+  // Do something...
+}, { sync: true } );
+
+// Make an asynchronous effect that's executed immediately on creation, which is useful in edge cases
+
+useEffect ( () =&gt; {
+  // Do something...
+}, { sync: 'init' } );
+
+// Make an effect that won't be paused by `Suspense`, which is useful in edge cases
+
+useEffect ( () =&gt; {
+  // Do something...
+}, { suspense: false } );
+</code></pre>
+</div><div><h4><code>FunctionMaybe</code></h4>
+<p>This type says that something can be the value itself or a function that returns that value.</p>
+<p>It's useful at times since some components, like <code>If</code>, accept <code>when</code> conditions wrapped in <code>FunctionMaybe</code>.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type FunctionMaybe&lt;T&gt; = (() =&gt; T) | T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {FunctionMaybe} from 'renderer';
+
+const SomeConditionalComponent = ( when: FunctionMaybe&lt;boolean&gt;, value: string ): JSX.Element =&gt; {
+  return (
+    &lt;If when={when}&gt;
+      {value}
+    &lt;/If&gt;
+  );
+};
+</code></pre>
+</div><div><h4><code>Observable</code></h4>
+<p>This type says that something is a regular observable, which can be updated via its setter.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type Observable&lt;T&gt; = {
+  (): T,
+  ( value: T ): T,
+  ( fn: ( value: T ) =&gt; T ): T,
+  readonly [ObservableSymbol]: true
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {Observable} from 'renderer';
+
+const fn = ( value: Observable&lt;boolean&gt; ): void =&gt; {
+  value (); // Getting
+  value ( true ); // Setting
+};
+</code></pre>
+</div><div><h4><code>ObservableLike</code></h4>
+<p>This type says that something has the same shape as a regular observable, but it may not actually be an observable.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableLike&lt;T&gt; = {
+  (): T,
+  ( value: T ): T,
+  ( fn: ( value: T ) =&gt; T ): T
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {ObservableLike} from 'renderer';
+
+const fn = ( value: ObservableLike&lt;boolean&gt; ): void =&gt; {
+  value (); // Getting
+  value ( true ); // Setting
+};
+</code></pre>
+</div><div><h4><code>ObservableReadonly</code></h4>
+<p>This type says that something is a read-only observable, which can only be read but not updated.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableReadonly&lt;T&gt; = {
+  (): T,
+  readonly [ObservableSymbol]: true
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {ObservableReadonly} from 'renderer';
+
+const fn = ( value: ObservableReadonly&lt;boolean&gt; ): void =&gt; {
+  value (); // Getting
+  value ( true ); // This will throw!
+};
+</code></pre>
+</div><div><h4><code>ObservableReadonlyLike</code></h4>
+<p>This type says that something hsa the same shape as a read-only observable, but it may not actually be an observable.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableReadonlyLike&lt;T&gt; = {
+  (): T
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {ObservableReadonlyLike} from 'renderer';
+
+const fn = ( value: ObservableReadonlyLike&lt;boolean&gt; ): void =&gt; {
+  value (); // Getting
+  value ( true ); // This is not supported!
+};
+</code></pre>
+</div><div><h4><code>ObservableMaybe</code></h4>
+<p>This type says that something can be the value itself or an observable to that value.</p>
+<p>This is super useful if you want to write components and hooks that can accept either plain values or observables to those values.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableMaybe&lt;T&gt; = Observable&lt;T&gt; | ObservableReadonly&lt;T&gt; | T;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {ObservableMaybe} from 'renderer';
+
+const Button = ({ label }: { label: ObservableMaybe&lt;string&gt; }): JSX.Element =&gt; {
+  return &lt;button&gt;{label}&lt;/button&gt;;
+};
+</code></pre>
+</div><div><h4><code>MemoOptions</code></h4>
+<p>This type describes the options object that the <code>useMemo</code> hook accepts.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type MemoOptions&lt;T&gt; = {
+  equals?: (( value: T, valuePrev: T ) =&gt; boolean) | false,
+  sync?: boolean
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import {useMemo} from 'renderer';
+
+// Make a regular asynchronous memo
+
+useMemo ( () =&gt; {
+  // Do something...
+});
+
+// Make a synchronous memo, which is strongly discouraged
+
+useMemo ( () =&gt; {
+  // Do something...
+}, { sync: true } );
+</code></pre>
+</div><div><h4><code>ObservableOptions</code></h4>
+<p>This type describes the options object that various functions can accept to tweak how the underlying observable works.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ObservableOptions&lt;T&gt; = {
+  equals?: (( value: T, valuePrev: T ) =&gt; boolean) | false
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {Observable, ObservableOptions} from 'renderer';
+import {$} from 'renderer';
+
+const createTimestamp = ( options?: ObservableOptions ): Observable&lt;number&gt; =&gt; {
+  return $( Date.now (), options );
+};
+</code></pre>
+</div><div><h4><code>Resource</code></h4>
+<p>This is the type of object that <code>useResource</code>, <code>usePromise</code> and <code>useFetch</code> will return you.</p>
+<p>It's an object that tells if whether the resource is loading or not, whether an error happened or not, if what the eventual resulting value is.</p>
+<p>It's a read-only observable that holds the resulting object, but it also comes with helper methods for retrieving specific keys out of the object, which can make some code much cleaner.</p>
+<p>Helper methods are memoized automatically for you.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type ResourceStaticPending&lt;T&gt; = { pending: true, error?: never, value?: never, latest?: T };
+type ResourceStaticRejected = { pending: false, error: Error, value?: never, latest?: never };
+type ResourceStaticResolved&lt;T&gt; = { pending: false, error?: never, value: T, latest: T };
+type ResourceStatic&lt;T&gt; = ResourceStaticPending&lt;T&gt; | ResourceStaticRejected | ResourceStaticResolved&lt;T&gt;;
+type ResourceFunction&lt;T&gt; = { pending (): boolean, error (): Error | undefined, value (): T | undefined, latest (): T | undefined };
+type Resource&lt;T&gt; = ObservableReadonly&lt;ResourceStatic&lt;T&gt;&gt; &amp; ResourceFunction&lt;T&gt;;
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-tsx">import type {ObservableReadonly, Resource} from 'renderer';
+
+const resource: Resource&lt;Response&gt; = useResource ( () =&gt; fetch ( 'https://my.api' ) );
+
+// Reading the static object
+
+resource ().pending; // =&gt; true | false
+resource ().error; // =&gt; Error | undefined
+resource ().value; // =&gt; Whatever the resource will resolve to
+resource ().latest; // =&gt; Whatever the resource will resolve to, or the previous known resolved value if the resource is pending
+
+// Using helper methods
+
+resource.pending (); // =&gt; true | false
+resource.error (); // =&gt; Error | undefined
+resource.value (); // =&gt; Whatever the resource will resolve to
+resource.latest (); // =&gt; Whatever the resource will resolve to, or the previous known resolved value if the resource is pending
+</code></pre>
+</div><div><h4><code>StoreOptions</code></h4>
+<p>This type describes the options object that the <code>store</code> function accepts.</p>
+<p>Interface:</p>
+<pre><code class="language-ts">type StoreOptions = {
+  unwrap?: boolean
+};
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-ts">import type {StoreOptions} from 'renderer';
+import {store} from 'renderer';
+
+const createStore = &lt;T&gt; ( value: T, options?: StoreOptions ): T =&gt; {
+  return store ( value, options );
+};
+</code></pre>
+</div><div><h3>Extras</h3>
+<p>Extra features and details.</p>
+</div><div><h4><code>Globals</code></h4>
+<p>The following globals are supported.</p>
+<ul>
+<li><code>renderer</code>: if <code>true</code>, then renderer is used in the current client page. This is also used internally to detect if renderer has been loaded multiple times within the same page, which is not supported.</li>
+</ul>
+</div><div><h4><code>JSX</code></h4>
+<p>JSX is supported out of the box, as a rule of thumb it's very similar to how React's JSX works, but with some differences.</p>
+<ul>
+<li>The value provided to an attribute can always be either just the plain value itself, an observable to that value, or a function to that value. If an observable or a function is provided then that attribute will update itself in a fine-grained manner.</li>
+<li>There's no "key" attribute because it's unnecessary.</li>
+<li>Only refs in the function form are supported, so you are incentivized to simply use observables for them too.</li>
+<li>The "ref" attribute can also accept an array of functions to call, for convenience.</li>
+<li>Refs are called on the next microtask, making it so the node you'll get will probably be attached to the DOM already. For getting a more immediate reference you can use an "immediate" <a href="#createdirective">directive</a>.</li>
+<li>You can simply just use "class" instead of "className".</li>
+<li>The "class" attribute can also accept an object of classes or an array of classes, for convenience.</li>
+<li>SVGs are supported out of the box and will also be updated in a fine-grained manner.</li>
+<li>The "innerHTML", "outerHTML", "textContent" and "className" props are forbidden on native elements, as they are largely just footguns or non-idiomatic.</li>
+<li>A React-like "dangerouslySetInnerHTML" attribute is supported for setting some raw HTML.</li>
+<li>Numbers set as values for style properties that require a unit to be provided will automatically be suffixed with "px".</li>
+<li>Using CSS variables in the "style" object is supported out of the box.</li>
+<li>The following events are delegated, automatically: <code>beforeinput</code>, <code>click</code>, <code>dblclick</code>, <code>focusin</code>, <code>focusout</code>, <code>input</code>, <code>keydown</code>, <code>keyup</code>, <code>mousedown</code>, <code>mouseup</code>.</li>
+<li>Events always bubble according to the natural DOM hierarchy, there's no special bubbling logic for <code>Portal</code>.</li>
+<li>Class components, but with no lifecycle callbacks, are supported too. They got thrown away with the bath water by other frameworks, but organizing internal methods in a class and assigning that class to refs automatically is actually a really nice feature.</li>
+</ul>
+</div><div><h4><code>TreeShaking</code></h4>
+<p>renderer is released as a tree-shakeable ESM module. The functions you don't use simply won't be included in the final bundle.</p>
+</div><div><h4><code>TypeScript</code></h4>
+<p>There are two main actions needed to make renderer work with TypeScript.</p>
+<ol>
+<li>renderer is an ESM-only framework, so you <em>might</em> need to mark your package as ESM too in order to use it, you can do that by putting the following in your <code>package.json</code>:<pre><code>"type": "module"
+</code></pre>
+</li>
+<li>You should instruct TypeScript to load the correct JSX types by putting the following in your <code>tsconfig.json</code>:<pre><code class="language-json"> {
+   "compilerOptions": {
+     "jsx": "react-jsx",
+     "jsxImportSource": "renderer"
+   }
+ }
+</code></pre>
+</li>
+<li>Optionally, if you don't want to use a bundler or if you are using a bundler for which a plugin hasn't been written yet you can just define a "React" variable in scope and just use the JSX transform for React:<pre><code class="language-ts">import * as React from 'renderer';
+</code></pre>
+</li>
+</ol>
+</div></div>
+    </div>
+</body>
+</html>
