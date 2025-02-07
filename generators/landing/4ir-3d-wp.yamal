@@ -1,0 +1,26 @@
+# КОРОТКОЕ ОПИСАНИЕ
+items:
+
+  - banner: "../../../texts/RU/business/4ir/full/banner.yaml"
+  - md: "../../../texts/RU/business/4ir/full/intro.md"         # Введение
+  - md: "../../../texts/RU/business/4ir/full/mission.md"       # Миссия клуба
+  - md: "../../../texts/RU/business/4ir/short/title.md"        # Заголовок баннера
+  - md: "../../../texts/RU/business/4ir/short/difference.md"   # Чем клуб отличается от агрегаторов
+  - md: "../../../texts/RU/business/4ir/short/problems.md"     # Какие проблемы решает клуб
+  - md: "../../../texts/RU/business/4ir/short/profit.md"       # В чем выгода от участия
+  - md: "../../../texts/RU/business/4ir/full/problems.md"       # Проблемы
+  - md: "../../../texts/RU/business/4ir/full/key-problems.md"   # Основные проблемы
+  - md: "../../../texts/RU/business/4ir/full/domination.md"     # Доменирование корпораций
+  - md: "../../../texts/RU/business/4ir/full/market.md"         # Объем рынка
+  - md: "../../../texts/RU/business/4ir/full/profit.md"         # В чем выгода
+  - md: "../../../texts/RU/business/4ir/full/cost-by-country.md" # Цены на участие по странам
+  - md: "../../../texts/RU/business/4ir/full/advantage.md"      # Ключевое преимущество клуба
+  - md: "../../../texts/RU/business/4ir/full/marketing.md"      # Действия в сфере маркетинга
+  - md: "../../../texts/RU/business/4ir/full/bujet.md"          # Распределение средств (общая информация)
+  - md: "../../../texts/RU/business/4ir/full/kpi.md"            # KPI эффективности
+  - md: "../../../texts/RU/business/4ir/full/trust.md"          # Почему можно доверять
+  - md: "../../../texts/RU/business/4ir/full/join.md"           # Как вступить
+  - md: "../../../texts/RU/business/4ir/full/bujet.md"          # Бюджет (подробно)
+  - md: "../../../texts/RU/business/4ir/full/examples.md"       # Примеры коллективных решений
+
+

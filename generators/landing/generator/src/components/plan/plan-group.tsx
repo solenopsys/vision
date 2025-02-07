@@ -6,7 +6,7 @@ import { parse } from "yaml";
 import { readFile } from "@fileio";
 
  
-
+import "./plan-group.css"
  
  
 
@@ -20,9 +20,12 @@ export function PlanGroup({ url }: { url: string } ) {
 
  
     return (
-      <div className="page">
+      <div >
         <Markdown url={url+"/"+config.header} />
 
+     <div class="plan-group">
+
+   
         <For values={config.items}>
           {(item: Item) => {
             if (item.plan) {
@@ -32,7 +35,7 @@ export function PlanGroup({ url }: { url: string } ) {
             return null;
           }}
         </For>
-
+        </div>
         <Markdown url={url+"/"+config.footer} />
       </div>
     );

@@ -1,0 +1,29 @@
+
+- title: AI Integration
+  icon: ai.svg
+  description: Интеграция ИИ агентов в бизнес процессы.
+  items:
+   - title: DeepSeek
+     icon: DeepSeek.svg
+   - title: ChatGPT
+     icon: ChatGPT.svg
+   - title: Claude
+     icon: Claude.svg
+
+
+- title: Умное Производство
+  icon: ai.svg
+  description: Connect and optimize your 3D printing equipment
+ 
+- title: Аналитическая платформа
+  icon: ai.svg
+  description: Real-time monitoring and predictive maintenance
+
+- title: Глобальная сеть
+  icon: ai.svg
+  description: Join a worldwide network of manufacturing experts
+
+
+ 
+ 
+

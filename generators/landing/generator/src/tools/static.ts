@@ -3,7 +3,7 @@ import { renderPage } from "../../dest/generator";
 import { parse } from "yaml"; 
 import { readFile } from "@fileio";
  
-const yamlContent = readFile("../4ir-3d.yamal");
+const yamlContent = readFile("../4ir-3d-landing.yamal");
 const config = parse(yamlContent);
 console.log("config",config) 
  

@@ -1,0 +1,68 @@
+.button { 
+   background-color: rgb(0, 190, 193 );
+   color: rgb(0, 0, 0);
+   padding: 12px 24px;
+   border: none;
+   border-radius: 6px;
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .button:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   background-color: #1a1a1a;
+ }
+ 
+ .button:active {
+   transform: translateY(0);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   background-color: #0f0f0f;
+ }
+ 
+ .button:focus {
+   outline: none;
+   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .button:disabled {
+   opacity: 0.6;
+   cursor: not-allowed;
+   transform: none;
+   box-shadow: none;
+ }
+ 
+ /* Эффект пульсации при нажатии */
+ .button::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 5px;
+   height: 5px;
+   background: rgba(255, 255, 255, 0.5);
+   opacity: 0;
+   border-radius: 100%;
+   transform: scale(1) translate(-50%, -50%);
+   transform-origin: 50% 50%;
+ }
+ 
+ .button:active::after {
+   animation: ripple 0.6s ease-out;
+ }
+ 
+ @keyframes ripple {
+   0% {
+     transform: scale(0) translate(-50%, -50%);
+     opacity: 0.5;
+   }
+   100% {
+     transform: scale(20) translate(-50%, -50%);
+     opacity: 0;
+   }
+ }

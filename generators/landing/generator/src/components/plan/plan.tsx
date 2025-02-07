@@ -3,7 +3,7 @@ import { For } from "@solenopsys/converged-renderer";
 import { parse } from "yaml";
 import { readFile } from "@fileio";
 import "./plan.css"
-
+import { Button } from "../button/button.tsx"
 
 interface PlanFeature {
   features: string[];
@@ -36,7 +36,9 @@ export function Plan({ url }: { url: string }) {
           <div>{planData.target}</div>
           <div class="plan-price">{planData.price}</div>
         </div>
-        
+        <Button title="Присоединиться" onClick={() => {
+          console.log("planData",planData)
+        }} />
         <div class="plan-features">
           <For values={planData.features}>
             {(feature: string) => (
@@ -47,6 +49,7 @@ export function Plan({ url }: { url: string }) {
             )}
           </For>
         </div>
+       
       </div>
     );
   }

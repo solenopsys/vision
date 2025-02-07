@@ -1,0 +1,9 @@
+# КОРОТКОЕ ОПИСАНИЕ
+items:
+  - banner: "../../../texts/RU/business/4ir/short/banner.yaml" # Баннер
+  - tiles: "../../../texts/RU/business/4ir/short/tiles.yaml"   # Тайлы
+  - features: "../../../texts/RU/business/4ir/short/features.yaml"   # fetures
+  - plan: "../../../texts/RU/business/4ir/short/plans"         # Сколько платить, тарифные планы
+  - md: "../../../texts/RU/business/4ir/short/contacts.md"     # Как связаться
+  
+ 

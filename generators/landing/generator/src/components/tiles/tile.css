@@ -1,0 +1,14 @@
+.tile-persent{
+    font-size: 70px;
+    font-weight: bold;
+ 
+    text-align: center;
+}
+
+.tile-description{
+   text-align: center;
+}
+
+.tile{
+   width: 250px;
+}

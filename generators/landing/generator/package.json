@@ -22,7 +22,7 @@
   },
 
   "scripts":{
-    "prebuild":"bun build src/tools/generator.ts --platform=bun --outdir ./dest --external @solenopsys/converged-renderer --external marked --external yaml --external @fileio",
+    "prebuild":"bun run build.ts",
     "genhtml": "bun ./src/tools/static.ts",
     "all": "npm run prebuild && npm run genhtml",
     "serve": "bun run ./src/tools/server.ts"
