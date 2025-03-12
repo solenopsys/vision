@@ -1,11 +1,12 @@
  
  
  .plan-card {
-   border: 1px solid #eee;
+   border: 1px solid #c7c7c7;
    border-radius: 8px;
    padding: 20px;
    margin-bottom: 30px; 
-   max-width: 300px;
+   width: 400px;
+   max-width: 400px;
  }
  
  .plan-header {
@@ -39,4 +40,12 @@
  
  .feature-bullet {
    color: #2c5282;
+   background-image: url('../../../images/check.svg');
+   
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 16px; /* задайте нужную ширину */
+   height:16px; /* задайте нужную высоту */
+   padding-top: 6px;; 
+
  } 

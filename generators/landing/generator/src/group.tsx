@@ -31,7 +31,7 @@ export function Group(items: Item[]) {
               return <div style="margin-left:40px;margin-right:40px"><Features url={item.features} /></div>
             }
             if (item.md) {
-              return <div style="margin-left:40px;margin-right:40px"><Markdown url={item.md} /></div>
+              return <div  class="width_conteiner"><Markdown url={item.md} /></div>
             }
             if (item.banner) {
               return <Banner url={item.banner} />

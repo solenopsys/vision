@@ -2,7 +2,7 @@ import { renderToString } from "@solenopsys/converged-renderer";
 import { Body } from "../body";
 import { writeFile } from "@fileio";
 
-const fonts = ["Open Sans",  "Montserrat", "Oswald"];
+const fonts = ["Open Sans", "Montserrat", "Oswald"];
 
 export async function renderPage(objectArray: any[], out: string) {
   const body = await renderToString(Body(objectArray));
@@ -13,7 +13,7 @@ export async function renderPage(objectArray: any[], out: string) {
       // Заменяем пробелы на "+" для формирования корректного URL
       const family = font.replace(/ /g, "+");
       // Для "Open Sans" можно задать веса, если это необходимо
-       
+
       return `<link href="https://fonts.googleapis.com/css2?family=${family}&display=swap" rel="stylesheet">`;
     })
     .join("\n    ");
@@ -31,9 +31,9 @@ export async function renderPage(objectArray: any[], out: string) {
     ${fontsLinks}
     <link href="/generator.css" rel="stylesheet">
 </head>
-<body>
+ 
     ${body}
-</body>
+ 
 </html>
 `;
 

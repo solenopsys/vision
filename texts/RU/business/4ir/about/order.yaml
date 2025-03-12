@@ -1,0 +1,13 @@
+include
+  industry4: Что такое Четвертая Промышленная Революция?
+  mission: Миссия и цели
+  structure: Как устроен клуб
+  workflow: Как клуб работает
+  why-club: Почему именно клуб, а не агрегатор  
+
+status:
+  industry4:ok
+  mission:ok
+  why-club:ok
+  workflow:ok
+  structure:ok

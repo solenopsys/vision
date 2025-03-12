@@ -1,0 +1,39 @@
+header: "Трансформируйте свое производство"
+items:
+  - title: Внедрение Искусственного Интеллекта
+    icon: /images/brain-1.svg
+    description: Интеграция ИИ агентов в бизнес процессы. Автоматический прием заказов через ИИ чат и телефония для приема заказов.
+    labels:
+    - title: DeepSeek
+      icon: /images/deepseek-color.svg
+    - title: ChatGPT
+      icon: /images/openai.svg
+    - title: Claude
+      icon: /images/claude-color.svg
+    - title: Mistral
+      icon: /images/mistral-color.svg
+    - title: Gemini
+      icon: /images/gemini-color.svg
+  - title: Умное Производство
+    icon: /images/robot.svg
+    description: "Интеграция всего оборудование в одну цифровую фабрику. Автоматизация рутин, удобная аналитика, оптимизация склада и материалов."
+    labels:
+    - title: UI
+      icon: /images/converged_logo.svg
+    - title: Compute
+      icon: /images/detonation_logo.svg
+    - title: Hardware
+      icon: /images/combinator_logo.svg
+  - title: Коллективный маркетинг
+    icon: /images/ads-window.svg
+    description: Совместные маркетинговые кампании уменьшают расходы. Обмен заявками Если поступил «неподходящий» заказ его можно обменять на более  релевантный вашему оборудованию.
+  - title: Аналитическая платформа
+    icon: /images/analytics-graph-bar-1.svg
+    description: Мониторинг в реальном времени и прогнозное обслуживание.    Снижение неожиданных поломок за счёт  отслеживающих состояние станков.  
+
+  - title: Глобальная сеть партнеров
+    icon: /images/multiple-users-network.svg
+    description: Тесная взаимосвязь с поставщиками партнерами по всему миру.
+
+
+    

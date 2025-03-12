@@ -1,0 +1,119 @@
+sections:
+
+ 
+ 
+- problems: Проблемы и решения
+  - Основные проблемы индустрии
+  - Как мы решаем эти проблемы
+  - Технологии для решения проблем
+  - Измеримые результаты KPI
+- strategy: стратегия и структура
+  - 4ir - клуб
+  - robotization фонд
+  - solenopsys - открытое бизнес сообщество
+  - как элементы взаимодействуют   
+
+- instruments: Инструменты и методы
+  - AI агенты
+  - Автоматизация
+  - Как они взаимосвязаны
+  - Электронные компоненты
+  - Программные модули
+- technologies:  Технологии и инструменты
+  - Converged
+  - Detonation
+  - Combinator
+  - Evolution
+- members: Кто участвует
+  - Производственные компании
+  - Поставщики и производители
+  - Инвесторы  
+  - Как они взаимосвязаны
+ 
+- benefits: Выгоды участия
+  - Экономические выгоды
+  - Операционные улучшения
+  - Конкурентные преимущества
+  - ROI и сроки окупаемости
+- pricing: Тарифы и условия
+  - Планы участия (3-4 тарифа)
+  - Что включено в каждый план
+  - Дополнительные опции
+  - Условия оплаты
+- process: Процесс присоединения
+  - Этапы вступления
+  - Процесс внедрения
+  - Поддержка и обучение
+  - Гарантии безопасности
+- results: Доказательства эффективности
+  - Аналитика рынка
+  - Отзывы участников
+  - Результаты в цифрах
+  - Истории успеха
+- contacts: Контакты и регистрация
+  - Форма регистрации
+  - Контактная информация
+  - FAQ
+
+ /content
+
+
+ /problems
+   - challenges.md
+   - solutions.md
+   - tech.md
+   - kpi.md
+
+ /strategy  
+   - club.md
+   - fund.md
+   - ecosystem.md
+   - synergy.md
+
+ /instruments
+   - ai.md
+   - automation.md
+   - integration.md
+   - hardware.md
+   - software.md
+
+ /technologies
+   - converged.md
+   - detonation.md
+   - combinator.md
+   - evolution.md
+
+ /members
+   - producers.md
+   - suppliers.md
+   - investors.md
+   - network.md
+
+ /benefits
+   - economic.md
+   - operations.md
+   - competitive.md
+   - roi.md
+
+ /pricing
+   - plans.md
+   - features.md
+   - addons.md
+   - terms.md
+
+ /process
+   - steps.md
+   - deployment.md
+   - support.md
+   - security.md
+
+ /results
+   - market.md
+   - feedback.md
+   - metrics.md
+   - cases.md
+
+ /contacts
+   - signup.md
+   - info.md
+   - faq.md

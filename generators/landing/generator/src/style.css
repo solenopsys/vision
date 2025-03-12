@@ -1,4 +1,8 @@
 
+:root {
+   --primary-color: rgb(0, 190, 193 );
+   --secondary-color: rgb(1, 125, 128);
+}
  
 
 body {
@@ -13,6 +17,13 @@ body {
    margin:0;
 }
 
+.width_conteiner {
+   max-width: 1000px;
+   margin: 0 auto;
+   width: 100%;
+   padding: 0 15px; /* отступы слева и справа */
+   box-sizing: border-box;
+}
  
 
 h1, h2, h3, h4, h5  {

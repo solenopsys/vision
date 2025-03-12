@@ -1,7 +1,7 @@
 # КОРОТКОЕ ОПИСАНИЕ
 items:
 
-  - banner: "../../../texts/RU/business/4ir/full/banner.yaml"
+  - banner: "../../../texts/RU/business/4ir/short/banner.yaml"
   - md: "../../../texts/RU/business/4ir/full/intro.md"         # Введение
   - md: "../../../texts/RU/business/4ir/full/mission.md"       # Миссия клуба
   - md: "../../../texts/RU/business/4ir/short/title.md"        # Заголовок баннера
@@ -22,5 +22,4 @@ items:
   - md: "../../../texts/RU/business/4ir/full/join.md"           # Как вступить
   - md: "../../../texts/RU/business/4ir/full/bujet.md"          # Бюджет (подробно)
   - md: "../../../texts/RU/business/4ir/full/examples.md"       # Примеры коллективных решений
-
-
+  - md: "../../../texts/RU/business/4ir/short/contacts.md"     # Как связаться

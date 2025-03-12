@@ -1,5 +1,4 @@
-import { join } from 'node:path'
-import lightningcssPlugin from "./css-plugin";
+
 import { transform } from 'lightningcss'
 
 const outdir = './dest'

@@ -1,7 +1,7 @@
 .tile-persent{
     font-size: 70px;
     font-weight: bold;
- 
+    color :var(--secondary-color);
     text-align: center;
 }
 
@@ -10,5 +10,5 @@
 }
 
 .tile{
-   width: 250px;
+   width: 200px;
 }

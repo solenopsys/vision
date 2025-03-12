@@ -1,4 +1,0 @@
-## Cylinders
-
-- Closed
-- Open
