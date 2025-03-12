@@ -1,27 +1,17 @@
-### Advantages of Smart Modules
+### Преимущества умных модулей
 
-**Ease of Installation and Maintenance**: All connectors in the system are identical and have a standardized interface,
-simplifying device connection to just plugging in a cord, with the rest managed by software.
+**Простота установки и обслуживания**: Все разъемы в системе идентичны и имеют стандартизированный интерфейс, что упрощает подключение устройства до простого вставления шнура, а остальное управляется программным обеспечением.
 
-**Transactional Data Transfer Interface**: Ensures certainty in device communication. There are only two outcomes:
-successful or unsuccessful data transfer. Analog interfaces, prone to various interferences, can lead to rare but
-damaging failures. Such faults are hard to diagnose.
+**Транзакционный интерфейс передачи данных**: Обеспечивает надежность в коммуникации устройств. Возможны только два исхода: успешная или неуспешная передача данных. Аналоговые интерфейсы, подверженные различным помехам, могут приводить к редким, но критическим сбоям, которые сложно диагностировать.
 
-**Continuous Device Monitoring**: Prevents a range of equipment malfunctions during operation. For example, a mechanical
-limit switch with a broken wire will only be detected during operation. With smart modules, such issues are diagnosed
-before the device starts working.
+**Непрерывный мониторинг устройств**: Предотвращает ряд отказов оборудования во время работы. Например, механический концевой выключатель с поврежденным проводом обнаружится только в процессе эксплуатации. В умных модулях подобные неисправности диагностируются еще до начала работы устройства.
 
-**Serial Module Connection**: Significantly reduces the number of wires needed for device connections.
+**Последовательное соединение модулей**: Существенно сокращает количество проводов, необходимых для подключения устройств.
 
-**Reprogrammable Smart Modules**: Can change their operational algorithms through firmware updates.
+**Перепрограммируемые умные модули**: Позволяют изменять алгоритмы работы с помощью обновления прошивки.
 
+### Умные модули
 
-### Smart Modules
+Умные модули — это ключевой компонент архитектуры Combinator. Каждый модуль оснащен встроенным микроконтроллером и двумя разъемами UIC, что позволяет соединять их в цепи. Один разъем используется для ввода данных, а другой — для подключения следующего умного модуля.
 
-Smart modules are a key component of the Combinator architecture. Each module features an embedded microcontroller
-and two UIC connectors, allowing them to be linked in chains. One connector is used for data input, while the other
-connects to the next smart module.
-
-Regardless of the cost of the sensor included in the smart module, even if it's as low as one cent, the module is always
-equipped with a microcontroller and an industrial UIC connector. Despite the higher cost, this approach offers several
-benefits that justify the expense, such as reduced installation, maintenance, and troubleshooting time for personnel.
+Независимо от стоимости датчика в умном модуле, даже если он стоит всего один цент, модуль всегда оснащается микроконтроллером и промышленным разъемом UIC. Несмотря на увеличение затрат, такой подход оправдывает себя за счет снижения времени на установку, обслуживание и диагностику неисправностей.

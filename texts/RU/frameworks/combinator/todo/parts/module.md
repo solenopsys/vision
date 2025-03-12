@@ -1,20 +1,13 @@
-### Modules
+### Модули
 
-M2E modules can include multiple connectors for connecting computational cores based on FPGA SOSC or ARM, which require
-more data exchange lines. Data processing cores connect to these connectors, and multiple data exchange interfaces can
-be attached to the same connectors. The data transmission interface of M2E modules includes 8 differential pairs and 8
-regular data transmission lines.
+Модули M2E могут включать несколько разъемов для подключения вычислительных ядер на базе FPGA SOSC или ARM, которые требуют большего количества линий обмена данными. Вычислительные ядра подключаются к этим разъемам, и к одним и тем же разъемам могут быть подключены несколько интерфейсов передачи данных. Интерфейс передачи данных модулей M2E включает 8 дифференциальных пар и 8 обычных линий передачи данных.
 
+#### Инвертированные разъемы модулей
 
-#### Inverted Module Connectors
+В отличие от стандартных разъемов M.2, в модульных платах используются гнездовые разъемы (мама). Это сделано по двум причинам: модули можно изготавливать на платах разной толщины, а принимающая плата может быть выполнена на алюминиевом основании. В M.2 требуется толщина 0,8 мм и двусторонняя плата на основе стеклотекстолита, поэтому штекерные разъемы (папа) расположены на плате Hub.
 
-Unlike standard M.2 connectors, module boards use female connectors (Mama). This is done for two reasons: modules can be
-manufactured based on boards of varying thickness, and the receiving board can be made on an aluminum substrate. M.2
-requires a thickness of 0.8 and a double-sided board based on fiberglass; hence, male connectors are located on the Hub
-board.
+**Пример модуля**  
+![module.svg](./content/images/Combinator/module.JPG)  
 
-**Module example**
-![module.svg](./content/images/Combinator/module.JPG)
-
-**Power module example**
+**Пример силового модуля**  
 ![module.svg](./content/images/Combinator/module-assembly.JPG)
