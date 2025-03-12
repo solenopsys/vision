@@ -15,3 +15,19 @@
 Умные модули — это ключевой компонент архитектуры Combinator. Каждый модуль оснащен встроенным микроконтроллером и двумя разъемами UIC, что позволяет соединять их в цепи. Один разъем используется для ввода данных, а другой — для подключения следующего умного модуля.
 
 Независимо от стоимости датчика в умном модуле, даже если он стоит всего один цент, модуль всегда оснащается микроконтроллером и промышленным разъемом UIC. Несмотря на увеличение затрат, такой подход оправдывает себя за счет снижения времени на установку, обслуживание и диагностику неисправностей.
+
+
+
+### Examples of Smart Modules
+- Motors
+    - Stepper motor with integrated driver.
+    - Closed-loop stepper motor with integrated driver and built-in angle sensor.
+    - Closed-loop servo motor with integrated driver and built-in angle sensor.
+- Sensors
+    - End sensesor with integrated microcontroller.
+    - Temperature sensor with integrated microcontroller.
+    - Hall sensor with integrated microcontroller.
+    - Angle sensor with integrated microcontroller.
+- Electronic Modules
+    - Extruder controller - heater, fans, sensor.
+    - Solid-state relay with integrated microcontroller and voltage presence sensor.
