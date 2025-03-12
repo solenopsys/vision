@@ -1,2 +1,4 @@
 include:
   overwiev: "Введение в фреймворк Graphene"
+  parts: "Компоненты фреймворка"
+  connectors: "Разъемы"
