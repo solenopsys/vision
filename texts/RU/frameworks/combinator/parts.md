@@ -6,6 +6,32 @@
 
 В этой статье мы рассмотрим ключевые компоненты фреймворка и их взаимодействие в рамках единой системы.
 
+### Компоненты фреймворка Combinator
+
+- **Electronics** — электронные модули
+  - **Hubs** — модули, объединяющие другие модули
+  - **Modules** — электронные модули
+  - **SmartModules** — «умные» модули
+  - **MorthIO** — модули MorthIO
+
+- **Connections** — соединители для межмодульных связей
+  - **Power** — силовые разъёмы
+  - **Data** — разъёмы для передачи данных
+  - **Cables** — кабели для соединений
+
+- **Sensors** — датчики различных типов
+
+- **Drivers** — различные драйверы
+
+- **Mechanics** — механические элементы
+  - **Profiles** — алюминиевые профили
+  - **Fixators** - фиксаторы
+  - **Fasteners** — крепёжные элементы
+  - **Cases** — корпуса, в которых размещаются модули
+  - **Linear** — линейные направляющие
+  - **Frames** — рамы для оборудования
+
+
 ## Разъемы: Основа надежной коммуникации
 
 Разъемы являются одним из ключевых элементов фреймворка Комбинатор, ведь почти половина качества и надежности электронных систем зависит именно от них. 
@@ -19,23 +45,7 @@
 - Механические воздействия
 
 
-### Combinator Framework Components
 
-- **Electronics** - electronic modules
-  - Hubs - modules that combine other modules
-  - Modules - electronic modules
-  - SmartModules - smart modules
-- **Connections** - connectors for module interconnections
-  - Power - power connectors
-  - Data - data connectors
-  - Cables - cables for connections
-- **Sensors** - sensors of various types
-- **Drivers** - various drivers
-- **Mechanics** - mechanical elements
-  - Profiles - aluminum profiles
-  - Fasteners - fastening elements
-  - Cases - enclosures where modules are placed
-  - Linear - linear guides
 
 
 Традиционные соединения часто становятся источником проблем — окисление контактов, механический износ, ослабление соединений.
