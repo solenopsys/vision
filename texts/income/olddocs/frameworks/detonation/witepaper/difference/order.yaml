@@ -1,4 +1,0 @@
-include:
-  architect: "How is the framework structured?"
-  clustering: "What is the main difference?"
-  kubernetes: "How does it differ from Kubernetes?"
