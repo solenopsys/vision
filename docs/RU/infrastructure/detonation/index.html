@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"></script>
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div><div><a href="/vision/RU/business/robotization" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Фонд Robotization</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Инфраструктура</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/infrastructure/converged" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged</a></div><div><a href="/vision/RU/infrastructure/detonation" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Detonation</a></div><div><a href="/vision/RU/infrastructure/combinator" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Combinator</a></div><div><a href="/vision/RU/infrastructure/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/infrastructure/evolution" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Evolution</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div><div><a href="/vision/RU/technology/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Документация</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/docs/reactive" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Reactive</a></div><div><a href="/vision/RU/docs/renderer" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Renderer</a></div><div><a href="/vision/RU/docs/router" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Router</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><h1>Detonation: ультралёгкий и ультрабыстрый фреймворк для распределённых вычислений</h1>
+<p>Detonation — это специальный <strong>оркестратор</strong> для цифровых фабрик и высокопроизводительных вычислений. Он близок по идее к Kubernetes, но радикально отличается архитектурой и скоростью реакции. В 10-гигабитной сети время ответа между узлами может достигать <strong>20 микросекунд</strong>, а внутри одного узла — долей микросекунды. Такой уровень производительности достигается благодаря полностью <strong>низкоуровневой</strong> реализации (C, Zig) и <strong>стриминговому</strong> подходу к обмену данными вместо привычных RPC-запросов.</p>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/-6IPI3A2ZRk" frameborder="0" allowfullscreen=""></iframe>
+
+</div><div><hr>
+<h2>1. Миссия и назначение</h2>
+<ul>
+<li><strong>Detonation</strong> ускоряет запуск технологических стартапов, превращая классические промышленно-научные задачи в эластичные цифровые фабрики.</li>
+<li>Он упрощает управление <strong>сложным оборудованием</strong> (3D-принтеры, станки, роботы, датчики, дроны и т.д.), делает возможным обрабатывать <strong>огромные потоки данных</strong> и одновременно выполнять высоконагруженные вычисления.</li>
+<li>Объединяет оборудование в <strong>единый кластер</strong>, прозрачно распределяя ресурсы: CPU, память, диски, сети и пр.</li>
+<li>Обеспечивает <strong>реальное время</strong> реакции при событийной обработке — от микросекунд до десятков микросекунд.</li>
+</ul>
+<p>Таким образом, Detonation даёт сообществу доступ к <strong>глобальной вычислительной сети</strong> и распределённому хранилищу данных, обычно доступному лишь крупным корпорациям.</p>
+<hr>
+<h2>2. Общий обзор Detonation</h2>
+<h3>Что решает Detonation</h3>
+<ol>
+<li><strong>Ультрабыстрый стриминговый обмен</strong>: нет типовых gRPC/HTTP-запросов; детонационный протокол (SHOCK) рассчитан на непрерывный поток данных.</li>
+<li><strong>Единая платформа для вычислений</strong>: автоматически распределяет задачу по свободным узлам, будь то миниатюрный «компьютер 5×5 см» с 512 МБ ОЗУ или большой серверный кластер.</li>
+<li><strong>Минимальный overhead</strong>: всё написано на С/Зig; контейнеры запускаются через <code>crun</code> (или аналог), размер базового контейнера — порядка <strong>500 КБ</strong>, а время старта — <strong>практически 0 секунд</strong>.</li>
+<li><strong>Специализированная ОС</strong>: используется особая сборка Linux, оптимизированная под высокоскоростной стриминг и eBPF.  </li>
+<li><strong>Прозрачное распределение ресурсов</strong>: свободные CPU, диски и память принадлежат децентрализованной сети (<strong>exp</strong>), откуда любой участник может взять их для своих задач по принципу взаимообмена.  </li>
+<li><strong>Строгая событийная модель</strong>: все действия — это события (packets/flows), которые роутятся внутри системы с ультранизкими задержками.</li>
+</ol>
+<h3>Ключевые особенности</h3>
+<ul>
+<li><strong>Реакция в 100 раз быстрее</strong>, чем в Kubernetes: кластеры перестраиваются и реагируют на нагрузку за <strong>миллисекунды или микросекунды</strong>, а не за секунды.  </li>
+<li><strong>Масштабируемость</strong>: от одного микроконтроллера до тысячи серверов. При подключении новых устройств (например, 100 станков) они тут же видны как <strong>один монолитный кластер</strong>.  </li>
+<li><strong>Низкоуровневое решение</strong>: используется eBPF, UDP/шину SHOCK, кольцевые буферы в <code>shm</code>, а также специализированные модули для высокопроизводительного чтения и записи на блочные устройства.  </li>
+<li><strong>Полное отсутствие состояния в сервисах</strong>: всё хранится в распределённом кэше (kdb). Это упрощает горизонтальное масштабирование и мгновенные перезапуски.</li>
+</ul>
+<hr>
+<h2>3. Архитектура и ключевые компоненты</h2>
+<p>Detonation концептуально делится на <strong>два уровня</strong>: внутри каждого узла (Host Level) и на уровне всего кластера (Cluster Level). При этом система спроектирована <strong>стримингово</strong> — данные движутся через потоки (Flows) и пакеты без постоянного установления TCP-сессий.</p>
+<h3>3.1 Внутри каждого узла (Host Level)</h3>
+<h4>1. <strong>Router</strong></h4>
+<p>Каждый узел запускает <strong>Router</strong> — центральный процесс, который:</p>
+<ul>
+<li>Принимает входящие пакеты (UDP) от других узлов или внешнего мира.</li>
+<li>Маршрутизирует потоки данных внутри узла (через eBPF + shm-кольцевые буферы).</li>
+<li>Управляет подключением контейнеров (ComputeSet, Data Services и т.д.).</li>
+<li>Следит за локальными ресурсами (оперативная память, диски, сетевые интерфейсы и т.д.).</li>
+</ul>
+<h4>2. <strong>eBPF User Space</strong></h4>
+<p>В Detonation активно используются <strong>eBPF-модули</strong>: мини-программы, которые фильтруют, перенаправляют и помечают пакеты на лету, не выходя в юзерспейс. Это даёт задержки в <strong>десятки наносекунд</strong> и колоссальную пропускную способность.</p>
+<h4>3. <strong>SHM-кольцевые буферы</strong></h4>
+<p>Внутри узла контейнеры (микросервисы) обмениваются сообщениями не по TCP, а через сегменты <strong>POSIX Shared Memory</strong> (shm). Так достигается ультранизкая задержка для пакетов (сотни наносекунд) и высокая скорость обмена.</p>
+<h4>4. <strong>Containers</strong></h4>
+<p>Контейнеры в Detonation запускаются с помощью <strong>crun</strong> (либо аналогичного инструмента), имеют размер от ~500 КБ и почти мгновенно стартуют.<br><strong>Виды контейнеров</strong>:  </p>
+<ul>
+<li><strong>ComputeSet</strong>: содержит одну или несколько функций (<strong>ComputFunction</strong>) для тяжёлых вычислений, часто с ускорителями (GPU, ASIC и т.д.).  </li>
+<li><strong>Data Service</strong>: представляет интерфейс к хранилищу (например, к блочным устройствам) или базам данных.  </li>
+<li><strong>Business Logic</strong> (Logic Services): отвечает за ветвление потоков и принятие решений на уровне более сложных сценариев.</li>
+</ul>
+<p>При этом контейнер не хранит состояние — вся информация обрабатывается на лету или в кэше.</p>
+<h4>5. <strong>KDB (кэш)</strong></h4>
+<p>Состояние процессов, контексты сессий, токены и прочие метаданные хранятся в распределённом kdb. Он доступен любому узлу, реплицирован и обеспечивает миллионы транзакций в секунду.</p>
+<hr>
+<h3>3.2 На уровне кластера (Cluster Level)</h3>
+<p>Когда узлов несколько, они образуют <strong>единый кластер</strong>:</p>
+<ul>
+<li><strong>Узлы</strong> обмениваются пакетами через UDP, а высокоуровневые данные — через протокол <strong>SHOCK</strong> (потоковый, без классических HTTP-заголовков).  </li>
+<li><strong>Контроллер кластера</strong> (иногда называют Blaster/Igniter) наблюдает за всеми узлами, автоматически создаёт/удаляет инстансы контейнеров по мере изменения нагрузки.  </li>
+<li><strong>Salins Distributed FS</strong>  <ul>
+<li>Аналог старого DDFS, но с учётом новых доработок.  </li>
+<li>Распределённая файловая система, похожая на IPFS, но без его ограничений.  </li>
+<li>Автоматически монтирует свободные диски узлов, превращая их в единое «облако» хранения.  </li>
+<li>Задействует eBPF, чтобы блочные устройства могли выдавать и принимать <strong>миллионы пакетов в секунду</strong>.</li>
+</ul>
+</li>
+<li><strong>exp-сеть</strong>  <ul>
+<li>Все неиспользуемые ресурсы кластера (CPU, RAM, диски) принадлежат единой децентрализованной сети <strong>exp</strong>.  </li>
+<li>Участники могут «одолжить» ресурсы из exp или сами предоставить их другим, рассчитываясь взаимозачётами через блокчейн.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>4. Слои Detonation (концептуально)</h2>
+<p>Для упрощения управления внутри одного узла все следующие слои свёрнуты в <strong>один процесс</strong> (Router + Igniter). Но логически их можно разделить:</p>
+<ol>
+<li><strong>Equipment</strong> — управляет оборудованием узла: от физических устройств (GPU, FPGA, диски, сетевые карты) до виртуальных (виртуальные сети, виртуальные диски и т.д.).  </li>
+<li><strong>Network</strong> — отвечает за маршрутизацию, фильтрацию и балансировку трафика с помощью eBPF/XDP/UDP. Позволяет достигать реакций на уровне микросекунд.  </li>
+<li><strong>Storage</strong> — хранение данных в Salins Distributed FS и взаимодействие с кэшем kdb. Задействует блочные устройства и драйверы для быстрого чтения/записи.  </li>
+<li><strong>Workload</strong> — собственно вычислительные нагрузки (контейнеры, виртуалки), управление жизненным циклом ComputeSet и т.д.</li>
+</ol>
+<hr>
+<h2>5. Взаимодействие (стриминговая модель)</h2>
+<h3>5.1 Потоки данных (Flows)</h3>
+<ul>
+<li><strong>Непрерывные потоки</strong>: в Detonation принято не устанавливать постоянные TCP-соединения между сервисами. Данные разрезаются на пакеты (обычно до 512 байт) и пересылаются в кольцевой буфер или по UDP (между узлами).  </li>
+<li><strong>Routing</strong>: eBPF-модули в Router перенаправляют пакеты на нужные контейнеры с учётом текущей загрузки.  </li>
+<li><strong>DAG-процессы</strong>: бизнес-логика и вычислительные графы (DAG) в Detonation построены через «роутеровую» схему. Пакеты могут <strong>ветвиться</strong>, <strong>дублироваться</strong>, <strong>циклически</strong> повторяться — всё в зависимости от конфигурации.</li>
+</ul>
+<h3>5.2 Business Logic Services и DAG</h3>
+<ul>
+<li><strong>Business Logic</strong>-контейнеры не занимаются тяжёлыми вычислениями; они <strong>анализируют</strong> контекст и решают, куда отправить пакет дальше.  </li>
+<li>Вся логика хранения состояния (сессии, доступы, промежуточные данные) — в <strong>kdb</strong>. Контейнеру приходит лишь ключ или ID нужных данных.</li>
+</ul>
+<h3>5.3 Data Services</h3>
+<ul>
+<li>Нет прямых подключений «сервис → база данных»; всё идёт через единый маршрут (Router + eBPF).  </li>
+<li>Data Service получает пакет-запрос, читает/записывает в блочное устройство и возвращает результат в виде потока пакетов.  </li>
+<li>Внутри может быть любая СУБД или файловая структура, но снаружи она видна как <strong>стриминговый сервис</strong>.</li>
+</ul>
+<hr>
+<h2>6. Применения и примеры</h2>
+<h3>6.1 Цифровая фабрика</h3>
+<ul>
+<li>Допустим, у вас 100 станков с мини-ПК на борту. Связавшись в сеть, они автоматически образуют <strong>единый кластер</strong> Detonation.  </li>
+<li>Любая задача (например, сбор телеметрии, загрузка STL-файлов для 3D-печати) стримится в кластер.  </li>
+<li>Система сама решает, какой узел лучше использовать для вычислений или хранения данных, а вся логика роутинга — внутри eBPF.  </li>
+<li>При пиковых нагрузках Detonation перераспределяет потоки, используя все 100 станков.</li>
+</ul>
+<h3>6.2 Научные вычисления</h3>
+<ul>
+<li>Высокоскоростные потоки данных (сотни гигабит в секунду) от датчиков или камер поступают в кластер, где разбиваются на сегменты.  </li>
+<li>Каждый узел обрабатывает часть данных параллельно; результат складывается в Salins FS или передаётся дальше для моделирования (Physics, ML, FPGA-логика).  </li>
+<li>В случае перегрузки система моментально «оттягивает» часть вычислений на другие узлы.</li>
+</ul>
+<h3>6.3 IoT / Robotics / Drones</h3>
+<ul>
+<li>Устройства (дроны, роботы, сенсоры) могут работать на крошечных платах с 512 МБ RAM и микро-Linux.  </li>
+<li>Detonation даёт единый механизм стриминга; если дрон «свободен», он участвует в распределённых задачах.  </li>
+<li>Единый kdb-кэш хранит текущее состояние всех устройств (положение, состояние батареи, температура и т.п.).</li>
+</ul>
+<hr>
+<h2>7. Почему Detonation быстрее Kubernetes</h2>
+<ol>
+<li><strong>Стриминг vs. RPC</strong>: Kubernetes в основном опирается на gRPC/HTTP-запросы и сервисы с собственным состоянием; Detonation — непрерывные потоки пакетов.  </li>
+<li><strong>Легковесность контейнеров</strong>: базовый контейнер ~500 КБ, запуск мгновенный, нет громоздких зависимостей от Docker/Containerd.  </li>
+<li><strong>Низкоуровневый код</strong>: без Go-рантайма, без лишних абстракций — только C, Zig, eBPF.  </li>
+<li><strong>Сверхбыстрая маршрутизация</strong>: eBPF в ядре Linux + шеринговая память (shm) внутри узла. Это убирает лишние контекстные переключения.  </li>
+<li><strong>Реакция в реальном времени</strong>: Detonation реагирует на изменение нагрузки за доли секунды или даже микросекунды. Kubernetes обычно масштабируется за секунды.  </li>
+<li><strong>Salins Distributed FS</strong>: аналог IPFS, но упрощён, с приоритетом на скорость и возможность выдачи миллионов пакетов в секунду.</li>
+</ol>
+<hr>
+<h2>8. Преимущества Detonation</h2>
+<ul>
+<li><strong>Ультранизкие задержки</strong> и <strong>высокая пропускная способность</strong> — идеальный выбор для промышленного стриминга, телеметрии и научных экспериментов.  </li>
+<li><strong>Масштабируемость</strong> от маленьких SBC (Single Board Computer) до кластеров в десятки тысяч серверов.  </li>
+<li><strong>Децентрализованное хранение</strong> в Salins Distributed FS с возможностью шифрования и быстрого доступа.  </li>
+<li><strong>Гибкое разделение ресурсов</strong> и взаимообмен через сеть <strong>exp</strong> с блокчейн-учетом.  </li>
+<li><strong>Простое развертывание</strong>: подключаете новое устройство — оно тут же становится частью кластера.  </li>
+<li><strong>Стейтлес-функции</strong>: контекст в kdb, что упрощает ошибки, откаты и мгновенные масштабирования.</li>
+</ul>
+<hr>
+<h2>9. Заключение</h2>
+<p><strong>Detonation</strong> — это новая эра для распределённых вычислений в реальном времени. Он берёт лучшее из идей Kubernetes, IPFS, eBPF, но формирует <strong>низкоуровневую стриминговую платформу</strong> с рекордной скоростью и лёгкостью. Подход «нет состояния в сервисах, только потоки и быстрый роутинг» открывает колоссальные возможности:</p>
+<ul>
+<li>Управление тысячами станков и датчиков «как одним» кластером.  </li>
+<li>Мгновенный анализ сотен гигабит данных на лету.  </li>
+<li>Гибкое распараллеливание любых вычислительных задач.  </li>
+<li>Единая сеть хранения, куда сливаются все данные с прозрачным шифрованием и блокчейн-взаиморасчётами.</li>
+</ul>
+<p>Detonation — универсальный <strong>«цифровой комбайн»</strong> для промышленного интернета вещей, научных лабораторий, робототехники, AI, вычислительной химии, 3D-печати и множества других сфер. Его <strong>ультрабыстрый отклик</strong> и микросекундная маршрутизация делают Detonation идеальным выбором для современных фабрик и сложных R&amp;D-процессов.</p>
+<hr>
+<p>© 2025 Solenopsys. Все права защищены.</p>
+</div></div>
+    </div>
+</body>
+</html>
