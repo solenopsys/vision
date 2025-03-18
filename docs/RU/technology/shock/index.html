@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"></script>
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div><div><a href="/vision/RU/business/robotization" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Фонд Robotization</a></div><div><a href="/vision/RU/business/4ir" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">4IR клуб</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Инфраструктура</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/infrastructure/converged" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged</a></div><div><a href="/vision/RU/infrastructure/detonation" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Detonation</a></div><div><a href="/vision/RU/infrastructure/combinator" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Combinator</a></div><div><a href="/vision/RU/infrastructure/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/infrastructure/expansion" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Expansion</a></div><div><a href="/vision/RU/infrastructure/evolution" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Evolution</a></div><div><a href="/vision/RU/infrastructure/matrix" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Matrix</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div><div><a href="/vision/RU/technology/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div><div><a href="/vision/RU/technology/slice" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Slice</a></div><div><a href="/vision/RU/technology/zighyr" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Zighyr</a></div><div><a href="/vision/RU/technology/shock" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Shock</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Документация</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/docs/reactive" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Reactive</a></div><div><a href="/vision/RU/docs/renderer" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Renderer</a></div><div><a href="/vision/RU/docs/router" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Router</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><h1>Протокол SHOCK</h1>
+<p>Бинарный протокол для распределённых вычислений</p>
+<h2>Введение</h2>
+<p>SHOCK (Streaming High-speed Optimized Computing Kernel) – это протокол уровня приложения, разработанный специально для инфраструктуры Solenopsys. Название происходит от первоначальной идеи назвать кластеры "Shock Waves", которая позже была изменена на "Detonation" из-за вопросов с торговыми марками.</p>
+<hr>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/LhdJaWM2ykc" frameborder="0" allowfullscreen=""></iframe>
+---
+ 
+
+<p>Основная цель протокола – обеспечить асинхронную коммуникацию в реальном времени между пользовательским интерфейсом, микросервисами, вычислительными ядрами и устройствами. В отличие от традиционных механизмов очередей сообщений, таких как RabbitMQ, SHOCK не поддерживает транзакционную передачу сообщений, концентрируясь на высокоскоростных потоковых возможностях.</p>
+</div><div><h2>Мотивация создания протокола</h2>
+<p>В современном промышленном производстве существует критическая потребность в сверхбыстрых протоколах передачи данных с высокой пропускной способностью. Промышленное оборудование функционирует в режиме реального времени, где каждая миллисекунда задержки может иметь значительные последствия для производственного процесса. Традиционные протоколы с использованием брокеров сообщений создают дополнительные задержки и не способны обеспечить требуемый уровень производительности.</p>
+<p>Основная идея протокола SHOCK заключается в создании системы без выделенного брокера сообщений в качестве отдельного процесса. Подобно ZMQ, SHOCK реализует прямую коммуникацию между компонентами системы через разделяемую память. Однако SHOCK идет дальше – он способен обходить стандартное сетевое стека Linux с использованием XDP и AF_XDP, что позволяет достичь беспрецедентной производительности.</p>
+<p>Такой подход особенно важен для:</p>
+<ul>
+<li>Систем управления промышленным оборудованием, где требуется минимальная задержка отклика</li>
+<li>Высокочастотных систем сбора данных с датчиков</li>
+<li>Распределенных систем управления производством</li>
+<li>Систем машинного зрения и контроля качества в реальном времени</li>
+<li>Систем распределенных вычислений для обработки больших объемов данных (трассировка, слайсинг и тд)</li>
+</ul>
+<h3>Оптимизация производительности</h3>
+<p>Ключевое преимущество SHOCK – компактный размер пакетов и возможность быстрого анализа пакетов. В отличие от протоколов, требующих полного парсинга данных перед обработкой, SHOCK позволяет мгновенно направлять сообщения соответствующим обработчикам.</p>
+<h3>Промышленное применение</h3>
+<p>Протокол специально разработан для промышленных сценариев использования:</p>
+<ul>
+<li>Управление промышленным оборудованием</li>
+<li>Распределённые вычисления</li>
+<li>Высокоскоростной обмен данными</li>
+<li>Системы мониторинга и управления в реальном времени</li>
+<li>Реализации цифровых фабрик</li>
+</ul>
+</div><div><h2>Сравнение с альтернативными протоколами</h2>
+<p>Протоколы AMQP, STOMP, и RSocket  требуют отдельного процесса для работы месседж-брокера или серверного компонента, который
+потребляет знательные ресурсы и требует администрирования.</p>
+<table>
+<thead>
+<tr>
+<th>Характеристика</th>
+<th>SHOCK</th>
+<th>AMQP (RabbitMQ)</th>
+<th>STOMP</th>
+<th>RSocket</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Минимальная задержка</td>
+<td>100-500 нс (внутри хоста)</td>
+<td>1-2 мс</td>
+<td>5-10 мс</td>
+<td>0.5-1 мс</td>
+</tr>
+<tr>
+<td>Максимальная пропускная способность</td>
+<td>До 10 млн сообщений/с</td>
+<td>До 1 млн сообщений/с</td>
+<td>До 100 тыс сообщений/с</td>
+<td>До 1 млн сообщений/с</td>
+</tr>
+<tr>
+<td>Размер заголовка</td>
+<td>2-30 байт</td>
+<td>8-60 байт</td>
+<td>Переменный (текстовый)</td>
+<td>12-24 байт</td>
+</tr>
+<tr>
+<td>Минимальный размер сообщения</td>
+<td>3 байта</td>
+<td>64 байта</td>
+<td>~100 байт</td>
+<td>20 байт</td>
+</tr>
+<tr>
+<td>Поддержка потоковой передачи</td>
+<td>Да</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Режим реального времени</td>
+<td>Да</td>
+<td>Ограниченно</td>
+<td>Нет</td>
+<td>Да</td>
+</tr>
+</tbody></table>
+<h3>SHOCK</h3>
+<ul>
+<li>Оптимален для промышленных систем реального времени</li>
+<li>Эффективен для высокопроизводительных вычислений и взаимодействия с железом</li>
+<li>Лучший выбор для систем с минимальной задержкой</li>
+</ul>
+<h3>AMQP</h3>
+<ul>
+<li>Схожая функциональность, но более сложная реализация</li>
+<li>Отсутствие поддержки потоков</li>
+<li>Типичная реализация: RabbitMQ</li>
+</ul>
+<h3>STOMP</h3>
+<ul>
+<li>Текстовый протокол</li>
+<li>Ориентация на платформу Java</li>
+<li>Тяжеловесность для корпоративного использования</li>
+</ul>
+<h3>RSocket</h3>
+<ul>
+<li>Более подходящий по сравнению со STOMP</li>
+<li>Реализация ориентирована на Java</li>
+<li>Фокус на корпоративные системы</li>
+</ul>
+</div><div><h2>Архитектура</h2>
+<h3>Философия</h3>
+<p>SHOCK отличается простотой и высокой производительностью, имея некоторые архитектурные сходства с протоколом ZMQ. Основные принципы дизайна включают:</p>
+<ul>
+<li>Минималистичный формат пакетов</li>
+<li>Высокоскоростную передачу данных</li>
+<li>Возможности обработки в реальном времени</li>
+<li>Гибкую маршрутизацию через uBFP маршрутизаторы</li>
+<li>Поддержку миллионов сообщений в секунду за счет использования XDP, AF_XDP и Shared Memory</li>
+<li>Сверхнизкую задержку (сотни наносекунд при межпроцессном взаимодействии)</li>
+</ul>
+<h3>Варианты транспортного уровня</h3>
+<p>Протокол поддерживает несколько транспортных механизмов:</p>
+<ul>
+<li>WebSocket (для связи кластера с пользовательским интерфейсом)</li>
+<li>UDP (для внутрикластерного взаимодействия)</li>
+<li>Разделяемая память (для обмена внутри хоста)</li>
+<li>TCP соединения
+Поддержка любых других видов транспорта может быть добавлена</li>
+</ul>
+<h3>Компоненты для поддержки протокола во фреймворках Detonation и Converged</h3>
+<p>Протокол SHOCK реализуется через несколько ключевых компонентов:</p>
+<ol>
+<li>Модуль маршрутизатора на основе uBPF: Отвечает за маршрутизацию сообщений внутри кластера</li>
+<li>Библиотека для фронтенда: Предоставляет интерфейс для взаимодействия с протоколом SHOCK</li>
+<li>Библиотеки для бэкенда: Предлагают реализации для различных языков программирования</li>
+</ol>
+</div><div><h2>Особенности реализации протокола</h2>
+<h3>Идентификация объектов</h3>
+<p>Протокол реализует гибкую систему идентификации объектов:</p>
+<ul>
+<li>Для операций с оборудованием: Указывает на конкретные микроконтроллеры на платах</li>
+<li>Для операций с кластером: Определяет конкретные контейнеры-получатели</li>
+</ul>
+<h3>Встроенная поддержка сессий, процессов и контекстов</h3>
+<ul>
+<li>Древовидная структура контекстов процессов</li>
+<li>Авторизация и контроль доступа на основе сессий</li>
+<li>Обеспечивает расширяемость и обратную совместимость через флаги версий</li>
+</ul>
+<h3>Расширяемость</h3>
+<p>Каждый последний бит метазаголовка указывает, существует ли следующий байт метазаголовка. Если следующий байт присутствует, это означает, что используется следующая версия протокола.</p>
+<ul>
+<li>1 версия - 1 бай  метазаголовка</li>
+<li>2 версия - 2 байта метазаголовка - текущая</li>
+<li>и тд.</li>
+</ul>
+<p>Дизайн протокола включает механизмы для будущего развития:</p>
+<ul>
+<li>Флаги версий в метазаголовках</li>
+<li>Поддержка обратной совместимости</li>
+<li>Обработка ошибок для неподдерживаемых версий</li>
+<li>Гибкие возможности расширения</li>
+</ul>
+</div><div><h2>Структура протокола</h2>
+<h3>Компоненты пакета</h3>
+<ol>
+<li>Метазаголовок (1-2 байта)</li>
+<li>Заголовок (1-28 байт)</li>
+<li>Тело сообщения</li>
+</ol>
+<p>Стандартный размер сообщения  около 1.5 КБ (соответвует размеру сетевого фрейма), хотя сообщения могут достигать размера до 64 КБ.</p>
+<h3>Структура метазаголовка</h3>
+<h4>Первый байт (8 бит)</h4>
+<ol>
+<li>Флаг размера сообщения (1 бит) - Определяет хранение длины в 1 или 2 байтах</li>
+<li>Флаг следующего сегмента (1 бит) - Указывает на наличие дополнительного сегмента</li>
+<li>Длина идентификатора сообщения (2 бита) - От 0 до 3 байт</li>
+<li>Длина поля объекта назначения (2 бита) - От 0 до 3 байт</li>
+<li>Длина поля метода назначения (1 бит) - Указывает на длину поля в 1 байт</li>
+<li>Флаг наличия второго байта (1 бит)</li>
+</ol>
+<h4>Второй байт (8 бит)</h4>
+<ol>
+<li>Длина поля сессии (2 бита) - От 0 до 3 байт</li>
+<li>Длина поля процесса (5 бит) - От 0 до 16 байт</li>
+<li>Резервный бит (1 бит) - Для будущих расширений</li>
+</ol>
+<h3>Основные сущности протокола</h3>
+<ol>
+<li>Процесс: Вычислительный процесс с кешированным состоянием</li>
+<li>Объект: Адрес назначения (микросервис, ядро или устройство)</li>
+<li>Метод: Способ вызова объекта (функция, событие или свойство)</li>
+<li>Сессия: Идентификатор авторизации для потока сообщений</li>
+</ol>
+</div></div>
+    </div>
+</body>
+</html>

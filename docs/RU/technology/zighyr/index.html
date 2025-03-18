@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"></script>
+       <link href="/vision/style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="side-menu"><nav class="flex flex-col space-y-4"><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Безнес</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/business/solenopsys" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Сообщество Solenopsys</a></div><div><a href="/vision/RU/business/robotization" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Фонд Robotization</a></div><div><a href="/vision/RU/business/4ir" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">4IR клуб</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Инфраструктура</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/infrastructure/converged" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged</a></div><div><a href="/vision/RU/infrastructure/detonation" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Detonation</a></div><div><a href="/vision/RU/infrastructure/combinator" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Combinator</a></div><div><a href="/vision/RU/infrastructure/graphene" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Graphene</a></div><div><a href="/vision/RU/infrastructure/expansion" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Expansion</a></div><div><a href="/vision/RU/infrastructure/evolution" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Evolution</a></div><div><a href="/vision/RU/infrastructure/matrix" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Matrix</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Технологии</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/technology/cap" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Протокол CAP</a></div><div><a href="/vision/RU/technology/sdfs" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Файловая система SDFS</a></div><div><a href="/vision/RU/technology/organic" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Organic</a></div><div><a href="/vision/RU/technology/slice" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Slice</a></div><div><a href="/vision/RU/technology/zighyr" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Zighyr</a></div><div><a href="/vision/RU/technology/shock" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Shock</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Концепты</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/consepts/srmi" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Инфраструктура SRMI</a></div></div></div><div class="menu-group"><h3 class="text-lg font-semibold mb-2">Документация</h3><div class="flex flex-col space-y-2 pl-4"><div><a href="/vision/RU/docs/reactive" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Reactive</a></div><div><a href="/vision/RU/docs/renderer" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Renderer</a></div><div><a href="/vision/RU/docs/router" class="menu-item text-gray-700 hover:text-gray-900 transition-colors duration-200">Converged Router</a></div></div></div></nav></div> 
+    <div class="content">
+        <div class="page"><div><p>Zighyr — это специализированная операционная система для встраиваемых решений, которая разворачивается внутри FPGA и базируется на легковесном RISC-V ядре SERV. При конфигурации создаётся IP-ядро с необходимым количеством процессорных ядер, внутри каждого из которых запускается экземпляр Zephyr RTOS, дополненный поддержкой языка Zig. Главная цель проекта — предложить разработчикам гибкую, безопасную и эффективную платформу, которая сочетает в себе простоту Zig, возможности Zephyr и проверенный временем загрузчик MCUboot.</p>
+</div><div><h2>Ключевые концепции</h2>
+<ol>
+<li><strong>Оптимизация под FPGA</strong>: При конфигурации Zighyr определяет доступное число ядер и автоматически генерирует IP-ядро, позволяя максимально эффективно использовать FPGA-ресурсы.</li>
+<li><strong>Интеграция с Zig</strong>: Язык Zig известен своей безопасностью, высокой производительностью и простотой. Использование Zig в Zighyr упрощает процесс разработки драйверов, модулей и прикладных компонентов за счёт статического анализа, контроля времени компиляции и гибкой системы типов.</li>
+<li><strong>Базирование на Zephyr</strong>: Zephyr RTOS — это надёжная и активно развивающаяся платформа реального времени. Она предоставляет широкий набор функций и драйверов, проверенных сообществом и промышленностью. Zighyr берёт всё лучшее от Zephyr и дополняет его поддержкой Zig.</li>
+<li><strong>Надёжная загрузка с MCUboot</strong>: Zighyr использует MCUboot в качестве базы для собственного загрузчика, обеспечивая безопасное обновление прошивки и надёжный старт системы. Эта модель даёт уверенность в том, что даже при сбоях обновления конечная система не окажется в неработоспособном состоянии.</li>
+</ol>
+<h2>Особенности реализации</h2>
+<ul>
+<li><strong>Сборка на базе Organic</strong>: Система использует инфраструктуру Organic для сборки и компиляции, что обеспечивает модульность, гибкость и удобство в настройке процесса. Organic позволяет автоматически определять необходимые зависимости и формировать итоговый пакет под целевую FPGA-конфигурацию, упрощая разработку и снижение риска конфликтов между модулями.- <strong>Высокопроизводительная коммуникация</strong>: Ядра могут обмениваться сообщениями через разделяемую память, что обеспечивает минимальные задержки и высокую пропускную способность.</li>
+<li><strong>Тесная интеграция с ядром SERV</strong>: Поскольку Zighyr разворачивается внутри FPGA, основой её аппаратной части является лёгкое RISC-V ядро SERV. Такой подход обеспечивает возможность параллельных вычислений и гибкую настройку под конкретный проект.</li>
+<li><strong>Совместимость с zig-zephyr</strong>: Репозиторий <a href="https://github.com/nodecum/zig-zephyr">zig-zephyr</a> поддерживает ряд примеров и шаблонов, упрощающих старт работы с платформой и дальнейшую настройку.</li>
+</ul>
+<h2>Преимущества</h2>
+<ul>
+<li><strong>Гибкость</strong>: Поддержка многопроцессорной конфигурации в FPGA и разнообразных аппаратных профилей.</li>
+<li><strong>Безопасность</strong>: Использование MCUboot даёт надёжный механизм обновлений, а Zig обеспечивает строгую проверку типов и снижение числа типичных ошибок.</li>
+<li><strong>Удобство разработки</strong>: Простая сборка через автогенерируемый <code>build.zig</code>, а также широкие возможности Zephyr по работе с периферией.</li>
+<li><strong>Масштабируемость</strong>: Система способна расти вместе с задачами и ресурсами FPGA — от небольших проектов до комплексных многопроцессорных конфигураций.</li>
+</ul>
+<p>Zighyr представляет собой современный подход к созданию безопасных и высокопроизводительных решений внутри FPGA. Используя преимущества Zephyr, безопасность MCUboot и потенциал языка Zig, она открывает путь к эффективной разработке приложений и снижению времени вывода продукта на рынок.</p>
+</div></div>
+    </div>
+</body>
+</html>
