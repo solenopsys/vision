@@ -1,8 +1,10 @@
 items:
-  "cap": "Протокол CAP"
-  "sdfs": "Файловая система SDFS"
-  "organic": "Organic"
-  "slice": "Slice"
-  "zighyr": "Zighyr"
-  "shock": "Shock"
+  "organic": "Organic - фреймворк"
+  "shock": "Shock - протокол"
+  "cap": "CAP - протокол"
+  "sdfs": "SDFS - файловая система"
+  "zighyr": "Zighyr - операционная система"
+  "slice": "Slice - образы"
+
+
    
