@@ -1,7 +1,2 @@
 include:
-  infrastructure: "Инфраструктура"
-  org: ""
-  types: "What are the types of communities?"
-  startups: "Startups"
-  stages: ""
-  
+  intro: "Введение"
